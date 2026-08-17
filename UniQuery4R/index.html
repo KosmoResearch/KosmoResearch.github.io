@@ -33,6 +33,7 @@
   <script type="module" crossorigin src="./assets/index-zjfZ6VJV.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-D0vAGhQZ.css">
   <link rel="stylesheet" href="./assets/geoweaver-aligned-header.css">
+  <link rel="stylesheet" href="./assets/results-table.css">
 </head>
 <body>
   <main>
@@ -242,7 +243,7 @@
             We present <strong>UniQuery4R</strong>, a query-conditioned framework that encodes a multi-frame clip once and selects the source view, target view, and continuous source-image coordinate only at decoding time via source-to-target cross-attention. Each query jointly predicts target correspondence, target-time 3D position, and scene flow, along with source depth, while camera parameters are estimated per view.
           </p>
           <p>
-            This design allows the encoded clip to be reused across arbitrary source–target selections and supports both sparse inference and dense reconstruction through batched queries, without learned temporal embeddings tied to a fixed clip length. We further introduce a direction–magnitude parameterization of scene flow with separate supervision for moving and static points. Among the evaluated methods, UniQuery4R achieves the best macro-average results on WorldTrack for both scene-flow estimation and dynamic-point reconstruction.
+            This design allows the encoded clip to be reused across arbitrary source–target selections and supports both sparse inference and dense reconstruction through batched queries, without learned temporal embeddings tied to a fixed clip length. We further introduce a direction–magnitude parameterization of scene flow with separate supervision for moving and static points. Across four evaluation datasets, UniQuery4R achieves the best macro-average results among the evaluated methods for WorldTrack dynamic-point tracking and for our scene-flow evaluation derived from the same datasets.
           </p>
         </div>
       </div>
@@ -291,27 +292,74 @@
         <p class="section-kicker">Evaluation</p>
         <h2 class="title is-3 has-text-centered">Results</h2>
         <p class="section-intro has-text-centered">
-          UniQuery4R obtains the best four-dataset macro average among evaluated methods on both WorldTrack tasks.
+          UniQuery4R achieves the best four-dataset macro-average results among evaluated methods for dynamic-point tracking under the WorldTrack protocol.
         </p>
 
-        <div class="columns metrics">
-          <div class="column metric">
-            <strong>81.48%</strong>
-            <span>Scene Flow τ@0.1m ↑</span>
-            <small>Macro EPE: 0.0530 m ↓</small>
-          </div>
-          <div class="column metric">
-            <strong>83.89%</strong>
-            <span>Dynamic Point APD ↑</span>
-            <small>Macro EPE: 0.1601 m ↓</small>
-          </div>
-          <div class="column metric">
-            <strong>4.18 ms</strong>
-            <span>Per additional 1k queries</span>
-            <small>Decoder linear fit R² = 1.000</small>
+        <div class="results-table-block">
+          <h3>WorldTrack Dynamic-Point Tracking</h3>
+          <p class="results-table-intro">APD (%) ↑ and EPE (m) ↓ across four datasets and their equal-weight macro-average.</p>
+          <div class="results-table-scroll" tabindex="0" role="region" aria-label="Scrollable dynamic-point tracking results">
+            <table class="results-table">
+              <colgroup>
+                <col class="method-column">
+                <col class="metric-column" span="10">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th rowspan="2" scope="col">Method</th>
+                  <th colspan="2" scope="colgroup">PStudio</th>
+                  <th colspan="2" scope="colgroup">PO</th>
+                  <th colspan="2" scope="colgroup">DR</th>
+                  <th colspan="2" scope="colgroup">ADT</th>
+                  <th colspan="2" scope="colgroup">Macro Avg.</th>
+                </tr>
+                <tr>
+                  <th scope="col">APD ↑</th><th scope="col">EPE ↓</th>
+                  <th scope="col">APD ↑</th><th scope="col">EPE ↓</th>
+                  <th scope="col">APD ↑</th><th scope="col">EPE ↓</th>
+                  <th scope="col">APD ↑</th><th scope="col">EPE ↓</th>
+                  <th scope="col">APD ↑</th><th scope="col">EPE ↓</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SpatialTrackerV2</td>
+                  <td>49.93</td><td>0.4639</td><td>53.45</td><td>0.5173</td><td>54.34</td><td>0.4368</td><td>69.39</td><td>0.2764</td><td>56.78</td><td>0.4236</td>
+                </tr>
+                <tr>
+                  <td>St4RTrack</td>
+                  <td>70.80</td><td>0.2479</td><td>67.38</td><td>0.314</td><td>74.24</td><td>0.2594</td><td>72.90</td><td>0.2958</td><td>71.33</td><td>0.2793</td>
+                </tr>
+                <tr>
+                  <td>TraceAnything</td>
+                  <td>70.86</td><td>0.278</td><td>39.37</td><td>1.0462</td><td>60.89</td><td>0.5642</td><td>75.69</td><td>0.2515</td><td>61.70</td><td>0.535</td>
+                </tr>
+                <tr>
+                  <td>Any4D</td>
+                  <td>74.72</td><td>0.2361</td><td>65.99</td><td>0.3783</td><td>76.72</td><td>0.3463</td><td>78.09</td><td>0.2378</td><td>73.88</td><td>0.2996</td>
+                </tr>
+                <tr>
+                  <td>V-DPM</td>
+                  <td class="second-best">78.95</td><td class="second-best">0.1757</td><td class="second-best">80.82</td><td class="second-best">0.1857</td><td>75.29</td><td>0.2438</td><td class="second-best">85.47</td><td class="second-best">0.1725</td><td class="second-best">80.13</td><td class="second-best">0.1944</td>
+                </tr>
+                <tr>
+                  <td>4RC</td>
+                  <td>69.08</td><td>0.259</td><td>79.81</td><td>0.2353</td><td><strong>84.65</strong></td><td><strong>0.1667</strong></td><td>84.16</td><td>0.177</td><td>79.43</td><td>0.2095</td>
+                </tr>
+                <tr>
+                  <td>OpenD4RT</td>
+                  <td>78.63</td><td>0.1811</td><td>66.03</td><td>0.3398</td><td>76.78</td><td>0.2407</td><td>69.91</td><td>0.2966</td><td>72.84</td><td>0.2646</td>
+                </tr>
+                <tr class="ours">
+                  <td>UniQuery4R (ours)</td>
+                  <td><strong>84.64</strong></td><td><strong>0.1333</strong></td><td><strong>83.74</strong></td><td><strong>0.1604</strong></td><td class="second-best">80.00</td><td class="second-best">0.2078</td><td><strong>87.17</strong></td><td><strong>0.1387</strong></td><td><strong>83.89</strong></td><td><strong>0.1601</strong></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
+        <h3 class="results-visualization-title">DAVIS Visualization</h3>
         <figure class="publication-figure">
           <img
             src="./figures/Compare_300dpi.jpg"

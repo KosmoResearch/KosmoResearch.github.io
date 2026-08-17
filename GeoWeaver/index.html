@@ -13,7 +13,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <title>GeoWeaver | Long-Sequence 3D Reconstruction</title>
   <link rel="icon" href="./public/favicon.svg">
-  <link rel="stylesheet" href="./app/globals.css">
+  <link rel="stylesheet" href="./app/globals.css?v=2">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -67,7 +67,7 @@
         </div>
         <div class="hero-actions">
           <span class="button button-primary button-disabled" aria-disabled="true">Paper coming soon</span>
-          <span class="button button-disabled" aria-disabled="true">Code coming soon</span>
+          <span class="button button-disabled" aria-disabled="true">Code</span>
           <a class="button button-secondary" href="#bibtex">BibTeX</a>
         </div>
       </div>
@@ -75,7 +75,7 @@
 
     <section class="section teaser">
       <div class="wide-container">
-        <img src="./public/og.png" alt="GeoWeaver long-sequence reconstruction overview" width="1672" height="941">
+        <img src="./public/og.png" alt="GeoWeaver long-sequence reconstruction overview" width="1672" height="941" decoding="async" fetchpriority="high">
         <p>GeoWeaver preserves accurate local geometric priors while assembling long RGB sequences into globally consistent cameras and point clouds.</p>
       </div>
     </section>
@@ -149,9 +149,73 @@
       <div class="wide-container">
         <div class="section-heading">
           <p>Evaluation</p>
-          <h2>Qualitative results</h2>
+          <h2>Results</h2>
           <div class="section-description">GeoWeaver produces coherent geometry, better aligned trajectories, and fewer discontinuities while using only one shared frame between adjacent chunks.</div>
         </div>
+        <div class="geo-results-table-block">
+          <h3>Oxford Spires Per-Scene Results</h3>
+          <p class="geo-results-table-intro">Relative rotation error (RRE, degrees) ↓ and absolute trajectory error (ATE, metres) ↓.</p>
+          <div class="geo-results-table-scroll" tabindex="0" role="region" aria-label="Scrollable Oxford Spires benchmark results">
+            <table class="geo-results-table">
+              <colgroup>
+                <col class="method-column">
+                <col class="metric-column" span="10">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th rowspan="2" scope="col">Method</th>
+                  <th colspan="2" scope="colgroup">Keble-04</th>
+                  <th colspan="2" scope="colgroup">Observatory-01</th>
+                  <th colspan="2" scope="colgroup">Blenheim-05</th>
+                  <th colspan="2" scope="colgroup">Christ Church-02</th>
+                  <th colspan="2" scope="colgroup">Average</th>
+                </tr>
+                <tr>
+                  <th scope="col">RRE ↓</th><th scope="col">ATE ↓</th>
+                  <th scope="col">RRE ↓</th><th scope="col">ATE ↓</th>
+                  <th scope="col">RRE ↓</th><th scope="col">ATE ↓</th>
+                  <th scope="col">RRE ↓</th><th scope="col">ATE ↓</th>
+                  <th scope="col">RRE ↓</th><th scope="col">ATE ↓</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MBA <span class="method-type">Opt.</span></td>
+                  <td>4.250</td><td>35.240</td><td>1.270</td><td>23.710</td><td>1.810</td><td>38.260</td><td>5.830</td><td>20.080</td><td>3.290</td><td>29.323</td>
+                </tr>
+                <tr class="group-start">
+                  <td>DA3 <span class="method-type">FF</span></td>
+                  <td>14.442</td><td>22.664</td><td>7.087</td><td>8.365</td><td>2.123</td><td class="second-best">1.538</td><td>16.193</td><td>33.992</td><td>9.961</td><td>16.640</td>
+                </tr>
+                <tr class="group-start">
+                  <td>VGGT-Long <span class="method-type">Chunk-FF</span></td>
+                  <td>16.850</td><td>13.350</td><td>14.990</td><td>4.250</td><td>18.480</td><td>11.240</td><td>25.610</td><td>20.680</td><td>18.983</td><td>12.380</td>
+                </tr>
+                <tr>
+                  <td>Scal3R <span class="method-type">Chunk-FF</span></td>
+                  <td>7.830</td><td class="second-best">2.130</td><td>5.270</td><td class="second-best">1.570</td><td>7.430</td><td>2.560</td><td>6.830</td><td>16.000</td><td>6.840</td><td>5.565</td>
+                </tr>
+                <tr>
+                  <td>LoGeR <span class="method-type">Chunk-FF</span></td>
+                  <td>11.000</td><td>4.134</td><td>8.000</td><td>5.632</td><td>9.800</td><td>2.621</td><td>3.700</td><td>3.553</td><td>8.100</td><td><strong>3.985</strong></td>
+                </tr>
+                <tr class="group-start">
+                  <td>LingBot-Map <span class="method-type">Stream</span></td>
+                  <td class="second-best">2.090</td><td>8.870</td><td class="second-best">0.970</td><td>6.960</td><td class="second-best">1.040</td><td>4.570</td><td class="second-best">1.240</td><td>3.880</td><td class="second-best">1.335</td><td>6.070</td>
+                </tr>
+                <tr class="group-start">
+                  <td>AMB3R <span class="method-type">Hybrid</span></td>
+                  <td>8.375</td><td>4.940</td><td>5.368</td><td><strong>1.220</strong></td><td>10.740</td><td>11.830</td><td>10.140</td><td><strong>12.760</strong></td><td>8.655</td><td>7.687</td>
+                </tr>
+                <tr class="ours">
+                  <td>GeoWeaver <span class="method-type">Hybrid</span></td>
+                  <td><strong>0.432</strong></td><td><strong>1.430</strong></td><td><strong>0.360</strong></td><td>1.820</td><td><strong>0.330</strong></td><td><strong>1.430</strong></td><td><strong>1.180</strong></td><td class="second-best">12.810</td><td><strong>0.575</strong></td><td class="second-best">4.372</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <h3 class="geo-results-visualization-title">Mip-NeRF 360 Visualization</h3>
         <figure class="paper-figure result-figure">
           <img src="./public/images/comparison.png" alt="Qualitative GeoWeaver point-cloud comparison on indoor and outdoor scenes" width="2521" height="963" loading="lazy">
           <figcaption>Representative comparisons on Observatory and the Mip-NeRF 360 room sequence.</figcaption>

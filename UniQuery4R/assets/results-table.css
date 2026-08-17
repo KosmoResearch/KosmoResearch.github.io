@@ -1,0 +1,127 @@
+.results-table-block {
+  margin: 0 0 3rem;
+}
+
+.results-table-block h3,
+.results-visualization-title {
+  margin: 0 0 0.5rem;
+  color: var(--text);
+  font-size: 1.35rem;
+  text-align: center;
+}
+
+.results-visualization-title {
+  margin-bottom: 1.25rem;
+}
+
+.results-table-intro {
+  margin: 0 auto 1.25rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+.results-table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  -webkit-overflow-scrolling: touch;
+}
+
+.results-table {
+  width: 100%;
+  min-width: 920px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.results-table .method-column {
+  width: 150px;
+}
+
+.results-table .metric-column {
+  width: 77px;
+}
+
+.results-table th,
+.results-table td {
+  padding: 0.62rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.results-table th:first-child,
+.results-table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  width: 150px;
+  min-width: 150px;
+  padding-left: 0.85rem;
+  background: var(--surface);
+  text-align: left;
+}
+
+.results-table thead th {
+  color: #334155;
+  background: var(--surface-soft);
+  font-weight: 700;
+}
+
+.results-table thead th:first-child {
+  z-index: 2;
+  background: var(--surface-soft);
+}
+
+.results-table thead tr:first-child th {
+  padding-top: 0.8rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 0;
+}
+
+.results-table thead tr:last-child th {
+  padding-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.results-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.results-table tbody tr.ours td {
+  background: #eff6ff;
+  font-weight: 700;
+}
+
+.results-table tbody tr.ours td:first-child {
+  background: #eff6ff;
+}
+
+.results-table .second-best {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.results-table-note {
+  margin: 0.9rem auto 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .results-table-block {
+    margin-bottom: 2.25rem;
+  }
+
+  .results-table-scroll {
+    margin-inline: -0.25rem;
+  }
+}
