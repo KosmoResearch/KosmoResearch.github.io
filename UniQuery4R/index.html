@@ -94,7 +94,13 @@
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <figure class="publication-banner">
-          <img src="./figures/concept_300dpi.jpg" alt="Conceptual overview of UniQuery4R.">
+          <img
+            src="./figures/concept_300dpi.jpg"
+            alt="Conceptual overview of UniQuery4R."
+            width="1920"
+            height="1131"
+            decoding="async"
+            fetchpriority="high">
         </figure>
         <h2 class="subtitle has-text-centered">
           Given a continuous source-pixel query over a jointly encoded clip, UniQuery4R predicts target correspondence, target-time 3D position, scene flow, and source depth, while estimating camera parameters per view.
@@ -246,7 +252,13 @@
         <p class="section-kicker">Approach</p>
         <h2 class="title is-3 has-text-centered">Method Overview</h2>
         <figure class="publication-figure">
-          <img src="./figures/UniQuery4R_model_architecture_300dpi.jpg" alt="UniQuery4R architecture.">
+          <img
+            src="./figures/UniQuery4R_model_architecture_300dpi.jpg"
+            alt="UniQuery4R architecture."
+            width="1920"
+            height="1030"
+            loading="lazy"
+            decoding="async">
           <figcaption>
             <strong>UniQuery4R architecture.</strong> A clip is jointly encoded into multi-scale features. At decoding time, a continuous query <em>q = (u, v, s, t)</em> selects the source and target views. The sampled source query attends to the full target feature map and jointly drives correspondence, geometry, and motion prediction.
           </figcaption>
@@ -299,7 +311,13 @@
         </div>
 
         <figure class="publication-figure">
-          <img src="./figures/Compare_300dpi.jpg" alt="Long-sequence DAVIS tracking comparison.">
+          <img
+            src="./figures/Compare_300dpi.jpg"
+            alt="Long-sequence DAVIS tracking comparison."
+            width="1920"
+            height="965"
+            loading="lazy"
+            decoding="async">
           <figcaption>
             <strong>Long-sequence DAVIS tracking.</strong> Each color denotes one fixed source query over time. UniQuery4R qualitatively exhibits less drift and fragmentation under occlusion and deformation.
           </figcaption>
