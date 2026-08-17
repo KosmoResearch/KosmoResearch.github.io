@@ -1,0 +1,568 @@
+{
+  "version": 1,
+  "name": "blackswan",
+  "frameCount": 50,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -0.4545070230960846,
+      -0.10961343348026276,
+      -1.301405906677246
+    ],
+    "max": [
+      1.0693085193634033,
+      0.49542221426963806,
+      -0.2702750265598297
+    ],
+    "scale": [
+      2.325193418073468e-05,
+      9.23225252336124e-06,
+      1.573404915689025e-05
+    ]
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 565532,
+    "bitmapSize": 70692,
+    "prefixEndFrame": 20,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 11583
+      },
+      {
+        "mode": "prefix",
+        "count": 23166
+      },
+      {
+        "mode": "prefix",
+        "count": 34757
+      },
+      {
+        "mode": "prefix",
+        "count": 46343
+      },
+      {
+        "mode": "prefix",
+        "count": 57933
+      },
+      {
+        "mode": "prefix",
+        "count": 69519
+      },
+      {
+        "mode": "prefix",
+        "count": 81107
+      },
+      {
+        "mode": "prefix",
+        "count": 92699
+      },
+      {
+        "mode": "prefix",
+        "count": 104285
+      },
+      {
+        "mode": "prefix",
+        "count": 115876
+      },
+      {
+        "mode": "prefix",
+        "count": 127462
+      },
+      {
+        "mode": "prefix",
+        "count": 139051
+      },
+      {
+        "mode": "prefix",
+        "count": 150641
+      },
+      {
+        "mode": "prefix",
+        "count": 162239
+      },
+      {
+        "mode": "prefix",
+        "count": 173830
+      },
+      {
+        "mode": "prefix",
+        "count": 185423
+      },
+      {
+        "mode": "prefix",
+        "count": 197008
+      },
+      {
+        "mode": "prefix",
+        "count": 208600
+      },
+      {
+        "mode": "prefix",
+        "count": 220198
+      },
+      {
+        "mode": "prefix",
+        "count": 231790
+      },
+      {
+        "mode": "prefix",
+        "count": 243378
+      },
+      {
+        "mode": "bitmap",
+        "offset": 0,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 70692,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 141384,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 212076,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 282768,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 353460,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 424152,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 494844,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 565536,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 636228,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 706920,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 777612,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 848304,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 918996,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 989688,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1060380,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1131072,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1201764,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1272456,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1343148,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1413840,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1484532,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1555224,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1625916,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1696608,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1767300,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1837992,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1908684,
+        "byteLength": 70692,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1979376,
+        "byteLength": 70692,
+        "count": 250000
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 3393192
+    },
+    "staticColors": {
+      "offset": 3393192,
+      "byteLength": 2262128
+    },
+    "dynamicPositions": {
+      "offset": 5655320,
+      "byteLength": 614400
+    },
+    "dynamicColors": {
+      "offset": 6269720,
+      "byteLength": 8192
+    },
+    "staticBitmaps": {
+      "offset": 6277912,
+      "byteLength": 2050068
+    },
+    "trajectoryColors": {
+      "offset": 8327980,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 8336172,
+      "byteLength": 9600
+    },
+    "cameraFrustumColors": {
+      "offset": 8345772,
+      "byteLength": 3200
+    },
+    "cameraCenterPositions": {
+      "offset": 8348972,
+      "byteLength": 600
+    },
+    "cameraCenterColors": {
+      "offset": 8349572,
+      "byteLength": 200
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 8349772,
+    "sha256": "d78ce5f9c09766ee7618988104f1df2bf00ea7c3413af07f9fbbe823aeda0837"
+  },
+  "validation": {
+    "quantizationMaxError": 1.1742115020751953e-05,
+    "sourceRrdBytes": 293871358
+  },
+  "camera": {
+    "frustumSegmentCount": 400,
+    "centerCount": 50,
+    "frameSegmentCounts": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      184,
+      192,
+      200,
+      208,
+      216,
+      224,
+      232,
+      240,
+      248,
+      256,
+      264,
+      272,
+      280,
+      288,
+      296,
+      304,
+      312,
+      320,
+      328,
+      336,
+      344,
+      352,
+      360,
+      368,
+      376,
+      384,
+      392,
+      400
+    ],
+    "frameCenterCounts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "centerRadius": 0.004
+  },
+  "rgbFrames": [
+    "./gallery-rgb/blackswan/000.webp",
+    "./gallery-rgb/blackswan/001.webp",
+    "./gallery-rgb/blackswan/002.webp",
+    "./gallery-rgb/blackswan/003.webp",
+    "./gallery-rgb/blackswan/004.webp",
+    "./gallery-rgb/blackswan/005.webp",
+    "./gallery-rgb/blackswan/006.webp",
+    "./gallery-rgb/blackswan/007.webp",
+    "./gallery-rgb/blackswan/008.webp",
+    "./gallery-rgb/blackswan/009.webp",
+    "./gallery-rgb/blackswan/010.webp",
+    "./gallery-rgb/blackswan/011.webp",
+    "./gallery-rgb/blackswan/012.webp",
+    "./gallery-rgb/blackswan/013.webp",
+    "./gallery-rgb/blackswan/014.webp",
+    "./gallery-rgb/blackswan/015.webp",
+    "./gallery-rgb/blackswan/016.webp",
+    "./gallery-rgb/blackswan/017.webp",
+    "./gallery-rgb/blackswan/018.webp",
+    "./gallery-rgb/blackswan/019.webp",
+    "./gallery-rgb/blackswan/020.webp",
+    "./gallery-rgb/blackswan/021.webp",
+    "./gallery-rgb/blackswan/022.webp",
+    "./gallery-rgb/blackswan/023.webp",
+    "./gallery-rgb/blackswan/024.webp",
+    "./gallery-rgb/blackswan/025.webp",
+    "./gallery-rgb/blackswan/026.webp",
+    "./gallery-rgb/blackswan/027.webp",
+    "./gallery-rgb/blackswan/028.webp",
+    "./gallery-rgb/blackswan/029.webp",
+    "./gallery-rgb/blackswan/030.webp",
+    "./gallery-rgb/blackswan/031.webp",
+    "./gallery-rgb/blackswan/032.webp",
+    "./gallery-rgb/blackswan/033.webp",
+    "./gallery-rgb/blackswan/034.webp",
+    "./gallery-rgb/blackswan/035.webp",
+    "./gallery-rgb/blackswan/036.webp",
+    "./gallery-rgb/blackswan/037.webp",
+    "./gallery-rgb/blackswan/038.webp",
+    "./gallery-rgb/blackswan/039.webp",
+    "./gallery-rgb/blackswan/040.webp",
+    "./gallery-rgb/blackswan/041.webp",
+    "./gallery-rgb/blackswan/042.webp",
+    "./gallery-rgb/blackswan/043.webp",
+    "./gallery-rgb/blackswan/044.webp",
+    "./gallery-rgb/blackswan/045.webp",
+    "./gallery-rgb/blackswan/046.webp",
+    "./gallery-rgb/blackswan/047.webp",
+    "./gallery-rgb/blackswan/048.webp",
+    "./gallery-rgb/blackswan/049.webp"
+  ]
+}

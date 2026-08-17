@@ -1,0 +1,472 @@
+{
+  "version": 1,
+  "name": "rollerblade/vdpm",
+  "frameCount": 35,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -0.46354180574417114,
+      -0.14691227674484253,
+      -1.3433053493499756
+    ],
+    "max": [
+      0.7190585732460022,
+      0.39360755681991577,
+      -0.2991611063480377
+    ],
+    "scale": [
+      1.8045324395643547e-05,
+      8.247803634731099e-06,
+      1.5932620954117738e-05
+    ]
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 315691,
+    "bitmapSize": 39462,
+    "prefixEndFrame": -1,
+    "frames": [
+      {
+        "mode": "bitmap",
+        "offset": 0,
+        "byteLength": 39462,
+        "count": 9065
+      },
+      {
+        "mode": "bitmap",
+        "offset": 39462,
+        "byteLength": 39462,
+        "count": 18132
+      },
+      {
+        "mode": "bitmap",
+        "offset": 78924,
+        "byteLength": 39462,
+        "count": 27207
+      },
+      {
+        "mode": "bitmap",
+        "offset": 118386,
+        "byteLength": 39462,
+        "count": 36279
+      },
+      {
+        "mode": "bitmap",
+        "offset": 157848,
+        "byteLength": 39462,
+        "count": 45363
+      },
+      {
+        "mode": "bitmap",
+        "offset": 197310,
+        "byteLength": 39462,
+        "count": 54469
+      },
+      {
+        "mode": "bitmap",
+        "offset": 236772,
+        "byteLength": 39462,
+        "count": 63549
+      },
+      {
+        "mode": "bitmap",
+        "offset": 276234,
+        "byteLength": 39462,
+        "count": 72653
+      },
+      {
+        "mode": "bitmap",
+        "offset": 315696,
+        "byteLength": 39462,
+        "count": 81751
+      },
+      {
+        "mode": "bitmap",
+        "offset": 355158,
+        "byteLength": 39462,
+        "count": 90853
+      },
+      {
+        "mode": "bitmap",
+        "offset": 394620,
+        "byteLength": 39462,
+        "count": 99928
+      },
+      {
+        "mode": "bitmap",
+        "offset": 434082,
+        "byteLength": 39462,
+        "count": 109025
+      },
+      {
+        "mode": "bitmap",
+        "offset": 473544,
+        "byteLength": 39462,
+        "count": 118116
+      },
+      {
+        "mode": "bitmap",
+        "offset": 513006,
+        "byteLength": 39462,
+        "count": 127201
+      },
+      {
+        "mode": "bitmap",
+        "offset": 552468,
+        "byteLength": 39462,
+        "count": 136305
+      },
+      {
+        "mode": "bitmap",
+        "offset": 591930,
+        "byteLength": 39462,
+        "count": 145404
+      },
+      {
+        "mode": "bitmap",
+        "offset": 631392,
+        "byteLength": 39462,
+        "count": 154503
+      },
+      {
+        "mode": "bitmap",
+        "offset": 670854,
+        "byteLength": 39462,
+        "count": 163627
+      },
+      {
+        "mode": "bitmap",
+        "offset": 710316,
+        "byteLength": 39462,
+        "count": 172760
+      },
+      {
+        "mode": "bitmap",
+        "offset": 749778,
+        "byteLength": 39462,
+        "count": 181887
+      },
+      {
+        "mode": "bitmap",
+        "offset": 789240,
+        "byteLength": 39462,
+        "count": 191004
+      },
+      {
+        "mode": "bitmap",
+        "offset": 828702,
+        "byteLength": 39462,
+        "count": 200112
+      },
+      {
+        "mode": "bitmap",
+        "offset": 868164,
+        "byteLength": 39462,
+        "count": 209228
+      },
+      {
+        "mode": "bitmap",
+        "offset": 907626,
+        "byteLength": 39462,
+        "count": 218347
+      },
+      {
+        "mode": "bitmap",
+        "offset": 947088,
+        "byteLength": 39462,
+        "count": 227455
+      },
+      {
+        "mode": "bitmap",
+        "offset": 986550,
+        "byteLength": 39462,
+        "count": 236553
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1026012,
+        "byteLength": 39462,
+        "count": 245619
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1065474,
+        "byteLength": 39462,
+        "count": 249912
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1104936,
+        "byteLength": 39462,
+        "count": 249918
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1144398,
+        "byteLength": 39462,
+        "count": 249911
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1183860,
+        "byteLength": 39462,
+        "count": 249919
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1223322,
+        "byteLength": 39462,
+        "count": 249918
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1262784,
+        "byteLength": 39462,
+        "count": 249919
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1302246,
+        "byteLength": 39462,
+        "count": 249922
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1341708,
+        "byteLength": 39462,
+        "count": 249931
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "camera": {
+    "frustumSegmentCount": 0,
+    "centerCount": 0,
+    "frameSegmentCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "frameCenterCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "centerRadius": 0.004
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 1894146
+    },
+    "staticColors": {
+      "offset": 1894148,
+      "byteLength": 1262764
+    },
+    "dynamicPositions": {
+      "offset": 3156912,
+      "byteLength": 430080
+    },
+    "dynamicColors": {
+      "offset": 3586992,
+      "byteLength": 8192
+    },
+    "trajectoryColors": {
+      "offset": 3595184,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 3603376,
+      "byteLength": 0
+    },
+    "cameraFrustumColors": {
+      "offset": 3603376,
+      "byteLength": 0
+    },
+    "cameraCenterPositions": {
+      "offset": 3603376,
+      "byteLength": 0
+    },
+    "cameraCenterColors": {
+      "offset": 3603376,
+      "byteLength": 0
+    },
+    "staticBitmaps": {
+      "offset": 3603376,
+      "byteLength": 1381170
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 4984546,
+    "sha256": "870e11350507116cda1b6c1ecd5f98623146624e79269392648a52abe0444444"
+  },
+  "validation": {
+    "quantizationMaxError": 9.119510650634766e-06,
+    "sourceRrdBytes": 149673300
+  },
+  "viewBounds": {
+    "min": [
+      -0.528414082971858,
+      -0.21088345495749658,
+      -1.2020421695558814
+    ],
+    "max": [
+      0.6909285450053524,
+      0.5097598034593429,
+      -0.3017282310876947
+    ],
+    "percentiles": [
+      1,
+      99
+    ],
+    "coordinateFrame": "tma"
+  },
+  "alignment": {
+    "reference": "tma",
+    "scale": 1.158436789870647,
+    "rotation": [
+      [
+        0.9993598179983805,
+        -0.004509844965672616,
+        0.03549106181323392
+      ],
+      [
+        0.012722738116015563,
+        0.9719751745176003,
+        -0.23473898708206264
+      ],
+      [
+        -0.03343779456059379,
+        0.2350402548923629,
+        0.9714103110812939
+      ]
+    ],
+    "translation": [
+      0.03398585236276584,
+      -0.18518645689041982,
+      0.12559583535916596
+    ],
+    "fit": {
+      "correspondence": "dynamic-track-and-frame",
+      "keepFraction": 0.8,
+      "medianResidual": 0.026138599438855416,
+      "rotationDegrees": 13.742626067998147
+    }
+  }
+}

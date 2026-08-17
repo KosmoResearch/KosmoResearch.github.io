@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GeoWeaver combines chunk-wise geometric priors with hierarchical test-time adaptation for accurate, globally consistent long-sequence 3D reconstruction.">
+  <meta name="keywords" content="GeoWeaver, 3D reconstruction, long-sequence reconstruction, camera pose estimation, computer vision">
+  <meta name="author" content="Tinghao Jiang, Sheng Tang, Shengzhe Wei, Juntong Fang, Weiqi Zhang, Junsheng Zhou, Zesong Li">
+  <meta property="og:title" content="GeoWeaver | Long-Sequence 3D Reconstruction">
+  <meta property="og:description" content="Accurate long-sequence 3D reconstruction via hierarchical geometric assembly.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./public/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>GeoWeaver | Long-Sequence 3D Reconstruction</title>
+  <link rel="icon" href="./public/favicon.svg">
+  <link rel="stylesheet" href="./app/globals.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "GeoWeaver: Accurate Long-Sequence 3D Reconstruction via Hierarchical Geometric Assembly",
+    "datePublished": "2026",
+    "author": [
+      {"@type": "Person", "name": "Tinghao Jiang"},
+      {"@type": "Person", "name": "Sheng Tang"},
+      {"@type": "Person", "name": "Shengzhe Wei"},
+      {"@type": "Person", "name": "Juntong Fang"},
+      {"@type": "Person", "name": "Weiqi Zhang"},
+      {"@type": "Person", "name": "Junsheng Zhou"},
+      {"@type": "Person", "name": "Zesong Li"}
+    ],
+    "image": "./public/og.png"
+  }
+  </script>
+</head>
+<body>
+  <main>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="GeoWeaver home">GeoWeaver</a>
+      <nav aria-label="Primary navigation">
+        <a href="#videos">Videos</a>
+        <a href="#abstract">Abstract</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#bibtex">BibTeX</a>
+      </nav>
+      <span class="header-paper is-disabled" aria-disabled="true">Paper coming soon</span>
+    </header>
+
+    <section class="publication-hero" id="top">
+      <div class="container hero-inner">
+        <p class="eyebrow">Project page · 2026</p>
+        <h1><span>GeoWeaver:</span> Accurate Long-Sequence 3D Reconstruction via Hierarchical Geometric Assembly</h1>
+        <div class="authors" aria-label="Authors">
+          <span>Tinghao Jiang<sup>1,2</sup><i>,</i></span>
+          <span>Sheng Tang<sup>2</sup><i>,</i></span>
+          <span>Shengzhe Wei<sup>2</sup><i>,</i></span>
+          <span>Juntong Fang<sup>3</sup><i>,</i></span>
+          <span>Weiqi Zhang<sup>3</sup><i>,</i></span>
+          <span>Junsheng Zhou<sup>3</sup><i>,</i></span>
+          <span>Zesong Li<sup>2</sup></span>
+        </div>
+        <div class="affiliations">
+          <span><sup>1</sup> Shanghai Jiao Tong University</span>
+          <span><sup>2</sup> Kosmo Research</span>
+          <span><sup>3</sup> School of Software, Tsinghua University</span>
+        </div>
+        <div class="hero-actions">
+          <span class="button button-primary button-disabled" aria-disabled="true">Paper coming soon</span>
+          <span class="button button-disabled" aria-disabled="true">Code coming soon</span>
+          <a class="button button-secondary" href="#bibtex">BibTeX</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section teaser">
+      <div class="wide-container">
+        <img src="./public/og.png" alt="GeoWeaver long-sequence reconstruction overview" width="1672" height="941">
+        <p>GeoWeaver preserves accurate local geometric priors while assembling long RGB sequences into globally consistent cameras and point clouds.</p>
+      </div>
+    </section>
+
+    <section class="section videos-section" id="videos">
+      <div class="wide-container">
+        <div class="section-heading">
+          <h2>Reconstruction videos</h2>
+          <div class="section-description">Explore indoor, outdoor, driving, and urban-scale reconstructions across four long-sequence benchmarks.</div>
+        </div>
+        <div class="demo-grid">
+          <article class="demo-card">
+            <video controls playsinline preload="metadata" poster="./public/posters/courthouse.jpg" aria-label="Courthouse reconstruction video"><source src="./public/videos/courthouse.mp4" type="video/mp4">Your browser does not support embedded videos.</video>
+            <div class="demo-label"><h3>Courthouse</h3><span>Tanks &amp; Temples</span></div>
+          </article>
+          <article class="demo-card">
+            <video controls playsinline preload="metadata" poster="./public/posters/barn.jpg" aria-label="Barn reconstruction video"><source src="./public/videos/barn.mp4" type="video/mp4">Your browser does not support embedded videos.</video>
+            <div class="demo-label"><h3>Barn</h3><span>Tanks &amp; Temples</span></div>
+          </article>
+          <article class="demo-card">
+            <video controls playsinline preload="metadata" poster="./public/posters/meeting-room.jpg" aria-label="Meeting Room reconstruction video"><source src="./public/videos/meeting-room.mp4" type="video/mp4">Your browser does not support embedded videos.</video>
+            <div class="demo-label"><h3>Meeting Room</h3><span>Tanks &amp; Temples</span></div>
+          </article>
+          <article class="demo-card">
+            <video controls playsinline preload="metadata" poster="./public/posters/vkitti2.jpg" aria-label="Virtual KITTI 2 reconstruction video"><source src="./public/videos/vkitti2.mp4" type="video/mp4">Your browser does not support embedded videos.</video>
+            <div class="demo-label"><h3>Virtual KITTI 2</h3><span>VKITTI2</span></div>
+          </article>
+          <article class="demo-card">
+            <video controls playsinline preload="metadata" poster="./public/posters/keble.jpg" aria-label="Keble College reconstruction video"><source src="./public/videos/keble.mp4" type="video/mp4">Your browser does not support embedded videos.</video>
+            <div class="demo-label"><h3>Keble College</h3><span>Oxford Spires</span></div>
+          </article>
+          <article class="demo-card">
+            <video controls playsinline preload="metadata" poster="./public/posters/blenheim.jpg" aria-label="Blenheim reconstruction video"><source src="./public/videos/blenheim.mp4" type="video/mp4">Your browser does not support embedded videos.</video>
+            <div class="demo-label"><h3>Blenheim</h3><span>Oxford Spires</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section abstract-section" id="abstract">
+      <div class="container prose-container">
+        <div class="section-heading"><p>Overview</p><h2>Abstract</h2></div>
+        <div class="abstract-copy">
+          <p>Long-sequence 3D reconstruction from RGB videos requires both accurate local geometry and globally consistent camera motion. Feed-forward models provide strong depth and pose predictions, but their memory cost prevents joint inference over long sequences. Chunk-wise processing improves scalability, yet independently predicted chunks often exhibit scale drift, pose errors, and point-cloud misalignment.</p>
+          <p>We present <strong>GeoWeaver</strong>, a unified framework comprising a Geometric Prior Model (GPM) and Test-Time Adaptation (TTA). The GPM predicts chunk-wise depth, confidence, and camera parameters as adjustable geometric priors. TTA then performs sequential initialization, global chunk-level Sim(3) alignment, and coarse-to-fine refinement of camera poses, affine depth corrections, and intrinsics. Dense correspondences provide adjacent, cross-chunk, and long-range constraints, while a robust CDF-style objective jointly optimizes weighted 2D reprojection and 3D consistency residuals.</p>
+          <p>Experiments across diverse long-sequence benchmarks demonstrate improved camera accuracy, global consistency, and point-cloud quality. Applying the same TTA procedure to different geometric prior models consistently improves their trajectory estimates, showing that GeoWeaver is not tied to a specific GPM.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method-section" id="method">
+      <div class="wide-container">
+        <div class="section-heading">
+          <p>Approach</p>
+          <h2>Method overview</h2>
+          <div class="section-description">A feed-forward geometric prior model supplies reliable local predictions; hierarchical test-time adaptation turns them into a coherent global reconstruction.</div>
+        </div>
+        <figure class="paper-figure">
+          <img src="./public/images/pipeline.png" alt="GeoWeaver geometric prior model and hierarchical test-time adaptation pipeline" width="5757" height="3084" loading="lazy">
+          <figcaption><strong>GeoWeaver architecture.</strong> GeoWeaver predicts chunk-wise depth, confidence, and cameras, then assembles them through sequential initialization, global chunk alignment, and frame-level refinement.</figcaption>
+        </figure>
+        <div class="method-steps">
+          <article><span>01</span><h3>Chunk-wise geometric priors</h3><p>A long RGB sequence is split into short chunks with one shared frame. The GPM predicts depth, confidence, camera pose, and intrinsics at bounded memory cost.</p></article>
+          <article><span>02</span><h3>Dense correspondence routing</h3><p>Confidence-aware dense matches connect temporal neighbors and long-range co-visible views, supplying constraints to each adaptation stage.</p></article>
+          <article><span>03</span><h3>Hierarchical geometric assembly</h3><p>Global Sim(3) alignment corrects chunk drift before joint refinement of frame poses, affine depth, and camera intrinsics.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results-section" id="results">
+      <div class="wide-container">
+        <div class="section-heading">
+          <p>Evaluation</p>
+          <h2>Qualitative results</h2>
+          <div class="section-description">GeoWeaver produces coherent geometry, better aligned trajectories, and fewer discontinuities while using only one shared frame between adjacent chunks.</div>
+        </div>
+        <figure class="paper-figure result-figure">
+          <img src="./public/images/comparison.png" alt="Qualitative GeoWeaver point-cloud comparison on indoor and outdoor scenes" width="2521" height="963" loading="lazy">
+          <figcaption>Representative comparisons on Observatory and the Mip-NeRF 360 room sequence.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section bibtex-section" id="bibtex">
+      <div class="container">
+        <div class="section-heading"><p>Reference</p><h2>BibTeX</h2><div class="section-description">Citation information will be updated when the paper is released.</div></div>
+        <div class="bibtex-card">
+          <button class="copy-button" id="copyBibtex" type="button">Copy BibTeX</button>
+          <pre><code id="bibtexCode">@article{jiang2026geoweaver,
+  title={GeoWeaver: Accurate Long-Sequence 3D Reconstruction via Hierarchical Geometric Assembly},
+  author={Jiang, Tinghao and Tang, Sheng and Wei, Shengzhe and Fang, Juntong and Zhang, Weiqi and Zhou, Junsheng and Li, Zesong},
+  year={2026}
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-content">
+        <p>This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a>, adopted from the <a href="https://nerfies.github.io/" target="_blank" rel="noopener noreferrer">Nerfies</a> project page.</p>
+        <p>This website is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+      </div>
+    </footer>
+  </main>
+  <script>
+    const copyButton = document.getElementById("copyBibtex");
+    copyButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(document.getElementById("bibtexCode").textContent);
+        copyButton.textContent = "Copied";
+        window.setTimeout(() => { copyButton.textContent = "Copy BibTeX"; }, 1800);
+      } catch {
+        copyButton.textContent = "Copy failed";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,508 @@
+{
+  "version": 1,
+  "name": "dance-twirl/opend4rt",
+  "frameCount": 50,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -5.448882102966309,
+      -1.3872206211090088,
+      -7.352097511291504
+    ],
+    "max": [
+      3.192915439605713,
+      2.306199073791504,
+      0.07499735802412033
+    ],
+    "scale": [
+      0.00013186538126319647,
+      5.6357970606768504e-05,
+      0.00011333020665915683
+    ]
+  },
+  "viewBounds": {
+    "min": [
+      -1.2862122067269024,
+      -0.12711462601486254,
+      -1.8695934631816307
+    ],
+    "max": [
+      0.36308609860911234,
+      0.6151885600434933,
+      -0.3190458656145391
+    ],
+    "percentiles": [
+      1,
+      99
+    ],
+    "coordinateFrame": "tma"
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 188012,
+    "bitmapSize": 23502,
+    "prefixEndFrame": 49,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 3883
+      },
+      {
+        "mode": "prefix",
+        "count": 7745
+      },
+      {
+        "mode": "prefix",
+        "count": 11607
+      },
+      {
+        "mode": "prefix",
+        "count": 15464
+      },
+      {
+        "mode": "prefix",
+        "count": 19322
+      },
+      {
+        "mode": "prefix",
+        "count": 23144
+      },
+      {
+        "mode": "prefix",
+        "count": 26945
+      },
+      {
+        "mode": "prefix",
+        "count": 30740
+      },
+      {
+        "mode": "prefix",
+        "count": 34546
+      },
+      {
+        "mode": "prefix",
+        "count": 38374
+      },
+      {
+        "mode": "prefix",
+        "count": 42244
+      },
+      {
+        "mode": "prefix",
+        "count": 46131
+      },
+      {
+        "mode": "prefix",
+        "count": 50017
+      },
+      {
+        "mode": "prefix",
+        "count": 53923
+      },
+      {
+        "mode": "prefix",
+        "count": 57809
+      },
+      {
+        "mode": "prefix",
+        "count": 61679
+      },
+      {
+        "mode": "prefix",
+        "count": 65516
+      },
+      {
+        "mode": "prefix",
+        "count": 69328
+      },
+      {
+        "mode": "prefix",
+        "count": 73130
+      },
+      {
+        "mode": "prefix",
+        "count": 76960
+      },
+      {
+        "mode": "prefix",
+        "count": 80805
+      },
+      {
+        "mode": "prefix",
+        "count": 84658
+      },
+      {
+        "mode": "prefix",
+        "count": 88470
+      },
+      {
+        "mode": "prefix",
+        "count": 92239
+      },
+      {
+        "mode": "prefix",
+        "count": 95993
+      },
+      {
+        "mode": "prefix",
+        "count": 99738
+      },
+      {
+        "mode": "prefix",
+        "count": 103486
+      },
+      {
+        "mode": "prefix",
+        "count": 107221
+      },
+      {
+        "mode": "prefix",
+        "count": 110951
+      },
+      {
+        "mode": "prefix",
+        "count": 114695
+      },
+      {
+        "mode": "prefix",
+        "count": 118437
+      },
+      {
+        "mode": "prefix",
+        "count": 122209
+      },
+      {
+        "mode": "prefix",
+        "count": 125994
+      },
+      {
+        "mode": "prefix",
+        "count": 129758
+      },
+      {
+        "mode": "prefix",
+        "count": 133472
+      },
+      {
+        "mode": "prefix",
+        "count": 137179
+      },
+      {
+        "mode": "prefix",
+        "count": 140896
+      },
+      {
+        "mode": "prefix",
+        "count": 144616
+      },
+      {
+        "mode": "prefix",
+        "count": 148341
+      },
+      {
+        "mode": "prefix",
+        "count": 152034
+      },
+      {
+        "mode": "prefix",
+        "count": 155685
+      },
+      {
+        "mode": "prefix",
+        "count": 159323
+      },
+      {
+        "mode": "prefix",
+        "count": 162921
+      },
+      {
+        "mode": "prefix",
+        "count": 166494
+      },
+      {
+        "mode": "prefix",
+        "count": 170055
+      },
+      {
+        "mode": "prefix",
+        "count": 173597
+      },
+      {
+        "mode": "prefix",
+        "count": 177157
+      },
+      {
+        "mode": "prefix",
+        "count": 180727
+      },
+      {
+        "mode": "prefix",
+        "count": 184350
+      },
+      {
+        "mode": "prefix",
+        "count": 188012
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "camera": {
+    "frustumSegmentCount": 0,
+    "centerCount": 0,
+    "frameSegmentCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "frameCenterCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "centerRadius": 0.004,
+    "frustumScale": 1.0
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 1128072
+    },
+    "staticColors": {
+      "offset": 1128072,
+      "byteLength": 752048
+    },
+    "dynamicPositions": {
+      "offset": 1880120,
+      "byteLength": 614400
+    },
+    "dynamicColors": {
+      "offset": 2494520,
+      "byteLength": 8192
+    },
+    "trajectoryColors": {
+      "offset": 2502712,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 2510904,
+      "byteLength": 0
+    },
+    "cameraFrustumColors": {
+      "offset": 2510904,
+      "byteLength": 0
+    },
+    "cameraCenterPositions": {
+      "offset": 2510904,
+      "byteLength": 0
+    },
+    "cameraCenterColors": {
+      "offset": 2510904,
+      "byteLength": 0
+    },
+    "staticBitmaps": {
+      "offset": 2510904,
+      "byteLength": 0
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 2510904,
+    "sha256": "4da2aedfc2d9254050342dc2a1f9c3dd24aaf47e7d4eb9fbd45633ff91232311"
+  },
+  "validation": {
+    "quantizationMaxError": 6.651878356933594e-05,
+    "sourceRrdBytes": 169686026
+  },
+  "alignment": {
+    "reference": "tma",
+    "scale": 0.25345764543627763,
+    "rotation": [
+      [
+        0.9981009426161583,
+        0.059913921602174604,
+        0.01431189529672495
+      ],
+      [
+        -0.05984316613139812,
+        0.9981936025648337,
+        -0.005322336517873774
+      ],
+      [
+        -0.014604924378640846,
+        0.004455759967512971,
+        0.9998834143974019
+      ]
+    ],
+    "translation": [
+      -0.12311135200925483,
+      0.13068827061554908,
+      -0.2023558275821835
+    ],
+    "fit": {
+      "correspondence": "static-geometry-icp",
+      "keepFraction": 0.45,
+      "medianResidual": 0.08087593873544785,
+      "rotationDegrees": 3.542741434468337
+    }
+  }
+}

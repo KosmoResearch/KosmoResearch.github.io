@@ -1,0 +1,631 @@
+{
+  "version": 1,
+  "name": "flamingo/tma",
+  "frameCount": 50,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -0.5695347785949707,
+      -0.15300896763801575,
+      -1.4267863035202026
+    ],
+    "max": [
+      0.9595305919647217,
+      0.38874000310897827,
+      -0.4660704433917999
+    ],
+    "scale": [
+      2.333204247406684e-05,
+      8.266560143965762e-06,
+      1.4659584849141538e-05
+    ]
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 831347,
+    "bitmapSize": 103919,
+    "prefixEndFrame": 13,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 17358
+      },
+      {
+        "mode": "prefix",
+        "count": 34730
+      },
+      {
+        "mode": "prefix",
+        "count": 52100
+      },
+      {
+        "mode": "prefix",
+        "count": 69486
+      },
+      {
+        "mode": "prefix",
+        "count": 86854
+      },
+      {
+        "mode": "prefix",
+        "count": 104230
+      },
+      {
+        "mode": "prefix",
+        "count": 121618
+      },
+      {
+        "mode": "prefix",
+        "count": 139022
+      },
+      {
+        "mode": "prefix",
+        "count": 156439
+      },
+      {
+        "mode": "prefix",
+        "count": 173853
+      },
+      {
+        "mode": "prefix",
+        "count": 191261
+      },
+      {
+        "mode": "prefix",
+        "count": 208675
+      },
+      {
+        "mode": "prefix",
+        "count": 226091
+      },
+      {
+        "mode": "prefix",
+        "count": 243507
+      },
+      {
+        "mode": "bitmap",
+        "offset": 0,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 103919,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 207838,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 311757,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 415676,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 519595,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 623514,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 727433,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 831352,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 935271,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1039190,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1143109,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1247028,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1350947,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1454866,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1558785,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1662704,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1766623,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1870542,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1974461,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2078380,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2182299,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2286218,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2390137,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2494056,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2597975,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2701894,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2805813,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2909732,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3013651,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3117570,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3221489,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3325408,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3429327,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3533246,
+        "byteLength": 103919,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3637165,
+        "byteLength": 103919,
+        "count": 250000
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "camera": {
+    "frustumSegmentCount": 400,
+    "centerCount": 50,
+    "frameSegmentCounts": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      184,
+      192,
+      200,
+      208,
+      216,
+      224,
+      232,
+      240,
+      248,
+      256,
+      264,
+      272,
+      280,
+      288,
+      296,
+      304,
+      312,
+      320,
+      328,
+      336,
+      344,
+      352,
+      360,
+      368,
+      376,
+      384,
+      392,
+      400
+    ],
+    "frameCenterCounts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "centerRadius": 0.004
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 4988082
+    },
+    "staticColors": {
+      "offset": 4988084,
+      "byteLength": 3325388
+    },
+    "dynamicPositions": {
+      "offset": 8313472,
+      "byteLength": 614400
+    },
+    "dynamicColors": {
+      "offset": 8927872,
+      "byteLength": 8192
+    },
+    "trajectoryColors": {
+      "offset": 8936064,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 8944256,
+      "byteLength": 9600
+    },
+    "cameraFrustumColors": {
+      "offset": 8953856,
+      "byteLength": 3200
+    },
+    "cameraCenterPositions": {
+      "offset": 8957056,
+      "byteLength": 600
+    },
+    "cameraCenterColors": {
+      "offset": 8957656,
+      "byteLength": 200
+    },
+    "staticBitmaps": {
+      "offset": 8957856,
+      "byteLength": 3741084
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 12698940,
+    "sha256": "f192139875c63b8761233f9c12807f55aa626ced450c3ffb024ff81d12c02b95"
+  },
+  "validation": {
+    "quantizationMaxError": 1.1742115020751953e-05,
+    "sourceRrdBytes": 303244836
+  },
+  "viewBounds": {
+    "min": [
+      -0.34708708564721746,
+      -0.13849288802521187,
+      -1.278196751489304
+    ],
+    "max": [
+      0.7741108834015904,
+      0.320537127591397,
+      -0.5764131055912003
+    ],
+    "percentiles": [
+      1,
+      99
+    ],
+    "coordinateFrame": "tma"
+  },
+  "alignment": {
+    "reference": "tma",
+    "scale": 1.0,
+    "rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "translation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fit": {
+      "correspondence": "reference",
+      "keepFraction": 1.0,
+      "medianResidual": 0.0,
+      "rotationDegrees": 0.0
+    }
+  },
+  "rgbFrames": [
+    "./comparison-rgb/flamingo/tma/000.webp",
+    "./comparison-rgb/flamingo/tma/001.webp",
+    "./comparison-rgb/flamingo/tma/002.webp",
+    "./comparison-rgb/flamingo/tma/003.webp",
+    "./comparison-rgb/flamingo/tma/004.webp",
+    "./comparison-rgb/flamingo/tma/005.webp",
+    "./comparison-rgb/flamingo/tma/006.webp",
+    "./comparison-rgb/flamingo/tma/007.webp",
+    "./comparison-rgb/flamingo/tma/008.webp",
+    "./comparison-rgb/flamingo/tma/009.webp",
+    "./comparison-rgb/flamingo/tma/010.webp",
+    "./comparison-rgb/flamingo/tma/011.webp",
+    "./comparison-rgb/flamingo/tma/012.webp",
+    "./comparison-rgb/flamingo/tma/013.webp",
+    "./comparison-rgb/flamingo/tma/014.webp",
+    "./comparison-rgb/flamingo/tma/015.webp",
+    "./comparison-rgb/flamingo/tma/016.webp",
+    "./comparison-rgb/flamingo/tma/017.webp",
+    "./comparison-rgb/flamingo/tma/018.webp",
+    "./comparison-rgb/flamingo/tma/019.webp",
+    "./comparison-rgb/flamingo/tma/020.webp",
+    "./comparison-rgb/flamingo/tma/021.webp",
+    "./comparison-rgb/flamingo/tma/022.webp",
+    "./comparison-rgb/flamingo/tma/023.webp",
+    "./comparison-rgb/flamingo/tma/024.webp",
+    "./comparison-rgb/flamingo/tma/025.webp",
+    "./comparison-rgb/flamingo/tma/026.webp",
+    "./comparison-rgb/flamingo/tma/027.webp",
+    "./comparison-rgb/flamingo/tma/028.webp",
+    "./comparison-rgb/flamingo/tma/029.webp",
+    "./comparison-rgb/flamingo/tma/030.webp",
+    "./comparison-rgb/flamingo/tma/031.webp",
+    "./comparison-rgb/flamingo/tma/032.webp",
+    "./comparison-rgb/flamingo/tma/033.webp",
+    "./comparison-rgb/flamingo/tma/034.webp",
+    "./comparison-rgb/flamingo/tma/035.webp",
+    "./comparison-rgb/flamingo/tma/036.webp",
+    "./comparison-rgb/flamingo/tma/037.webp",
+    "./comparison-rgb/flamingo/tma/038.webp",
+    "./comparison-rgb/flamingo/tma/039.webp",
+    "./comparison-rgb/flamingo/tma/040.webp",
+    "./comparison-rgb/flamingo/tma/041.webp",
+    "./comparison-rgb/flamingo/tma/042.webp",
+    "./comparison-rgb/flamingo/tma/043.webp",
+    "./comparison-rgb/flamingo/tma/044.webp",
+    "./comparison-rgb/flamingo/tma/045.webp",
+    "./comparison-rgb/flamingo/tma/046.webp",
+    "./comparison-rgb/flamingo/tma/047.webp",
+    "./comparison-rgb/flamingo/tma/048.webp",
+    "./comparison-rgb/flamingo/tma/049.webp"
+  ]
+}

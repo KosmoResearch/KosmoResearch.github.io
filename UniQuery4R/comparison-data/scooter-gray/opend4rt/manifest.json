@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "name": "scooter-gray/opend4rt",
+  "frameCount": 23,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -6.433728218078613,
+      -0.5549688339233398,
+      -10.120437622070312
+    ],
+    "max": [
+      2.7615838050842285,
+      1.555003046989441,
+      -2.3604962825775146
+    ],
+    "scale": [
+      0.0001403114729328081,
+      3.219610880478285e-05,
+      0.00011840910883620381
+    ]
+  },
+  "viewBounds": {
+    "min": [
+      -1.1573075175358334,
+      -0.09297895141311319,
+      -1.8534876326500553
+    ],
+    "max": [
+      0.37581756653616266,
+      0.3064676304203705,
+      -0.5537181856920913
+    ],
+    "percentiles": [
+      1,
+      99
+    ],
+    "coordinateFrame": "tma"
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 87309,
+    "bitmapSize": 10914,
+    "prefixEndFrame": 22,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 3937
+      },
+      {
+        "mode": "prefix",
+        "count": 7861
+      },
+      {
+        "mode": "prefix",
+        "count": 11787
+      },
+      {
+        "mode": "prefix",
+        "count": 15690
+      },
+      {
+        "mode": "prefix",
+        "count": 19586
+      },
+      {
+        "mode": "prefix",
+        "count": 23463
+      },
+      {
+        "mode": "prefix",
+        "count": 27356
+      },
+      {
+        "mode": "prefix",
+        "count": 31307
+      },
+      {
+        "mode": "prefix",
+        "count": 35269
+      },
+      {
+        "mode": "prefix",
+        "count": 39199
+      },
+      {
+        "mode": "prefix",
+        "count": 43077
+      },
+      {
+        "mode": "prefix",
+        "count": 46859
+      },
+      {
+        "mode": "prefix",
+        "count": 50630
+      },
+      {
+        "mode": "prefix",
+        "count": 54373
+      },
+      {
+        "mode": "prefix",
+        "count": 58103
+      },
+      {
+        "mode": "prefix",
+        "count": 61804
+      },
+      {
+        "mode": "prefix",
+        "count": 65509
+      },
+      {
+        "mode": "prefix",
+        "count": 69171
+      },
+      {
+        "mode": "prefix",
+        "count": 72829
+      },
+      {
+        "mode": "prefix",
+        "count": 76462
+      },
+      {
+        "mode": "prefix",
+        "count": 80091
+      },
+      {
+        "mode": "prefix",
+        "count": 83698
+      },
+      {
+        "mode": "prefix",
+        "count": 87309
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "camera": {
+    "frustumSegmentCount": 0,
+    "centerCount": 0,
+    "frameSegmentCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "frameCenterCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "centerRadius": 0.004,
+    "frustumScale": 1.0
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 523854
+    },
+    "staticColors": {
+      "offset": 523856,
+      "byteLength": 349236
+    },
+    "dynamicPositions": {
+      "offset": 873092,
+      "byteLength": 282624
+    },
+    "dynamicColors": {
+      "offset": 1155716,
+      "byteLength": 8192
+    },
+    "trajectoryColors": {
+      "offset": 1163908,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 1172100,
+      "byteLength": 0
+    },
+    "cameraFrustumColors": {
+      "offset": 1172100,
+      "byteLength": 0
+    },
+    "cameraCenterPositions": {
+      "offset": 1172100,
+      "byteLength": 0
+    },
+    "cameraCenterColors": {
+      "offset": 1172100,
+      "byteLength": 0
+    },
+    "staticBitmaps": {
+      "offset": 1172100,
+      "byteLength": 0
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 1172100,
+    "sha256": "71af3d9dc35915e48c2c708d4aa896d046186f772840617a291039f0fd79a553"
+  },
+  "validation": {
+    "quantizationMaxError": 7.104873657226562e-05,
+    "sourceRrdBytes": 168131524
+  },
+  "alignment": {
+    "reference": "tma",
+    "scale": 0.22772061702032045,
+    "rotation": [
+      [
+        0.9999072627643557,
+        0.013424156198166481,
+        0.002293011439254968
+      ],
+      [
+        -0.0134525355397134,
+        0.9998270002325229,
+        0.012845189511532053
+      ],
+      [
+        -0.0021201789184109093,
+        -0.012874845102044721,
+        0.9999148679787455
+      ]
+    ],
+    "translation": [
+      0.11639065185752123,
+      0.02520514061743971,
+      0.057484081649861185
+    ],
+    "fit": {
+      "correspondence": "static-geometry-icp",
+      "keepFraction": 0.45,
+      "medianResidual": 0.016549152319224374,
+      "rotationDegrees": 1.0732514809789868
+    }
+  }
+}

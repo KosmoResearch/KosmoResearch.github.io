@@ -1,0 +1,568 @@
+{
+  "version": 1,
+  "name": "breakdance",
+  "frameCount": 50,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -0.5766475796699524,
+      -0.1551671177148819,
+      -2.0540661811828613
+    ],
+    "max": [
+      0.4635073244571686,
+      0.4197932481765747,
+      -0.2651738226413727
+    ],
+    "scale": [
+      1.5871746654738672e-05,
+      8.773332410783041e-06,
+      2.729674815782346e-05
+    ]
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 571150,
+    "bitmapSize": 71394,
+    "prefixEndFrame": 20,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 11593
+      },
+      {
+        "mode": "prefix",
+        "count": 23196
+      },
+      {
+        "mode": "prefix",
+        "count": 34840
+      },
+      {
+        "mode": "prefix",
+        "count": 46559
+      },
+      {
+        "mode": "prefix",
+        "count": 58201
+      },
+      {
+        "mode": "prefix",
+        "count": 70043
+      },
+      {
+        "mode": "prefix",
+        "count": 81792
+      },
+      {
+        "mode": "prefix",
+        "count": 93604
+      },
+      {
+        "mode": "prefix",
+        "count": 105346
+      },
+      {
+        "mode": "prefix",
+        "count": 116983
+      },
+      {
+        "mode": "prefix",
+        "count": 128564
+      },
+      {
+        "mode": "prefix",
+        "count": 140079
+      },
+      {
+        "mode": "prefix",
+        "count": 151635
+      },
+      {
+        "mode": "prefix",
+        "count": 163498
+      },
+      {
+        "mode": "prefix",
+        "count": 175242
+      },
+      {
+        "mode": "prefix",
+        "count": 186843
+      },
+      {
+        "mode": "prefix",
+        "count": 198416
+      },
+      {
+        "mode": "prefix",
+        "count": 209997
+      },
+      {
+        "mode": "prefix",
+        "count": 221657
+      },
+      {
+        "mode": "prefix",
+        "count": 233295
+      },
+      {
+        "mode": "prefix",
+        "count": 244879
+      },
+      {
+        "mode": "bitmap",
+        "offset": 0,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 71394,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 142788,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 214182,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 285576,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 356970,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 428364,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 499758,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 571152,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 642546,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 713940,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 785334,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 856728,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 928122,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 999516,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1070910,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1142304,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1213698,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1285092,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1356486,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1427880,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1499274,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1570668,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1642062,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1713456,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1784850,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1856244,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1927638,
+        "byteLength": 71394,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1999032,
+        "byteLength": 71394,
+        "count": 250000
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 3426900
+    },
+    "staticColors": {
+      "offset": 3426900,
+      "byteLength": 2284600
+    },
+    "dynamicPositions": {
+      "offset": 5711500,
+      "byteLength": 614400
+    },
+    "dynamicColors": {
+      "offset": 6325900,
+      "byteLength": 8192
+    },
+    "staticBitmaps": {
+      "offset": 6334092,
+      "byteLength": 2070426
+    },
+    "trajectoryColors": {
+      "offset": 8404520,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 8412712,
+      "byteLength": 9600
+    },
+    "cameraFrustumColors": {
+      "offset": 8422312,
+      "byteLength": 3200
+    },
+    "cameraCenterPositions": {
+      "offset": 8425512,
+      "byteLength": 600
+    },
+    "cameraCenterColors": {
+      "offset": 8426112,
+      "byteLength": 200
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 8426312,
+    "sha256": "c256f3cf132d37b73c0aa0cde874a49fe7c71ef9a38dd1751bd1e3eadcbb96d1"
+  },
+  "validation": {
+    "quantizationMaxError": 1.3768672943115234e-05,
+    "sourceRrdBytes": 295409698
+  },
+  "camera": {
+    "frustumSegmentCount": 400,
+    "centerCount": 50,
+    "frameSegmentCounts": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      184,
+      192,
+      200,
+      208,
+      216,
+      224,
+      232,
+      240,
+      248,
+      256,
+      264,
+      272,
+      280,
+      288,
+      296,
+      304,
+      312,
+      320,
+      328,
+      336,
+      344,
+      352,
+      360,
+      368,
+      376,
+      384,
+      392,
+      400
+    ],
+    "frameCenterCounts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "centerRadius": 0.004
+  },
+  "rgbFrames": [
+    "./gallery-rgb/breakdance/000.webp",
+    "./gallery-rgb/breakdance/001.webp",
+    "./gallery-rgb/breakdance/002.webp",
+    "./gallery-rgb/breakdance/003.webp",
+    "./gallery-rgb/breakdance/004.webp",
+    "./gallery-rgb/breakdance/005.webp",
+    "./gallery-rgb/breakdance/006.webp",
+    "./gallery-rgb/breakdance/007.webp",
+    "./gallery-rgb/breakdance/008.webp",
+    "./gallery-rgb/breakdance/009.webp",
+    "./gallery-rgb/breakdance/010.webp",
+    "./gallery-rgb/breakdance/011.webp",
+    "./gallery-rgb/breakdance/012.webp",
+    "./gallery-rgb/breakdance/013.webp",
+    "./gallery-rgb/breakdance/014.webp",
+    "./gallery-rgb/breakdance/015.webp",
+    "./gallery-rgb/breakdance/016.webp",
+    "./gallery-rgb/breakdance/017.webp",
+    "./gallery-rgb/breakdance/018.webp",
+    "./gallery-rgb/breakdance/019.webp",
+    "./gallery-rgb/breakdance/020.webp",
+    "./gallery-rgb/breakdance/021.webp",
+    "./gallery-rgb/breakdance/022.webp",
+    "./gallery-rgb/breakdance/023.webp",
+    "./gallery-rgb/breakdance/024.webp",
+    "./gallery-rgb/breakdance/025.webp",
+    "./gallery-rgb/breakdance/026.webp",
+    "./gallery-rgb/breakdance/027.webp",
+    "./gallery-rgb/breakdance/028.webp",
+    "./gallery-rgb/breakdance/029.webp",
+    "./gallery-rgb/breakdance/030.webp",
+    "./gallery-rgb/breakdance/031.webp",
+    "./gallery-rgb/breakdance/032.webp",
+    "./gallery-rgb/breakdance/033.webp",
+    "./gallery-rgb/breakdance/034.webp",
+    "./gallery-rgb/breakdance/035.webp",
+    "./gallery-rgb/breakdance/036.webp",
+    "./gallery-rgb/breakdance/037.webp",
+    "./gallery-rgb/breakdance/038.webp",
+    "./gallery-rgb/breakdance/039.webp",
+    "./gallery-rgb/breakdance/040.webp",
+    "./gallery-rgb/breakdance/041.webp",
+    "./gallery-rgb/breakdance/042.webp",
+    "./gallery-rgb/breakdance/043.webp",
+    "./gallery-rgb/breakdance/044.webp",
+    "./gallery-rgb/breakdance/045.webp",
+    "./gallery-rgb/breakdance/046.webp",
+    "./gallery-rgb/breakdance/047.webp",
+    "./gallery-rgb/breakdance/048.webp",
+    "./gallery-rgb/breakdance/049.webp"
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "version": 1,
+  "name": "rollerblade",
+  "frameCount": 35,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -0.5434095859527588,
+      -0.16823247075080872,
+      -1.1788740158081055
+    ],
+    "max": [
+      0.6006267666816711,
+      0.4473627805709839,
+      -0.26468029618263245
+    ],
+    "scale": [
+      1.745687404763885e-05,
+      9.393381333211437e-06,
+      1.3949702406534925e-05
+    ]
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 425863,
+    "bitmapSize": 53233,
+    "prefixEndFrame": 19,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 12399
+      },
+      {
+        "mode": "prefix",
+        "count": 24794
+      },
+      {
+        "mode": "prefix",
+        "count": 37201
+      },
+      {
+        "mode": "prefix",
+        "count": 49615
+      },
+      {
+        "mode": "prefix",
+        "count": 62037
+      },
+      {
+        "mode": "prefix",
+        "count": 74472
+      },
+      {
+        "mode": "prefix",
+        "count": 86867
+      },
+      {
+        "mode": "prefix",
+        "count": 99290
+      },
+      {
+        "mode": "prefix",
+        "count": 111711
+      },
+      {
+        "mode": "prefix",
+        "count": 124147
+      },
+      {
+        "mode": "prefix",
+        "count": 136578
+      },
+      {
+        "mode": "prefix",
+        "count": 149006
+      },
+      {
+        "mode": "prefix",
+        "count": 161429
+      },
+      {
+        "mode": "prefix",
+        "count": 173869
+      },
+      {
+        "mode": "prefix",
+        "count": 186318
+      },
+      {
+        "mode": "prefix",
+        "count": 198755
+      },
+      {
+        "mode": "prefix",
+        "count": 211185
+      },
+      {
+        "mode": "prefix",
+        "count": 223657
+      },
+      {
+        "mode": "prefix",
+        "count": 236139
+      },
+      {
+        "mode": "prefix",
+        "count": 248609
+      },
+      {
+        "mode": "bitmap",
+        "offset": 0,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 53233,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 106466,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 159699,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 212932,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 266165,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 319398,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 372631,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 425864,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 479097,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 532330,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 585563,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 638796,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 692029,
+        "byteLength": 53233,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 745262,
+        "byteLength": 53233,
+        "count": 250000
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 2555178
+    },
+    "staticColors": {
+      "offset": 2555180,
+      "byteLength": 1703452
+    },
+    "dynamicPositions": {
+      "offset": 4258632,
+      "byteLength": 430080
+    },
+    "dynamicColors": {
+      "offset": 4688712,
+      "byteLength": 8192
+    },
+    "staticBitmaps": {
+      "offset": 4696904,
+      "byteLength": 798495
+    },
+    "trajectoryColors": {
+      "offset": 5495400,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 5503592,
+      "byteLength": 6720
+    },
+    "cameraFrustumColors": {
+      "offset": 5510312,
+      "byteLength": 2240
+    },
+    "cameraCenterPositions": {
+      "offset": 5512552,
+      "byteLength": 420
+    },
+    "cameraCenterColors": {
+      "offset": 5512972,
+      "byteLength": 140
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 5513112,
+    "sha256": "9783ae894025414ac1cb18ab306bd2e2f6ff0667a12a447a862cf1aa1156bba8"
+  },
+  "validation": {
+    "quantizationMaxError": 8.881092071533203e-06,
+    "sourceRrdBytes": 186395463
+  },
+  "camera": {
+    "frustumSegmentCount": 280,
+    "centerCount": 35,
+    "frameSegmentCounts": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      184,
+      192,
+      200,
+      208,
+      216,
+      224,
+      232,
+      240,
+      248,
+      256,
+      264,
+      272,
+      280
+    ],
+    "frameCenterCounts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "centerRadius": 0.004
+  },
+  "rgbFrames": [
+    "./gallery-rgb/rollerblade/000.webp",
+    "./gallery-rgb/rollerblade/001.webp",
+    "./gallery-rgb/rollerblade/002.webp",
+    "./gallery-rgb/rollerblade/003.webp",
+    "./gallery-rgb/rollerblade/004.webp",
+    "./gallery-rgb/rollerblade/005.webp",
+    "./gallery-rgb/rollerblade/006.webp",
+    "./gallery-rgb/rollerblade/007.webp",
+    "./gallery-rgb/rollerblade/008.webp",
+    "./gallery-rgb/rollerblade/009.webp",
+    "./gallery-rgb/rollerblade/010.webp",
+    "./gallery-rgb/rollerblade/011.webp",
+    "./gallery-rgb/rollerblade/012.webp",
+    "./gallery-rgb/rollerblade/013.webp",
+    "./gallery-rgb/rollerblade/014.webp",
+    "./gallery-rgb/rollerblade/015.webp",
+    "./gallery-rgb/rollerblade/016.webp",
+    "./gallery-rgb/rollerblade/017.webp",
+    "./gallery-rgb/rollerblade/018.webp",
+    "./gallery-rgb/rollerblade/019.webp",
+    "./gallery-rgb/rollerblade/020.webp",
+    "./gallery-rgb/rollerblade/021.webp",
+    "./gallery-rgb/rollerblade/022.webp",
+    "./gallery-rgb/rollerblade/023.webp",
+    "./gallery-rgb/rollerblade/024.webp",
+    "./gallery-rgb/rollerblade/025.webp",
+    "./gallery-rgb/rollerblade/026.webp",
+    "./gallery-rgb/rollerblade/027.webp",
+    "./gallery-rgb/rollerblade/028.webp",
+    "./gallery-rgb/rollerblade/029.webp",
+    "./gallery-rgb/rollerblade/030.webp",
+    "./gallery-rgb/rollerblade/031.webp",
+    "./gallery-rgb/rollerblade/032.webp",
+    "./gallery-rgb/rollerblade/033.webp",
+    "./gallery-rgb/rollerblade/034.webp"
+  ]
+}

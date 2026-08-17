@@ -1,0 +1,40 @@
+# Local and generated dependencies
+**/node_modules/
+**/dist/
+**/.next/
+**/.vite/
+**/.wrangler/
+**/out/
+**/tsconfig.tsbuildinfo
+
+# GeoWeaver's former framework source is retained locally only. The deployable
+# version is GeoWeaver/index.html + app/globals.css + public assets.
+GeoWeaver/app/*
+!GeoWeaver/app/globals.css
+GeoWeaver/build/
+GeoWeaver/tests/
+GeoWeaver/worker/
+GeoWeaver/package.json
+GeoWeaver/package-lock.json
+GeoWeaver/next.config.ts
+GeoWeaver/next-env.d.ts
+GeoWeaver/vite.config.ts
+GeoWeaver/tsconfig.json
+GeoWeaver/eslint.config.mjs
+GeoWeaver/postcss.config.mjs
+GeoWeaver/README.md
+
+# Local configuration and logs
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+
+# Manuscripts and editable paper sources must never be published here
+**/*.pdf
+**/*.tex
+**/*.bib
+**/*.doc
+**/*.docx
+**/*supplementary*/

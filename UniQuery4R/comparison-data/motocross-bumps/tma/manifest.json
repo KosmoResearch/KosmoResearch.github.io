@@ -1,0 +1,633 @@
+{
+  "version": 1,
+  "name": "motocross-bumps/tma",
+  "frameCount": 50,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -1.7981078624725342,
+      -0.21871529519557953,
+      -6.668810844421387
+    ],
+    "max": [
+      2.9827044010162354,
+      1.2088505029678345,
+      1.7818474769592285
+    ],
+    "scale": [
+      7.295051909750327e-05,
+      2.178325848944951e-05,
+      0.00012894878454972059
+    ]
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 765085,
+    "bitmapSize": 95636,
+    "prefixEndFrame": 12,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 18228
+      },
+      {
+        "mode": "prefix",
+        "count": 36447
+      },
+      {
+        "mode": "prefix",
+        "count": 54649
+      },
+      {
+        "mode": "prefix",
+        "count": 72796
+      },
+      {
+        "mode": "prefix",
+        "count": 90914
+      },
+      {
+        "mode": "prefix",
+        "count": 109005
+      },
+      {
+        "mode": "prefix",
+        "count": 127063
+      },
+      {
+        "mode": "prefix",
+        "count": 145093
+      },
+      {
+        "mode": "prefix",
+        "count": 163076
+      },
+      {
+        "mode": "prefix",
+        "count": 181037
+      },
+      {
+        "mode": "prefix",
+        "count": 198977
+      },
+      {
+        "mode": "prefix",
+        "count": 216882
+      },
+      {
+        "mode": "prefix",
+        "count": 234775
+      },
+      {
+        "mode": "bitmap",
+        "offset": 0,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 95636,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 191272,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 286908,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 382544,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 478180,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 573816,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 669452,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 765088,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 860724,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 956360,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1051996,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1147632,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1243268,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1338904,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1434540,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1530176,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1625812,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1721448,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1817084,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1912720,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2008356,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2103992,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2199628,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2295264,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2390900,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2486536,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2582172,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2677808,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2773444,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2869080,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2964716,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3060352,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3155988,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3251624,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3347260,
+        "byteLength": 95636,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3442896,
+        "byteLength": 95636,
+        "count": 250000
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "camera": {
+    "frustumSegmentCount": 400,
+    "centerCount": 50,
+    "frameSegmentCounts": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      184,
+      192,
+      200,
+      208,
+      216,
+      224,
+      232,
+      240,
+      248,
+      256,
+      264,
+      272,
+      280,
+      288,
+      296,
+      304,
+      312,
+      320,
+      328,
+      336,
+      344,
+      352,
+      360,
+      368,
+      376,
+      384,
+      392,
+      400
+    ],
+    "frameCenterCounts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "centerRadius": 0.004
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 4590510
+    },
+    "staticColors": {
+      "offset": 4590512,
+      "byteLength": 3060340
+    },
+    "dynamicPositions": {
+      "offset": 7650852,
+      "byteLength": 614400
+    },
+    "dynamicColors": {
+      "offset": 8265252,
+      "byteLength": 8192
+    },
+    "trajectoryColors": {
+      "offset": 8273444,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 8281636,
+      "byteLength": 9600
+    },
+    "cameraFrustumColors": {
+      "offset": 8291236,
+      "byteLength": 3200
+    },
+    "cameraCenterPositions": {
+      "offset": 8294436,
+      "byteLength": 600
+    },
+    "cameraCenterColors": {
+      "offset": 8295036,
+      "byteLength": 200
+    },
+    "staticBitmaps": {
+      "offset": 8295236,
+      "byteLength": 3538532
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 11833768,
+    "sha256": "6b6b08fe99a7836fa0f524547346ac8e8a0e5a4f58d59307510bd8e4676c56c2"
+  },
+  "validation": {
+    "quantizationMaxError": 6.508827209472656e-05,
+    "sourceRrdBytes": 306591882
+  },
+  "viewBounds": {
+    "min": [
+      -0.9219838001945755,
+      -0.18111739104278968,
+      -5.695892264993745
+    ],
+    "max": [
+      1.9403990618002742,
+      0.7765617851873685,
+      0.859219197591301
+    ],
+    "percentiles": [
+      1,
+      99
+    ],
+    "coordinateFrame": "tma"
+  },
+  "alignment": {
+    "reference": "tma",
+    "scale": 1.0,
+    "rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "translation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fit": {
+      "correspondence": "reference",
+      "keepFraction": 1.0,
+      "medianResidual": 0.0,
+      "rotationDegrees": 0.0
+    }
+  },
+  "rgbFrames": [
+    "./comparison-rgb/motocross-bumps/tma/000.webp",
+    "./comparison-rgb/motocross-bumps/tma/001.webp",
+    "./comparison-rgb/motocross-bumps/tma/002.webp",
+    "./comparison-rgb/motocross-bumps/tma/003.webp",
+    "./comparison-rgb/motocross-bumps/tma/004.webp",
+    "./comparison-rgb/motocross-bumps/tma/005.webp",
+    "./comparison-rgb/motocross-bumps/tma/006.webp",
+    "./comparison-rgb/motocross-bumps/tma/007.webp",
+    "./comparison-rgb/motocross-bumps/tma/008.webp",
+    "./comparison-rgb/motocross-bumps/tma/009.webp",
+    "./comparison-rgb/motocross-bumps/tma/010.webp",
+    "./comparison-rgb/motocross-bumps/tma/011.webp",
+    "./comparison-rgb/motocross-bumps/tma/012.webp",
+    "./comparison-rgb/motocross-bumps/tma/013.webp",
+    "./comparison-rgb/motocross-bumps/tma/014.webp",
+    "./comparison-rgb/motocross-bumps/tma/015.webp",
+    "./comparison-rgb/motocross-bumps/tma/016.webp",
+    "./comparison-rgb/motocross-bumps/tma/017.webp",
+    "./comparison-rgb/motocross-bumps/tma/018.webp",
+    "./comparison-rgb/motocross-bumps/tma/019.webp",
+    "./comparison-rgb/motocross-bumps/tma/020.webp",
+    "./comparison-rgb/motocross-bumps/tma/021.webp",
+    "./comparison-rgb/motocross-bumps/tma/022.webp",
+    "./comparison-rgb/motocross-bumps/tma/023.webp",
+    "./comparison-rgb/motocross-bumps/tma/024.webp",
+    "./comparison-rgb/motocross-bumps/tma/025.webp",
+    "./comparison-rgb/motocross-bumps/tma/026.webp",
+    "./comparison-rgb/motocross-bumps/tma/027.webp",
+    "./comparison-rgb/motocross-bumps/tma/028.webp",
+    "./comparison-rgb/motocross-bumps/tma/029.webp",
+    "./comparison-rgb/motocross-bumps/tma/030.webp",
+    "./comparison-rgb/motocross-bumps/tma/031.webp",
+    "./comparison-rgb/motocross-bumps/tma/032.webp",
+    "./comparison-rgb/motocross-bumps/tma/033.webp",
+    "./comparison-rgb/motocross-bumps/tma/034.webp",
+    "./comparison-rgb/motocross-bumps/tma/035.webp",
+    "./comparison-rgb/motocross-bumps/tma/036.webp",
+    "./comparison-rgb/motocross-bumps/tma/037.webp",
+    "./comparison-rgb/motocross-bumps/tma/038.webp",
+    "./comparison-rgb/motocross-bumps/tma/039.webp",
+    "./comparison-rgb/motocross-bumps/tma/040.webp",
+    "./comparison-rgb/motocross-bumps/tma/041.webp",
+    "./comparison-rgb/motocross-bumps/tma/042.webp",
+    "./comparison-rgb/motocross-bumps/tma/043.webp",
+    "./comparison-rgb/motocross-bumps/tma/044.webp",
+    "./comparison-rgb/motocross-bumps/tma/045.webp",
+    "./comparison-rgb/motocross-bumps/tma/046.webp",
+    "./comparison-rgb/motocross-bumps/tma/047.webp",
+    "./comparison-rgb/motocross-bumps/tma/048.webp",
+    "./comparison-rgb/motocross-bumps/tma/049.webp"
+  ]
+}

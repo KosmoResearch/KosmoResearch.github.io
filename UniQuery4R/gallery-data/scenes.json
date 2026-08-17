@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "scenes": [
+    {
+      "name": "parkour",
+      "label": "Parkour",
+      "manifest": "./gallery-data/parkour/manifest.json",
+      "inputImages": [
+        "./gallery-inputs/parkour/00.webp",
+        "./gallery-inputs/parkour/01.webp",
+        "./gallery-inputs/parkour/02.webp",
+        "./gallery-inputs/parkour/03.webp",
+        "./gallery-inputs/parkour/04.webp",
+        "./gallery-inputs/parkour/05.webp"
+      ]
+    },
+    {
+      "name": "rollerblade",
+      "label": "Rollerblade",
+      "manifest": "./gallery-data/rollerblade/manifest.json",
+      "inputImages": [
+        "./gallery-inputs/rollerblade/00.webp",
+        "./gallery-inputs/rollerblade/01.webp",
+        "./gallery-inputs/rollerblade/02.webp",
+        "./gallery-inputs/rollerblade/03.webp",
+        "./gallery-inputs/rollerblade/04.webp",
+        "./gallery-inputs/rollerblade/05.webp"
+      ]
+    },
+    {
+      "name": "drift-chicane",
+      "label": "Drift Chicane",
+      "manifest": "./gallery-data/drift-chicane/manifest.json",
+      "inputImages": [
+        "./gallery-inputs/drift-chicane/00.webp",
+        "./gallery-inputs/drift-chicane/01.webp",
+        "./gallery-inputs/drift-chicane/02.webp",
+        "./gallery-inputs/drift-chicane/03.webp",
+        "./gallery-inputs/drift-chicane/04.webp",
+        "./gallery-inputs/drift-chicane/05.webp"
+      ]
+    },
+    {
+      "name": "blackswan",
+      "label": "Blackswan",
+      "manifest": "./gallery-data/blackswan/manifest.json",
+      "inputImages": [
+        "./gallery-inputs/blackswan/00.webp",
+        "./gallery-inputs/blackswan/01.webp",
+        "./gallery-inputs/blackswan/02.webp",
+        "./gallery-inputs/blackswan/03.webp",
+        "./gallery-inputs/blackswan/04.webp",
+        "./gallery-inputs/blackswan/05.webp"
+      ]
+    },
+    {
+      "name": "hockey",
+      "label": "Hockey",
+      "manifest": "./gallery-data/hockey/manifest.json",
+      "inputImages": [
+        "./gallery-inputs/hockey/00.webp",
+        "./gallery-inputs/hockey/01.webp",
+        "./gallery-inputs/hockey/02.webp",
+        "./gallery-inputs/hockey/03.webp",
+        "./gallery-inputs/hockey/04.webp",
+        "./gallery-inputs/hockey/05.webp"
+      ]
+    },
+    {
+      "name": "breakdance",
+      "label": "Breakdance",
+      "manifest": "./gallery-data/breakdance/manifest.json",
+      "inputImages": [
+        "./gallery-inputs/breakdance/00.webp",
+        "./gallery-inputs/breakdance/01.webp",
+        "./gallery-inputs/breakdance/02.webp",
+        "./gallery-inputs/breakdance/03.webp",
+        "./gallery-inputs/breakdance/04.webp",
+        "./gallery-inputs/breakdance/05.webp"
+      ]
+    },
+    {
+      "name": "horsejump-low",
+      "label": "Horsejump Low",
+      "manifest": "./gallery-data/horsejump-low/manifest.json",
+      "inputImages": [
+        "./gallery-inputs/horsejump-low/00.webp",
+        "./gallery-inputs/horsejump-low/01.webp",
+        "./gallery-inputs/horsejump-low/02.webp",
+        "./gallery-inputs/horsejump-low/03.webp",
+        "./gallery-inputs/horsejump-low/04.webp",
+        "./gallery-inputs/horsejump-low/05.webp"
+      ]
+    },
+    {
+      "name": "train",
+      "label": "Train",
+      "manifest": "./gallery-data/train/manifest.json",
+      "inputImages": [
+        "./gallery-inputs/train/00.webp",
+        "./gallery-inputs/train/01.webp",
+        "./gallery-inputs/train/02.webp",
+        "./gallery-inputs/train/03.webp",
+        "./gallery-inputs/train/04.webp",
+        "./gallery-inputs/train/05.webp"
+      ]
+    }
+  ]
+}

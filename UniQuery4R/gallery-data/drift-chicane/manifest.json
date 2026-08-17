@@ -1,0 +1,572 @@
+{
+  "version": 1,
+  "name": "drift-chicane",
+  "frameCount": 50,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -0.7196379899978638,
+      -0.07152386754751205,
+      -3.9098892211914062
+    ],
+    "max": [
+      1.2699562311172485,
+      0.6896392107009888,
+      -0.25576722621917725
+    ],
+    "scale": [
+      3.0359262382262386e-05,
+      1.1614603863563389e-05,
+      5.5758326197974384e-05
+    ]
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 613354,
+    "bitmapSize": 76670,
+    "prefixEndFrame": 18,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 12797
+      },
+      {
+        "mode": "prefix",
+        "count": 25592
+      },
+      {
+        "mode": "prefix",
+        "count": 38381
+      },
+      {
+        "mode": "prefix",
+        "count": 51169
+      },
+      {
+        "mode": "prefix",
+        "count": 63956
+      },
+      {
+        "mode": "prefix",
+        "count": 76736
+      },
+      {
+        "mode": "prefix",
+        "count": 89516
+      },
+      {
+        "mode": "prefix",
+        "count": 102292
+      },
+      {
+        "mode": "prefix",
+        "count": 115069
+      },
+      {
+        "mode": "prefix",
+        "count": 127842
+      },
+      {
+        "mode": "prefix",
+        "count": 140611
+      },
+      {
+        "mode": "prefix",
+        "count": 153376
+      },
+      {
+        "mode": "prefix",
+        "count": 166133
+      },
+      {
+        "mode": "prefix",
+        "count": 178877
+      },
+      {
+        "mode": "prefix",
+        "count": 191614
+      },
+      {
+        "mode": "prefix",
+        "count": 204344
+      },
+      {
+        "mode": "prefix",
+        "count": 217066
+      },
+      {
+        "mode": "prefix",
+        "count": 229786
+      },
+      {
+        "mode": "prefix",
+        "count": 242502
+      },
+      {
+        "mode": "bitmap",
+        "offset": 0,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 76670,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 153340,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 230010,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 306680,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 383350,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 460020,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 536690,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 613360,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 690030,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 766700,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 843370,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 920040,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 996710,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1073380,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1150050,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1226720,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1303390,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1380060,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1456730,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1533400,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1610070,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1686740,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1763410,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1840080,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1916750,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1993420,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2070090,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2146760,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2223430,
+        "byteLength": 76670,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2300100,
+        "byteLength": 76670,
+        "count": 250000
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 1659
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 3680124
+    },
+    "staticColors": {
+      "offset": 3680124,
+      "byteLength": 2453416
+    },
+    "dynamicPositions": {
+      "offset": 6133540,
+      "byteLength": 497700
+    },
+    "dynamicColors": {
+      "offset": 6631240,
+      "byteLength": 6636
+    },
+    "staticBitmaps": {
+      "offset": 6637876,
+      "byteLength": 2376770
+    },
+    "trajectoryColors": {
+      "offset": 9014648,
+      "byteLength": 6636
+    },
+    "cameraFrustumPositions": {
+      "offset": 9021284,
+      "byteLength": 9600
+    },
+    "cameraFrustumColors": {
+      "offset": 9030884,
+      "byteLength": 3200
+    },
+    "cameraCenterPositions": {
+      "offset": 9034084,
+      "byteLength": 600
+    },
+    "cameraCenterColors": {
+      "offset": 9034684,
+      "byteLength": 200
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 9034884,
+    "sha256": "63eb702a249051fe844c9839e3e5808cc88fa1431a3befeb843ce57810bd8cbb"
+  },
+  "validation": {
+    "quantizationMaxError": 2.8133392333984375e-05,
+    "sourceRrdBytes": 267371631
+  },
+  "camera": {
+    "frustumSegmentCount": 400,
+    "centerCount": 50,
+    "frameSegmentCounts": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      184,
+      192,
+      200,
+      208,
+      216,
+      224,
+      232,
+      240,
+      248,
+      256,
+      264,
+      272,
+      280,
+      288,
+      296,
+      304,
+      312,
+      320,
+      328,
+      336,
+      344,
+      352,
+      360,
+      368,
+      376,
+      384,
+      392,
+      400
+    ],
+    "frameCenterCounts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "centerRadius": 0.004
+  },
+  "rgbFrames": [
+    "./gallery-rgb/drift-chicane/000.webp",
+    "./gallery-rgb/drift-chicane/001.webp",
+    "./gallery-rgb/drift-chicane/002.webp",
+    "./gallery-rgb/drift-chicane/003.webp",
+    "./gallery-rgb/drift-chicane/004.webp",
+    "./gallery-rgb/drift-chicane/005.webp",
+    "./gallery-rgb/drift-chicane/006.webp",
+    "./gallery-rgb/drift-chicane/007.webp",
+    "./gallery-rgb/drift-chicane/008.webp",
+    "./gallery-rgb/drift-chicane/009.webp",
+    "./gallery-rgb/drift-chicane/010.webp",
+    "./gallery-rgb/drift-chicane/011.webp",
+    "./gallery-rgb/drift-chicane/012.webp",
+    "./gallery-rgb/drift-chicane/013.webp",
+    "./gallery-rgb/drift-chicane/014.webp",
+    "./gallery-rgb/drift-chicane/015.webp",
+    "./gallery-rgb/drift-chicane/016.webp",
+    "./gallery-rgb/drift-chicane/017.webp",
+    "./gallery-rgb/drift-chicane/018.webp",
+    "./gallery-rgb/drift-chicane/019.webp",
+    "./gallery-rgb/drift-chicane/020.webp",
+    "./gallery-rgb/drift-chicane/021.webp",
+    "./gallery-rgb/drift-chicane/022.webp",
+    "./gallery-rgb/drift-chicane/023.webp",
+    "./gallery-rgb/drift-chicane/024.webp",
+    "./gallery-rgb/drift-chicane/025.webp",
+    "./gallery-rgb/drift-chicane/026.webp",
+    "./gallery-rgb/drift-chicane/027.webp",
+    "./gallery-rgb/drift-chicane/028.webp",
+    "./gallery-rgb/drift-chicane/029.webp",
+    "./gallery-rgb/drift-chicane/030.webp",
+    "./gallery-rgb/drift-chicane/031.webp",
+    "./gallery-rgb/drift-chicane/032.webp",
+    "./gallery-rgb/drift-chicane/033.webp",
+    "./gallery-rgb/drift-chicane/034.webp",
+    "./gallery-rgb/drift-chicane/035.webp",
+    "./gallery-rgb/drift-chicane/036.webp",
+    "./gallery-rgb/drift-chicane/037.webp",
+    "./gallery-rgb/drift-chicane/038.webp",
+    "./gallery-rgb/drift-chicane/039.webp",
+    "./gallery-rgb/drift-chicane/040.webp",
+    "./gallery-rgb/drift-chicane/041.webp",
+    "./gallery-rgb/drift-chicane/042.webp",
+    "./gallery-rgb/drift-chicane/043.webp",
+    "./gallery-rgb/drift-chicane/044.webp",
+    "./gallery-rgb/drift-chicane/045.webp",
+    "./gallery-rgb/drift-chicane/046.webp",
+    "./gallery-rgb/drift-chicane/047.webp",
+    "./gallery-rgb/drift-chicane/048.webp",
+    "./gallery-rgb/drift-chicane/049.webp"
+  ]
+}

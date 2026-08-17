@@ -1,0 +1,508 @@
+{
+  "version": 1,
+  "name": "hike/opend4rt",
+  "frameCount": 50,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -4.743886470794678,
+      -1.45806884765625,
+      -9.341609954833984
+    ],
+    "max": [
+      10.447970390319824,
+      2.981515884399414,
+      -1.9685604572296143
+    ],
+    "scale": [
+      0.00023181286815088242,
+      6.774372013751417e-05,
+      0.00011250552779529244
+    ]
+  },
+  "viewBounds": {
+    "min": [
+      -0.9477925143909024,
+      -0.2527623166869655,
+      -2.719278255321523
+    ],
+    "max": [
+      2.487333506327784,
+      0.8769087037913325,
+      -0.9122972494605781
+    ],
+    "percentiles": [
+      1,
+      99
+    ],
+    "coordinateFrame": "tma"
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 195635,
+    "bitmapSize": 24455,
+    "prefixEndFrame": 49,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 3903
+      },
+      {
+        "mode": "prefix",
+        "count": 7799
+      },
+      {
+        "mode": "prefix",
+        "count": 11696
+      },
+      {
+        "mode": "prefix",
+        "count": 15598
+      },
+      {
+        "mode": "prefix",
+        "count": 19493
+      },
+      {
+        "mode": "prefix",
+        "count": 23401
+      },
+      {
+        "mode": "prefix",
+        "count": 27303
+      },
+      {
+        "mode": "prefix",
+        "count": 31215
+      },
+      {
+        "mode": "prefix",
+        "count": 35133
+      },
+      {
+        "mode": "prefix",
+        "count": 39030
+      },
+      {
+        "mode": "prefix",
+        "count": 42922
+      },
+      {
+        "mode": "prefix",
+        "count": 46823
+      },
+      {
+        "mode": "prefix",
+        "count": 50714
+      },
+      {
+        "mode": "prefix",
+        "count": 54609
+      },
+      {
+        "mode": "prefix",
+        "count": 58511
+      },
+      {
+        "mode": "prefix",
+        "count": 62410
+      },
+      {
+        "mode": "prefix",
+        "count": 66309
+      },
+      {
+        "mode": "prefix",
+        "count": 70209
+      },
+      {
+        "mode": "prefix",
+        "count": 74106
+      },
+      {
+        "mode": "prefix",
+        "count": 78011
+      },
+      {
+        "mode": "prefix",
+        "count": 81916
+      },
+      {
+        "mode": "prefix",
+        "count": 85826
+      },
+      {
+        "mode": "prefix",
+        "count": 89736
+      },
+      {
+        "mode": "prefix",
+        "count": 93656
+      },
+      {
+        "mode": "prefix",
+        "count": 97577
+      },
+      {
+        "mode": "prefix",
+        "count": 101496
+      },
+      {
+        "mode": "prefix",
+        "count": 105406
+      },
+      {
+        "mode": "prefix",
+        "count": 109302
+      },
+      {
+        "mode": "prefix",
+        "count": 113204
+      },
+      {
+        "mode": "prefix",
+        "count": 117111
+      },
+      {
+        "mode": "prefix",
+        "count": 121017
+      },
+      {
+        "mode": "prefix",
+        "count": 124925
+      },
+      {
+        "mode": "prefix",
+        "count": 128834
+      },
+      {
+        "mode": "prefix",
+        "count": 132750
+      },
+      {
+        "mode": "prefix",
+        "count": 136673
+      },
+      {
+        "mode": "prefix",
+        "count": 140595
+      },
+      {
+        "mode": "prefix",
+        "count": 144510
+      },
+      {
+        "mode": "prefix",
+        "count": 148428
+      },
+      {
+        "mode": "prefix",
+        "count": 152346
+      },
+      {
+        "mode": "prefix",
+        "count": 156278
+      },
+      {
+        "mode": "prefix",
+        "count": 160210
+      },
+      {
+        "mode": "prefix",
+        "count": 164151
+      },
+      {
+        "mode": "prefix",
+        "count": 168081
+      },
+      {
+        "mode": "prefix",
+        "count": 172015
+      },
+      {
+        "mode": "prefix",
+        "count": 175953
+      },
+      {
+        "mode": "prefix",
+        "count": 179886
+      },
+      {
+        "mode": "prefix",
+        "count": 183821
+      },
+      {
+        "mode": "prefix",
+        "count": 187760
+      },
+      {
+        "mode": "prefix",
+        "count": 191697
+      },
+      {
+        "mode": "prefix",
+        "count": 195635
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "camera": {
+    "frustumSegmentCount": 0,
+    "centerCount": 0,
+    "frameSegmentCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "frameCenterCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "centerRadius": 0.004,
+    "frustumScale": 1.0
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 1173810
+    },
+    "staticColors": {
+      "offset": 1173812,
+      "byteLength": 782540
+    },
+    "dynamicPositions": {
+      "offset": 1956352,
+      "byteLength": 614400
+    },
+    "dynamicColors": {
+      "offset": 2570752,
+      "byteLength": 8192
+    },
+    "trajectoryColors": {
+      "offset": 2578944,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 2587136,
+      "byteLength": 0
+    },
+    "cameraFrustumColors": {
+      "offset": 2587136,
+      "byteLength": 0
+    },
+    "cameraCenterPositions": {
+      "offset": 2587136,
+      "byteLength": 0
+    },
+    "cameraCenterColors": {
+      "offset": 2587136,
+      "byteLength": 0
+    },
+    "staticBitmaps": {
+      "offset": 2587136,
+      "byteLength": 0
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 2587136,
+    "sha256": "a89fa2df1becff3011286de543fb5d86fa1cab2719f87cf9bd78e1fd74aac360"
+  },
+  "validation": {
+    "quantizationMaxError": 0.00011730194091796875,
+    "sourceRrdBytes": 180287186
+  },
+  "alignment": {
+    "reference": "tma",
+    "scale": 0.29240532956726323,
+    "rotation": [
+      [
+        0.9966474154315255,
+        0.0729514025742761,
+        0.03704081770299946
+      ],
+      [
+        -0.07378010028527783,
+        0.9970423239818508,
+        0.02151978138281197
+      ],
+      [
+        -0.03536136472981876,
+        -0.024180509740606596,
+        0.9990820170702348
+      ]
+    ],
+    "translation": [
+      0.10151937666012056,
+      0.18702159407564894,
+      -0.15011599455479496
+    ],
+    "fit": {
+      "correspondence": "static-geometry-icp",
+      "keepFraction": 0.45,
+      "medianResidual": 0.03197142110348877,
+      "rotationDegrees": 4.8727026083689555
+    }
+  }
+}

@@ -1,0 +1,618 @@
+{
+  "version": 1,
+  "scenes": [
+    {
+      "name": "scooter-black",
+      "label": "Scooter Black",
+      "inputImages": [
+        "./comparison-inputs/scooter-black/tma/00.webp",
+        "./comparison-inputs/scooter-black/tma/01.webp",
+        "./comparison-inputs/scooter-black/tma/02.webp",
+        "./comparison-inputs/scooter-black/tma/03.webp",
+        "./comparison-inputs/scooter-black/tma/04.webp",
+        "./comparison-inputs/scooter-black/tma/05.webp"
+      ],
+      "rgbFrames": [
+        "./comparison-rgb/scooter-black/tma/000.webp",
+        "./comparison-rgb/scooter-black/tma/001.webp",
+        "./comparison-rgb/scooter-black/tma/002.webp",
+        "./comparison-rgb/scooter-black/tma/003.webp",
+        "./comparison-rgb/scooter-black/tma/004.webp",
+        "./comparison-rgb/scooter-black/tma/005.webp",
+        "./comparison-rgb/scooter-black/tma/006.webp",
+        "./comparison-rgb/scooter-black/tma/007.webp",
+        "./comparison-rgb/scooter-black/tma/008.webp",
+        "./comparison-rgb/scooter-black/tma/009.webp",
+        "./comparison-rgb/scooter-black/tma/010.webp",
+        "./comparison-rgb/scooter-black/tma/011.webp",
+        "./comparison-rgb/scooter-black/tma/012.webp",
+        "./comparison-rgb/scooter-black/tma/013.webp",
+        "./comparison-rgb/scooter-black/tma/014.webp",
+        "./comparison-rgb/scooter-black/tma/015.webp",
+        "./comparison-rgb/scooter-black/tma/016.webp",
+        "./comparison-rgb/scooter-black/tma/017.webp",
+        "./comparison-rgb/scooter-black/tma/018.webp",
+        "./comparison-rgb/scooter-black/tma/019.webp",
+        "./comparison-rgb/scooter-black/tma/020.webp",
+        "./comparison-rgb/scooter-black/tma/021.webp",
+        "./comparison-rgb/scooter-black/tma/022.webp"
+      ],
+      "methods": [
+        {
+          "id": "opend4rt",
+          "label": "OpenD4RT",
+          "manifest": "./comparison-data/scooter-black/opend4rt/manifest.json"
+        },
+        {
+          "id": "4rc",
+          "label": "4RC",
+          "manifest": "./comparison-data/scooter-black/4rc/manifest.json"
+        },
+        {
+          "id": "vdpm",
+          "label": "V-DPM",
+          "manifest": "./comparison-data/scooter-black/vdpm/manifest.json"
+        },
+        {
+          "id": "tma",
+          "label": "UniQuery4R (Ours)",
+          "manifest": "./comparison-data/scooter-black/tma/manifest.json"
+        }
+      ]
+    },
+    {
+      "name": "rollerblade",
+      "label": "Rollerblade",
+      "inputImages": [
+        "./comparison-inputs/rollerblade/tma/00.webp",
+        "./comparison-inputs/rollerblade/tma/01.webp",
+        "./comparison-inputs/rollerblade/tma/02.webp",
+        "./comparison-inputs/rollerblade/tma/03.webp",
+        "./comparison-inputs/rollerblade/tma/04.webp",
+        "./comparison-inputs/rollerblade/tma/05.webp"
+      ],
+      "rgbFrames": [
+        "./comparison-rgb/rollerblade/tma/000.webp",
+        "./comparison-rgb/rollerblade/tma/001.webp",
+        "./comparison-rgb/rollerblade/tma/002.webp",
+        "./comparison-rgb/rollerblade/tma/003.webp",
+        "./comparison-rgb/rollerblade/tma/004.webp",
+        "./comparison-rgb/rollerblade/tma/005.webp",
+        "./comparison-rgb/rollerblade/tma/006.webp",
+        "./comparison-rgb/rollerblade/tma/007.webp",
+        "./comparison-rgb/rollerblade/tma/008.webp",
+        "./comparison-rgb/rollerblade/tma/009.webp",
+        "./comparison-rgb/rollerblade/tma/010.webp",
+        "./comparison-rgb/rollerblade/tma/011.webp",
+        "./comparison-rgb/rollerblade/tma/012.webp",
+        "./comparison-rgb/rollerblade/tma/013.webp",
+        "./comparison-rgb/rollerblade/tma/014.webp",
+        "./comparison-rgb/rollerblade/tma/015.webp",
+        "./comparison-rgb/rollerblade/tma/016.webp",
+        "./comparison-rgb/rollerblade/tma/017.webp",
+        "./comparison-rgb/rollerblade/tma/018.webp",
+        "./comparison-rgb/rollerblade/tma/019.webp",
+        "./comparison-rgb/rollerblade/tma/020.webp",
+        "./comparison-rgb/rollerblade/tma/021.webp",
+        "./comparison-rgb/rollerblade/tma/022.webp",
+        "./comparison-rgb/rollerblade/tma/023.webp",
+        "./comparison-rgb/rollerblade/tma/024.webp",
+        "./comparison-rgb/rollerblade/tma/025.webp",
+        "./comparison-rgb/rollerblade/tma/026.webp",
+        "./comparison-rgb/rollerblade/tma/027.webp",
+        "./comparison-rgb/rollerblade/tma/028.webp",
+        "./comparison-rgb/rollerblade/tma/029.webp",
+        "./comparison-rgb/rollerblade/tma/030.webp",
+        "./comparison-rgb/rollerblade/tma/031.webp",
+        "./comparison-rgb/rollerblade/tma/032.webp",
+        "./comparison-rgb/rollerblade/tma/033.webp",
+        "./comparison-rgb/rollerblade/tma/034.webp"
+      ],
+      "methods": [
+        {
+          "id": "opend4rt",
+          "label": "OpenD4RT",
+          "manifest": "./comparison-data/rollerblade/opend4rt/manifest.json"
+        },
+        {
+          "id": "4rc",
+          "label": "4RC",
+          "manifest": "./comparison-data/rollerblade/4rc/manifest.json"
+        },
+        {
+          "id": "vdpm",
+          "label": "V-DPM",
+          "manifest": "./comparison-data/rollerblade/vdpm/manifest.json"
+        },
+        {
+          "id": "tma",
+          "label": "UniQuery4R (Ours)",
+          "manifest": "./comparison-data/rollerblade/tma/manifest.json"
+        }
+      ]
+    },
+    {
+      "name": "scooter-gray",
+      "label": "Scooter Gray",
+      "inputImages": [
+        "./comparison-inputs/scooter-gray/tma/00.webp",
+        "./comparison-inputs/scooter-gray/tma/01.webp",
+        "./comparison-inputs/scooter-gray/tma/02.webp",
+        "./comparison-inputs/scooter-gray/tma/03.webp",
+        "./comparison-inputs/scooter-gray/tma/04.webp",
+        "./comparison-inputs/scooter-gray/tma/05.webp"
+      ],
+      "rgbFrames": [
+        "./comparison-rgb/scooter-gray/tma/000.webp",
+        "./comparison-rgb/scooter-gray/tma/001.webp",
+        "./comparison-rgb/scooter-gray/tma/002.webp",
+        "./comparison-rgb/scooter-gray/tma/003.webp",
+        "./comparison-rgb/scooter-gray/tma/004.webp",
+        "./comparison-rgb/scooter-gray/tma/005.webp",
+        "./comparison-rgb/scooter-gray/tma/006.webp",
+        "./comparison-rgb/scooter-gray/tma/007.webp",
+        "./comparison-rgb/scooter-gray/tma/008.webp",
+        "./comparison-rgb/scooter-gray/tma/009.webp",
+        "./comparison-rgb/scooter-gray/tma/010.webp",
+        "./comparison-rgb/scooter-gray/tma/011.webp",
+        "./comparison-rgb/scooter-gray/tma/012.webp",
+        "./comparison-rgb/scooter-gray/tma/013.webp",
+        "./comparison-rgb/scooter-gray/tma/014.webp",
+        "./comparison-rgb/scooter-gray/tma/015.webp",
+        "./comparison-rgb/scooter-gray/tma/016.webp",
+        "./comparison-rgb/scooter-gray/tma/017.webp",
+        "./comparison-rgb/scooter-gray/tma/018.webp",
+        "./comparison-rgb/scooter-gray/tma/019.webp",
+        "./comparison-rgb/scooter-gray/tma/020.webp",
+        "./comparison-rgb/scooter-gray/tma/021.webp",
+        "./comparison-rgb/scooter-gray/tma/022.webp"
+      ],
+      "methods": [
+        {
+          "id": "opend4rt",
+          "label": "OpenD4RT",
+          "manifest": "./comparison-data/scooter-gray/opend4rt/manifest.json"
+        },
+        {
+          "id": "4rc",
+          "label": "4RC",
+          "manifest": "./comparison-data/scooter-gray/4rc/manifest.json"
+        },
+        {
+          "id": "vdpm",
+          "label": "V-DPM",
+          "manifest": "./comparison-data/scooter-gray/vdpm/manifest.json"
+        },
+        {
+          "id": "tma",
+          "label": "UniQuery4R (Ours)",
+          "manifest": "./comparison-data/scooter-gray/tma/manifest.json"
+        }
+      ]
+    },
+    {
+      "name": "surf",
+      "label": "Surf",
+      "inputImages": [
+        "./comparison-inputs/surf/tma/00.webp",
+        "./comparison-inputs/surf/tma/01.webp",
+        "./comparison-inputs/surf/tma/02.webp",
+        "./comparison-inputs/surf/tma/03.webp",
+        "./comparison-inputs/surf/tma/04.webp",
+        "./comparison-inputs/surf/tma/05.webp"
+      ],
+      "rgbFrames": [
+        "./comparison-rgb/surf/tma/000.webp",
+        "./comparison-rgb/surf/tma/001.webp",
+        "./comparison-rgb/surf/tma/002.webp",
+        "./comparison-rgb/surf/tma/003.webp",
+        "./comparison-rgb/surf/tma/004.webp",
+        "./comparison-rgb/surf/tma/005.webp",
+        "./comparison-rgb/surf/tma/006.webp",
+        "./comparison-rgb/surf/tma/007.webp",
+        "./comparison-rgb/surf/tma/008.webp",
+        "./comparison-rgb/surf/tma/009.webp",
+        "./comparison-rgb/surf/tma/010.webp",
+        "./comparison-rgb/surf/tma/011.webp",
+        "./comparison-rgb/surf/tma/012.webp",
+        "./comparison-rgb/surf/tma/013.webp",
+        "./comparison-rgb/surf/tma/014.webp",
+        "./comparison-rgb/surf/tma/015.webp",
+        "./comparison-rgb/surf/tma/016.webp",
+        "./comparison-rgb/surf/tma/017.webp",
+        "./comparison-rgb/surf/tma/018.webp",
+        "./comparison-rgb/surf/tma/019.webp",
+        "./comparison-rgb/surf/tma/020.webp",
+        "./comparison-rgb/surf/tma/021.webp",
+        "./comparison-rgb/surf/tma/022.webp",
+        "./comparison-rgb/surf/tma/023.webp",
+        "./comparison-rgb/surf/tma/024.webp",
+        "./comparison-rgb/surf/tma/025.webp",
+        "./comparison-rgb/surf/tma/026.webp",
+        "./comparison-rgb/surf/tma/027.webp",
+        "./comparison-rgb/surf/tma/028.webp",
+        "./comparison-rgb/surf/tma/029.webp",
+        "./comparison-rgb/surf/tma/030.webp",
+        "./comparison-rgb/surf/tma/031.webp",
+        "./comparison-rgb/surf/tma/032.webp",
+        "./comparison-rgb/surf/tma/033.webp",
+        "./comparison-rgb/surf/tma/034.webp",
+        "./comparison-rgb/surf/tma/035.webp",
+        "./comparison-rgb/surf/tma/036.webp",
+        "./comparison-rgb/surf/tma/037.webp",
+        "./comparison-rgb/surf/tma/038.webp",
+        "./comparison-rgb/surf/tma/039.webp",
+        "./comparison-rgb/surf/tma/040.webp",
+        "./comparison-rgb/surf/tma/041.webp",
+        "./comparison-rgb/surf/tma/042.webp",
+        "./comparison-rgb/surf/tma/043.webp"
+      ],
+      "methods": [
+        {
+          "id": "opend4rt",
+          "label": "OpenD4RT",
+          "manifest": "./comparison-data/surf/opend4rt/manifest.json"
+        },
+        {
+          "id": "4rc",
+          "label": "4RC",
+          "manifest": "./comparison-data/surf/4rc/manifest.json"
+        },
+        {
+          "id": "vdpm",
+          "label": "V-DPM",
+          "manifest": "./comparison-data/surf/vdpm/manifest.json"
+        },
+        {
+          "id": "tma",
+          "label": "UniQuery4R (Ours)",
+          "manifest": "./comparison-data/surf/tma/manifest.json"
+        }
+      ]
+    },
+    {
+      "name": "motocross-bumps",
+      "label": "Motocross Bumps",
+      "inputImages": [
+        "./comparison-inputs/motocross-bumps/tma/00.webp",
+        "./comparison-inputs/motocross-bumps/tma/01.webp",
+        "./comparison-inputs/motocross-bumps/tma/02.webp",
+        "./comparison-inputs/motocross-bumps/tma/03.webp",
+        "./comparison-inputs/motocross-bumps/tma/04.webp",
+        "./comparison-inputs/motocross-bumps/tma/05.webp"
+      ],
+      "rgbFrames": [
+        "./comparison-rgb/motocross-bumps/tma/000.webp",
+        "./comparison-rgb/motocross-bumps/tma/001.webp",
+        "./comparison-rgb/motocross-bumps/tma/002.webp",
+        "./comparison-rgb/motocross-bumps/tma/003.webp",
+        "./comparison-rgb/motocross-bumps/tma/004.webp",
+        "./comparison-rgb/motocross-bumps/tma/005.webp",
+        "./comparison-rgb/motocross-bumps/tma/006.webp",
+        "./comparison-rgb/motocross-bumps/tma/007.webp",
+        "./comparison-rgb/motocross-bumps/tma/008.webp",
+        "./comparison-rgb/motocross-bumps/tma/009.webp",
+        "./comparison-rgb/motocross-bumps/tma/010.webp",
+        "./comparison-rgb/motocross-bumps/tma/011.webp",
+        "./comparison-rgb/motocross-bumps/tma/012.webp",
+        "./comparison-rgb/motocross-bumps/tma/013.webp",
+        "./comparison-rgb/motocross-bumps/tma/014.webp",
+        "./comparison-rgb/motocross-bumps/tma/015.webp",
+        "./comparison-rgb/motocross-bumps/tma/016.webp",
+        "./comparison-rgb/motocross-bumps/tma/017.webp",
+        "./comparison-rgb/motocross-bumps/tma/018.webp",
+        "./comparison-rgb/motocross-bumps/tma/019.webp",
+        "./comparison-rgb/motocross-bumps/tma/020.webp",
+        "./comparison-rgb/motocross-bumps/tma/021.webp",
+        "./comparison-rgb/motocross-bumps/tma/022.webp",
+        "./comparison-rgb/motocross-bumps/tma/023.webp",
+        "./comparison-rgb/motocross-bumps/tma/024.webp",
+        "./comparison-rgb/motocross-bumps/tma/025.webp",
+        "./comparison-rgb/motocross-bumps/tma/026.webp",
+        "./comparison-rgb/motocross-bumps/tma/027.webp",
+        "./comparison-rgb/motocross-bumps/tma/028.webp",
+        "./comparison-rgb/motocross-bumps/tma/029.webp",
+        "./comparison-rgb/motocross-bumps/tma/030.webp",
+        "./comparison-rgb/motocross-bumps/tma/031.webp",
+        "./comparison-rgb/motocross-bumps/tma/032.webp",
+        "./comparison-rgb/motocross-bumps/tma/033.webp",
+        "./comparison-rgb/motocross-bumps/tma/034.webp",
+        "./comparison-rgb/motocross-bumps/tma/035.webp",
+        "./comparison-rgb/motocross-bumps/tma/036.webp",
+        "./comparison-rgb/motocross-bumps/tma/037.webp",
+        "./comparison-rgb/motocross-bumps/tma/038.webp",
+        "./comparison-rgb/motocross-bumps/tma/039.webp",
+        "./comparison-rgb/motocross-bumps/tma/040.webp",
+        "./comparison-rgb/motocross-bumps/tma/041.webp",
+        "./comparison-rgb/motocross-bumps/tma/042.webp",
+        "./comparison-rgb/motocross-bumps/tma/043.webp",
+        "./comparison-rgb/motocross-bumps/tma/044.webp",
+        "./comparison-rgb/motocross-bumps/tma/045.webp",
+        "./comparison-rgb/motocross-bumps/tma/046.webp",
+        "./comparison-rgb/motocross-bumps/tma/047.webp",
+        "./comparison-rgb/motocross-bumps/tma/048.webp",
+        "./comparison-rgb/motocross-bumps/tma/049.webp"
+      ],
+      "methods": [
+        {
+          "id": "opend4rt",
+          "label": "OpenD4RT",
+          "manifest": "./comparison-data/motocross-bumps/opend4rt/manifest.json"
+        },
+        {
+          "id": "4rc",
+          "label": "4RC",
+          "manifest": "./comparison-data/motocross-bumps/4rc/manifest.json"
+        },
+        {
+          "id": "vdpm",
+          "label": "V-DPM",
+          "manifest": "./comparison-data/motocross-bumps/vdpm/manifest.json"
+        },
+        {
+          "id": "tma",
+          "label": "UniQuery4R (Ours)",
+          "manifest": "./comparison-data/motocross-bumps/tma/manifest.json"
+        }
+      ]
+    },
+    {
+      "name": "hike",
+      "label": "Hike",
+      "inputImages": [
+        "./comparison-inputs/hike/tma/00.webp",
+        "./comparison-inputs/hike/tma/01.webp",
+        "./comparison-inputs/hike/tma/02.webp",
+        "./comparison-inputs/hike/tma/03.webp",
+        "./comparison-inputs/hike/tma/04.webp",
+        "./comparison-inputs/hike/tma/05.webp"
+      ],
+      "rgbFrames": [
+        "./comparison-rgb/hike/tma/000.webp",
+        "./comparison-rgb/hike/tma/001.webp",
+        "./comparison-rgb/hike/tma/002.webp",
+        "./comparison-rgb/hike/tma/003.webp",
+        "./comparison-rgb/hike/tma/004.webp",
+        "./comparison-rgb/hike/tma/005.webp",
+        "./comparison-rgb/hike/tma/006.webp",
+        "./comparison-rgb/hike/tma/007.webp",
+        "./comparison-rgb/hike/tma/008.webp",
+        "./comparison-rgb/hike/tma/009.webp",
+        "./comparison-rgb/hike/tma/010.webp",
+        "./comparison-rgb/hike/tma/011.webp",
+        "./comparison-rgb/hike/tma/012.webp",
+        "./comparison-rgb/hike/tma/013.webp",
+        "./comparison-rgb/hike/tma/014.webp",
+        "./comparison-rgb/hike/tma/015.webp",
+        "./comparison-rgb/hike/tma/016.webp",
+        "./comparison-rgb/hike/tma/017.webp",
+        "./comparison-rgb/hike/tma/018.webp",
+        "./comparison-rgb/hike/tma/019.webp",
+        "./comparison-rgb/hike/tma/020.webp",
+        "./comparison-rgb/hike/tma/021.webp",
+        "./comparison-rgb/hike/tma/022.webp",
+        "./comparison-rgb/hike/tma/023.webp",
+        "./comparison-rgb/hike/tma/024.webp",
+        "./comparison-rgb/hike/tma/025.webp",
+        "./comparison-rgb/hike/tma/026.webp",
+        "./comparison-rgb/hike/tma/027.webp",
+        "./comparison-rgb/hike/tma/028.webp",
+        "./comparison-rgb/hike/tma/029.webp",
+        "./comparison-rgb/hike/tma/030.webp",
+        "./comparison-rgb/hike/tma/031.webp",
+        "./comparison-rgb/hike/tma/032.webp",
+        "./comparison-rgb/hike/tma/033.webp",
+        "./comparison-rgb/hike/tma/034.webp",
+        "./comparison-rgb/hike/tma/035.webp",
+        "./comparison-rgb/hike/tma/036.webp",
+        "./comparison-rgb/hike/tma/037.webp",
+        "./comparison-rgb/hike/tma/038.webp",
+        "./comparison-rgb/hike/tma/039.webp",
+        "./comparison-rgb/hike/tma/040.webp",
+        "./comparison-rgb/hike/tma/041.webp",
+        "./comparison-rgb/hike/tma/042.webp",
+        "./comparison-rgb/hike/tma/043.webp",
+        "./comparison-rgb/hike/tma/044.webp",
+        "./comparison-rgb/hike/tma/045.webp",
+        "./comparison-rgb/hike/tma/046.webp",
+        "./comparison-rgb/hike/tma/047.webp",
+        "./comparison-rgb/hike/tma/048.webp",
+        "./comparison-rgb/hike/tma/049.webp"
+      ],
+      "methods": [
+        {
+          "id": "opend4rt",
+          "label": "OpenD4RT",
+          "manifest": "./comparison-data/hike/opend4rt/manifest.json"
+        },
+        {
+          "id": "4rc",
+          "label": "4RC",
+          "manifest": "./comparison-data/hike/4rc/manifest.json"
+        },
+        {
+          "id": "vdpm",
+          "label": "V-DPM",
+          "manifest": "./comparison-data/hike/vdpm/manifest.json"
+        },
+        {
+          "id": "tma",
+          "label": "UniQuery4R (Ours)",
+          "manifest": "./comparison-data/hike/tma/manifest.json"
+        }
+      ]
+    },
+    {
+      "name": "flamingo",
+      "label": "Flamingo",
+      "inputImages": [
+        "./comparison-inputs/flamingo/tma/00.webp",
+        "./comparison-inputs/flamingo/tma/01.webp",
+        "./comparison-inputs/flamingo/tma/02.webp",
+        "./comparison-inputs/flamingo/tma/03.webp",
+        "./comparison-inputs/flamingo/tma/04.webp",
+        "./comparison-inputs/flamingo/tma/05.webp"
+      ],
+      "rgbFrames": [
+        "./comparison-rgb/flamingo/tma/000.webp",
+        "./comparison-rgb/flamingo/tma/001.webp",
+        "./comparison-rgb/flamingo/tma/002.webp",
+        "./comparison-rgb/flamingo/tma/003.webp",
+        "./comparison-rgb/flamingo/tma/004.webp",
+        "./comparison-rgb/flamingo/tma/005.webp",
+        "./comparison-rgb/flamingo/tma/006.webp",
+        "./comparison-rgb/flamingo/tma/007.webp",
+        "./comparison-rgb/flamingo/tma/008.webp",
+        "./comparison-rgb/flamingo/tma/009.webp",
+        "./comparison-rgb/flamingo/tma/010.webp",
+        "./comparison-rgb/flamingo/tma/011.webp",
+        "./comparison-rgb/flamingo/tma/012.webp",
+        "./comparison-rgb/flamingo/tma/013.webp",
+        "./comparison-rgb/flamingo/tma/014.webp",
+        "./comparison-rgb/flamingo/tma/015.webp",
+        "./comparison-rgb/flamingo/tma/016.webp",
+        "./comparison-rgb/flamingo/tma/017.webp",
+        "./comparison-rgb/flamingo/tma/018.webp",
+        "./comparison-rgb/flamingo/tma/019.webp",
+        "./comparison-rgb/flamingo/tma/020.webp",
+        "./comparison-rgb/flamingo/tma/021.webp",
+        "./comparison-rgb/flamingo/tma/022.webp",
+        "./comparison-rgb/flamingo/tma/023.webp",
+        "./comparison-rgb/flamingo/tma/024.webp",
+        "./comparison-rgb/flamingo/tma/025.webp",
+        "./comparison-rgb/flamingo/tma/026.webp",
+        "./comparison-rgb/flamingo/tma/027.webp",
+        "./comparison-rgb/flamingo/tma/028.webp",
+        "./comparison-rgb/flamingo/tma/029.webp",
+        "./comparison-rgb/flamingo/tma/030.webp",
+        "./comparison-rgb/flamingo/tma/031.webp",
+        "./comparison-rgb/flamingo/tma/032.webp",
+        "./comparison-rgb/flamingo/tma/033.webp",
+        "./comparison-rgb/flamingo/tma/034.webp",
+        "./comparison-rgb/flamingo/tma/035.webp",
+        "./comparison-rgb/flamingo/tma/036.webp",
+        "./comparison-rgb/flamingo/tma/037.webp",
+        "./comparison-rgb/flamingo/tma/038.webp",
+        "./comparison-rgb/flamingo/tma/039.webp",
+        "./comparison-rgb/flamingo/tma/040.webp",
+        "./comparison-rgb/flamingo/tma/041.webp",
+        "./comparison-rgb/flamingo/tma/042.webp",
+        "./comparison-rgb/flamingo/tma/043.webp",
+        "./comparison-rgb/flamingo/tma/044.webp",
+        "./comparison-rgb/flamingo/tma/045.webp",
+        "./comparison-rgb/flamingo/tma/046.webp",
+        "./comparison-rgb/flamingo/tma/047.webp",
+        "./comparison-rgb/flamingo/tma/048.webp",
+        "./comparison-rgb/flamingo/tma/049.webp"
+      ],
+      "methods": [
+        {
+          "id": "opend4rt",
+          "label": "OpenD4RT",
+          "manifest": "./comparison-data/flamingo/opend4rt/manifest.json"
+        },
+        {
+          "id": "4rc",
+          "label": "4RC",
+          "manifest": "./comparison-data/flamingo/4rc/manifest.json"
+        },
+        {
+          "id": "vdpm",
+          "label": "V-DPM",
+          "manifest": "./comparison-data/flamingo/vdpm/manifest.json"
+        },
+        {
+          "id": "tma",
+          "label": "UniQuery4R (Ours)",
+          "manifest": "./comparison-data/flamingo/tma/manifest.json"
+        }
+      ]
+    },
+    {
+      "name": "dance-twirl",
+      "label": "Dance Twirl",
+      "inputImages": [
+        "./comparison-inputs/dance-twirl/tma/00.webp",
+        "./comparison-inputs/dance-twirl/tma/01.webp",
+        "./comparison-inputs/dance-twirl/tma/02.webp",
+        "./comparison-inputs/dance-twirl/tma/03.webp",
+        "./comparison-inputs/dance-twirl/tma/04.webp",
+        "./comparison-inputs/dance-twirl/tma/05.webp"
+      ],
+      "rgbFrames": [
+        "./comparison-rgb/dance-twirl/tma/000.webp",
+        "./comparison-rgb/dance-twirl/tma/001.webp",
+        "./comparison-rgb/dance-twirl/tma/002.webp",
+        "./comparison-rgb/dance-twirl/tma/003.webp",
+        "./comparison-rgb/dance-twirl/tma/004.webp",
+        "./comparison-rgb/dance-twirl/tma/005.webp",
+        "./comparison-rgb/dance-twirl/tma/006.webp",
+        "./comparison-rgb/dance-twirl/tma/007.webp",
+        "./comparison-rgb/dance-twirl/tma/008.webp",
+        "./comparison-rgb/dance-twirl/tma/009.webp",
+        "./comparison-rgb/dance-twirl/tma/010.webp",
+        "./comparison-rgb/dance-twirl/tma/011.webp",
+        "./comparison-rgb/dance-twirl/tma/012.webp",
+        "./comparison-rgb/dance-twirl/tma/013.webp",
+        "./comparison-rgb/dance-twirl/tma/014.webp",
+        "./comparison-rgb/dance-twirl/tma/015.webp",
+        "./comparison-rgb/dance-twirl/tma/016.webp",
+        "./comparison-rgb/dance-twirl/tma/017.webp",
+        "./comparison-rgb/dance-twirl/tma/018.webp",
+        "./comparison-rgb/dance-twirl/tma/019.webp",
+        "./comparison-rgb/dance-twirl/tma/020.webp",
+        "./comparison-rgb/dance-twirl/tma/021.webp",
+        "./comparison-rgb/dance-twirl/tma/022.webp",
+        "./comparison-rgb/dance-twirl/tma/023.webp",
+        "./comparison-rgb/dance-twirl/tma/024.webp",
+        "./comparison-rgb/dance-twirl/tma/025.webp",
+        "./comparison-rgb/dance-twirl/tma/026.webp",
+        "./comparison-rgb/dance-twirl/tma/027.webp",
+        "./comparison-rgb/dance-twirl/tma/028.webp",
+        "./comparison-rgb/dance-twirl/tma/029.webp",
+        "./comparison-rgb/dance-twirl/tma/030.webp",
+        "./comparison-rgb/dance-twirl/tma/031.webp",
+        "./comparison-rgb/dance-twirl/tma/032.webp",
+        "./comparison-rgb/dance-twirl/tma/033.webp",
+        "./comparison-rgb/dance-twirl/tma/034.webp",
+        "./comparison-rgb/dance-twirl/tma/035.webp",
+        "./comparison-rgb/dance-twirl/tma/036.webp",
+        "./comparison-rgb/dance-twirl/tma/037.webp",
+        "./comparison-rgb/dance-twirl/tma/038.webp",
+        "./comparison-rgb/dance-twirl/tma/039.webp",
+        "./comparison-rgb/dance-twirl/tma/040.webp",
+        "./comparison-rgb/dance-twirl/tma/041.webp",
+        "./comparison-rgb/dance-twirl/tma/042.webp",
+        "./comparison-rgb/dance-twirl/tma/043.webp",
+        "./comparison-rgb/dance-twirl/tma/044.webp",
+        "./comparison-rgb/dance-twirl/tma/045.webp",
+        "./comparison-rgb/dance-twirl/tma/046.webp",
+        "./comparison-rgb/dance-twirl/tma/047.webp",
+        "./comparison-rgb/dance-twirl/tma/048.webp",
+        "./comparison-rgb/dance-twirl/tma/049.webp"
+      ],
+      "methods": [
+        {
+          "id": "opend4rt",
+          "label": "OpenD4RT",
+          "manifest": "./comparison-data/dance-twirl/opend4rt/manifest.json"
+        },
+        {
+          "id": "4rc",
+          "label": "4RC",
+          "manifest": "./comparison-data/dance-twirl/4rc/manifest.json"
+        },
+        {
+          "id": "vdpm",
+          "label": "V-DPM",
+          "manifest": "./comparison-data/dance-twirl/vdpm/manifest.json"
+        },
+        {
+          "id": "tma",
+          "label": "UniQuery4R (Ours)",
+          "manifest": "./comparison-data/dance-twirl/tma/manifest.json"
+        }
+      ]
+    }
+  ]
+}

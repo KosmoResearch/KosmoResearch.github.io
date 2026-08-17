@@ -1,0 +1,631 @@
+{
+  "version": 1,
+  "name": "hike/tma",
+  "frameCount": 50,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -1.9798154830932617,
+      -0.31367310881614685,
+      -7.204726219177246
+    ],
+    "max": [
+      7.287107944488525,
+      1.3421332836151123,
+      -0.44887521862983704
+    ],
+    "scale": [
+      0.0001414041907992214,
+      2.5265986550948583e-05,
+      0.0001030876737786457
+    ]
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 836061,
+    "bitmapSize": 104508,
+    "prefixEndFrame": 13,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 17480
+      },
+      {
+        "mode": "prefix",
+        "count": 34958
+      },
+      {
+        "mode": "prefix",
+        "count": 52439
+      },
+      {
+        "mode": "prefix",
+        "count": 69938
+      },
+      {
+        "mode": "prefix",
+        "count": 87439
+      },
+      {
+        "mode": "prefix",
+        "count": 104951
+      },
+      {
+        "mode": "prefix",
+        "count": 122484
+      },
+      {
+        "mode": "prefix",
+        "count": 140043
+      },
+      {
+        "mode": "prefix",
+        "count": 157606
+      },
+      {
+        "mode": "prefix",
+        "count": 175094
+      },
+      {
+        "mode": "prefix",
+        "count": 192579
+      },
+      {
+        "mode": "prefix",
+        "count": 210051
+      },
+      {
+        "mode": "prefix",
+        "count": 227527
+      },
+      {
+        "mode": "prefix",
+        "count": 245010
+      },
+      {
+        "mode": "bitmap",
+        "offset": 0,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 104508,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 209016,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 313524,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 418032,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 522540,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 627048,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 731556,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 836064,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 940572,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1045080,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1149588,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1254096,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1358604,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1463112,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1567620,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1672128,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1776636,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1881144,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1985652,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2090160,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2194668,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2299176,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2403684,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2508192,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2612700,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2717208,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2821716,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2926224,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3030732,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3135240,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3239748,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3344256,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3448764,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3553272,
+        "byteLength": 104508,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3657780,
+        "byteLength": 104508,
+        "count": 250000
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "camera": {
+    "frustumSegmentCount": 400,
+    "centerCount": 50,
+    "frameSegmentCounts": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      184,
+      192,
+      200,
+      208,
+      216,
+      224,
+      232,
+      240,
+      248,
+      256,
+      264,
+      272,
+      280,
+      288,
+      296,
+      304,
+      312,
+      320,
+      328,
+      336,
+      344,
+      352,
+      360,
+      368,
+      376,
+      384,
+      392,
+      400
+    ],
+    "frameCenterCounts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "centerRadius": 0.004
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 5016366
+    },
+    "staticColors": {
+      "offset": 5016368,
+      "byteLength": 3344244
+    },
+    "dynamicPositions": {
+      "offset": 8360612,
+      "byteLength": 614400
+    },
+    "dynamicColors": {
+      "offset": 8975012,
+      "byteLength": 8192
+    },
+    "trajectoryColors": {
+      "offset": 8983204,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 8991396,
+      "byteLength": 9600
+    },
+    "cameraFrustumColors": {
+      "offset": 9000996,
+      "byteLength": 3200
+    },
+    "cameraCenterPositions": {
+      "offset": 9004196,
+      "byteLength": 600
+    },
+    "cameraCenterColors": {
+      "offset": 9004796,
+      "byteLength": 200
+    },
+    "staticBitmaps": {
+      "offset": 9004996,
+      "byteLength": 3762288
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 12767284,
+    "sha256": "def339fbc051f6ae4a069c48cffed81228ce88cee63378377cc096f0fabaea77"
+  },
+  "validation": {
+    "quantizationMaxError": 7.128715515136719e-05,
+    "sourceRrdBytes": 307804730
+  },
+  "viewBounds": {
+    "min": [
+      -1.0035609498154372,
+      -0.23082593891558645,
+      -3.116165989442379
+    ],
+    "max": [
+      2.4809776815352995,
+      0.8653388875973178,
+      -0.49516188362031244
+    ],
+    "percentiles": [
+      1,
+      99
+    ],
+    "coordinateFrame": "tma"
+  },
+  "alignment": {
+    "reference": "tma",
+    "scale": 1.0,
+    "rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "translation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fit": {
+      "correspondence": "reference",
+      "keepFraction": 1.0,
+      "medianResidual": 0.0,
+      "rotationDegrees": 0.0
+    }
+  },
+  "rgbFrames": [
+    "./comparison-rgb/hike/tma/000.webp",
+    "./comparison-rgb/hike/tma/001.webp",
+    "./comparison-rgb/hike/tma/002.webp",
+    "./comparison-rgb/hike/tma/003.webp",
+    "./comparison-rgb/hike/tma/004.webp",
+    "./comparison-rgb/hike/tma/005.webp",
+    "./comparison-rgb/hike/tma/006.webp",
+    "./comparison-rgb/hike/tma/007.webp",
+    "./comparison-rgb/hike/tma/008.webp",
+    "./comparison-rgb/hike/tma/009.webp",
+    "./comparison-rgb/hike/tma/010.webp",
+    "./comparison-rgb/hike/tma/011.webp",
+    "./comparison-rgb/hike/tma/012.webp",
+    "./comparison-rgb/hike/tma/013.webp",
+    "./comparison-rgb/hike/tma/014.webp",
+    "./comparison-rgb/hike/tma/015.webp",
+    "./comparison-rgb/hike/tma/016.webp",
+    "./comparison-rgb/hike/tma/017.webp",
+    "./comparison-rgb/hike/tma/018.webp",
+    "./comparison-rgb/hike/tma/019.webp",
+    "./comparison-rgb/hike/tma/020.webp",
+    "./comparison-rgb/hike/tma/021.webp",
+    "./comparison-rgb/hike/tma/022.webp",
+    "./comparison-rgb/hike/tma/023.webp",
+    "./comparison-rgb/hike/tma/024.webp",
+    "./comparison-rgb/hike/tma/025.webp",
+    "./comparison-rgb/hike/tma/026.webp",
+    "./comparison-rgb/hike/tma/027.webp",
+    "./comparison-rgb/hike/tma/028.webp",
+    "./comparison-rgb/hike/tma/029.webp",
+    "./comparison-rgb/hike/tma/030.webp",
+    "./comparison-rgb/hike/tma/031.webp",
+    "./comparison-rgb/hike/tma/032.webp",
+    "./comparison-rgb/hike/tma/033.webp",
+    "./comparison-rgb/hike/tma/034.webp",
+    "./comparison-rgb/hike/tma/035.webp",
+    "./comparison-rgb/hike/tma/036.webp",
+    "./comparison-rgb/hike/tma/037.webp",
+    "./comparison-rgb/hike/tma/038.webp",
+    "./comparison-rgb/hike/tma/039.webp",
+    "./comparison-rgb/hike/tma/040.webp",
+    "./comparison-rgb/hike/tma/041.webp",
+    "./comparison-rgb/hike/tma/042.webp",
+    "./comparison-rgb/hike/tma/043.webp",
+    "./comparison-rgb/hike/tma/044.webp",
+    "./comparison-rgb/hike/tma/045.webp",
+    "./comparison-rgb/hike/tma/046.webp",
+    "./comparison-rgb/hike/tma/047.webp",
+    "./comparison-rgb/hike/tma/048.webp",
+    "./comparison-rgb/hike/tma/049.webp"
+  ]
+}

@@ -1,0 +1,564 @@
+{
+  "version": 1,
+  "name": "train",
+  "frameCount": 50,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -0.6367245316505432,
+      -0.26763808727264404,
+      -1.560725450515747
+    ],
+    "max": [
+      1.2340799570083618,
+      0.6206676363945007,
+      -0.5333883762359619
+    ],
+    "scale": [
+      2.8546646717586555e-05,
+      1.3554676115745679e-05,
+      1.5676159819122404e-05
+    ]
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 524328,
+    "bitmapSize": 65541,
+    "prefixEndFrame": 22,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 11072
+      },
+      {
+        "mode": "prefix",
+        "count": 22093
+      },
+      {
+        "mode": "prefix",
+        "count": 33099
+      },
+      {
+        "mode": "prefix",
+        "count": 44069
+      },
+      {
+        "mode": "prefix",
+        "count": 55020
+      },
+      {
+        "mode": "prefix",
+        "count": 65923
+      },
+      {
+        "mode": "prefix",
+        "count": 76778
+      },
+      {
+        "mode": "prefix",
+        "count": 87600
+      },
+      {
+        "mode": "prefix",
+        "count": 98395
+      },
+      {
+        "mode": "prefix",
+        "count": 109150
+      },
+      {
+        "mode": "prefix",
+        "count": 119882
+      },
+      {
+        "mode": "prefix",
+        "count": 130599
+      },
+      {
+        "mode": "prefix",
+        "count": 141290
+      },
+      {
+        "mode": "prefix",
+        "count": 151938
+      },
+      {
+        "mode": "prefix",
+        "count": 162567
+      },
+      {
+        "mode": "prefix",
+        "count": 173166
+      },
+      {
+        "mode": "prefix",
+        "count": 183741
+      },
+      {
+        "mode": "prefix",
+        "count": 194312
+      },
+      {
+        "mode": "prefix",
+        "count": 204866
+      },
+      {
+        "mode": "prefix",
+        "count": 215423
+      },
+      {
+        "mode": "prefix",
+        "count": 225981
+      },
+      {
+        "mode": "prefix",
+        "count": 236534
+      },
+      {
+        "mode": "prefix",
+        "count": 247109
+      },
+      {
+        "mode": "bitmap",
+        "offset": 0,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 65541,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 131082,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 196623,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 262164,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 327705,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 393246,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 458787,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 524328,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 589869,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 655410,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 720951,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 786492,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 852033,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 917574,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 983115,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1048656,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1114197,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1179738,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1245279,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1310820,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1376361,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1441902,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1507443,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1572984,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1638525,
+        "byteLength": 65541,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1704066,
+        "byteLength": 65541,
+        "count": 250000
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 3145968
+    },
+    "staticColors": {
+      "offset": 3145968,
+      "byteLength": 2097312
+    },
+    "dynamicPositions": {
+      "offset": 5243280,
+      "byteLength": 614400
+    },
+    "dynamicColors": {
+      "offset": 5857680,
+      "byteLength": 8192
+    },
+    "staticBitmaps": {
+      "offset": 5865872,
+      "byteLength": 1769607
+    },
+    "trajectoryColors": {
+      "offset": 7635480,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 7643672,
+      "byteLength": 9600
+    },
+    "cameraFrustumColors": {
+      "offset": 7653272,
+      "byteLength": 3200
+    },
+    "cameraCenterPositions": {
+      "offset": 7656472,
+      "byteLength": 600
+    },
+    "cameraCenterColors": {
+      "offset": 7657072,
+      "byteLength": 200
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 7657272,
+    "sha256": "56ee244e9a43b5381c7aa9742a60daa02d8b3745fbc83b1e3df8cc3d638ceed7"
+  },
+  "validation": {
+    "quantizationMaxError": 1.4424324035644531e-05,
+    "sourceRrdBytes": 293144522
+  },
+  "camera": {
+    "frustumSegmentCount": 400,
+    "centerCount": 50,
+    "frameSegmentCounts": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      184,
+      192,
+      200,
+      208,
+      216,
+      224,
+      232,
+      240,
+      248,
+      256,
+      264,
+      272,
+      280,
+      288,
+      296,
+      304,
+      312,
+      320,
+      328,
+      336,
+      344,
+      352,
+      360,
+      368,
+      376,
+      384,
+      392,
+      400
+    ],
+    "frameCenterCounts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "centerRadius": 0.004
+  },
+  "rgbFrames": [
+    "./gallery-rgb/train/000.webp",
+    "./gallery-rgb/train/001.webp",
+    "./gallery-rgb/train/002.webp",
+    "./gallery-rgb/train/003.webp",
+    "./gallery-rgb/train/004.webp",
+    "./gallery-rgb/train/005.webp",
+    "./gallery-rgb/train/006.webp",
+    "./gallery-rgb/train/007.webp",
+    "./gallery-rgb/train/008.webp",
+    "./gallery-rgb/train/009.webp",
+    "./gallery-rgb/train/010.webp",
+    "./gallery-rgb/train/011.webp",
+    "./gallery-rgb/train/012.webp",
+    "./gallery-rgb/train/013.webp",
+    "./gallery-rgb/train/014.webp",
+    "./gallery-rgb/train/015.webp",
+    "./gallery-rgb/train/016.webp",
+    "./gallery-rgb/train/017.webp",
+    "./gallery-rgb/train/018.webp",
+    "./gallery-rgb/train/019.webp",
+    "./gallery-rgb/train/020.webp",
+    "./gallery-rgb/train/021.webp",
+    "./gallery-rgb/train/022.webp",
+    "./gallery-rgb/train/023.webp",
+    "./gallery-rgb/train/024.webp",
+    "./gallery-rgb/train/025.webp",
+    "./gallery-rgb/train/026.webp",
+    "./gallery-rgb/train/027.webp",
+    "./gallery-rgb/train/028.webp",
+    "./gallery-rgb/train/029.webp",
+    "./gallery-rgb/train/030.webp",
+    "./gallery-rgb/train/031.webp",
+    "./gallery-rgb/train/032.webp",
+    "./gallery-rgb/train/033.webp",
+    "./gallery-rgb/train/034.webp",
+    "./gallery-rgb/train/035.webp",
+    "./gallery-rgb/train/036.webp",
+    "./gallery-rgb/train/037.webp",
+    "./gallery-rgb/train/038.webp",
+    "./gallery-rgb/train/039.webp",
+    "./gallery-rgb/train/040.webp",
+    "./gallery-rgb/train/041.webp",
+    "./gallery-rgb/train/042.webp",
+    "./gallery-rgb/train/043.webp",
+    "./gallery-rgb/train/044.webp",
+    "./gallery-rgb/train/045.webp",
+    "./gallery-rgb/train/046.webp",
+    "./gallery-rgb/train/047.webp",
+    "./gallery-rgb/train/048.webp",
+    "./gallery-rgb/train/049.webp"
+  ]
+}

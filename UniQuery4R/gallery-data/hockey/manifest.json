@@ -1,0 +1,570 @@
+{
+  "version": 1,
+  "name": "hockey",
+  "frameCount": 50,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -1.2508249282836914,
+      -0.08885931223630905,
+      -3.7325541973114014
+    ],
+    "max": [
+      0.9377840757369995,
+      0.6042737364768982,
+      -0.4950586259365082
+    ],
+    "scale": [
+      3.3396034268662333e-05,
+      1.0576532076811418e-05,
+      4.940101644024253e-05
+    ]
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 593101,
+    "bitmapSize": 74138,
+    "prefixEndFrame": 19,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 12287
+      },
+      {
+        "mode": "prefix",
+        "count": 24565
+      },
+      {
+        "mode": "prefix",
+        "count": 36845
+      },
+      {
+        "mode": "prefix",
+        "count": 49121
+      },
+      {
+        "mode": "prefix",
+        "count": 61386
+      },
+      {
+        "mode": "prefix",
+        "count": 73669
+      },
+      {
+        "mode": "prefix",
+        "count": 85954
+      },
+      {
+        "mode": "prefix",
+        "count": 98226
+      },
+      {
+        "mode": "prefix",
+        "count": 110502
+      },
+      {
+        "mode": "prefix",
+        "count": 122760
+      },
+      {
+        "mode": "prefix",
+        "count": 135017
+      },
+      {
+        "mode": "prefix",
+        "count": 147252
+      },
+      {
+        "mode": "prefix",
+        "count": 159466
+      },
+      {
+        "mode": "prefix",
+        "count": 171669
+      },
+      {
+        "mode": "prefix",
+        "count": 183864
+      },
+      {
+        "mode": "prefix",
+        "count": 196051
+      },
+      {
+        "mode": "prefix",
+        "count": 208239
+      },
+      {
+        "mode": "prefix",
+        "count": 220403
+      },
+      {
+        "mode": "prefix",
+        "count": 232577
+      },
+      {
+        "mode": "prefix",
+        "count": 244747
+      },
+      {
+        "mode": "bitmap",
+        "offset": 0,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 74138,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 148276,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 222414,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 296552,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 370690,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 444828,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 518966,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 593104,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 667242,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 741380,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 815518,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 889656,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 963794,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1037932,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1112070,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1186208,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1260346,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1334484,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1408622,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1482760,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1556898,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1631036,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1705174,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1779312,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1853450,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1927588,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2001726,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2075864,
+        "byteLength": 74138,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2150002,
+        "byteLength": 74138,
+        "count": 250000
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 3558606
+    },
+    "staticColors": {
+      "offset": 3558608,
+      "byteLength": 2372404
+    },
+    "dynamicPositions": {
+      "offset": 5931012,
+      "byteLength": 614400
+    },
+    "dynamicColors": {
+      "offset": 6545412,
+      "byteLength": 8192
+    },
+    "staticBitmaps": {
+      "offset": 6553604,
+      "byteLength": 2224140
+    },
+    "trajectoryColors": {
+      "offset": 8777744,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 8785936,
+      "byteLength": 9600
+    },
+    "cameraFrustumColors": {
+      "offset": 8795536,
+      "byteLength": 3200
+    },
+    "cameraCenterPositions": {
+      "offset": 8798736,
+      "byteLength": 600
+    },
+    "cameraCenterColors": {
+      "offset": 8799336,
+      "byteLength": 200
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 8799536,
+    "sha256": "8c7b819af806bcd17d1767385fe390ff39eb5bc739e7c2bb18b1fba2aa9a18be"
+  },
+  "validation": {
+    "quantizationMaxError": 2.491474151611328e-05,
+    "sourceRrdBytes": 275820197
+  },
+  "camera": {
+    "frustumSegmentCount": 400,
+    "centerCount": 50,
+    "frameSegmentCounts": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      184,
+      192,
+      200,
+      208,
+      216,
+      224,
+      232,
+      240,
+      248,
+      256,
+      264,
+      272,
+      280,
+      288,
+      296,
+      304,
+      312,
+      320,
+      328,
+      336,
+      344,
+      352,
+      360,
+      368,
+      376,
+      384,
+      392,
+      400
+    ],
+    "frameCenterCounts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "centerRadius": 0.004
+  },
+  "rgbFrames": [
+    "./gallery-rgb/hockey/000.webp",
+    "./gallery-rgb/hockey/001.webp",
+    "./gallery-rgb/hockey/002.webp",
+    "./gallery-rgb/hockey/003.webp",
+    "./gallery-rgb/hockey/004.webp",
+    "./gallery-rgb/hockey/005.webp",
+    "./gallery-rgb/hockey/006.webp",
+    "./gallery-rgb/hockey/007.webp",
+    "./gallery-rgb/hockey/008.webp",
+    "./gallery-rgb/hockey/009.webp",
+    "./gallery-rgb/hockey/010.webp",
+    "./gallery-rgb/hockey/011.webp",
+    "./gallery-rgb/hockey/012.webp",
+    "./gallery-rgb/hockey/013.webp",
+    "./gallery-rgb/hockey/014.webp",
+    "./gallery-rgb/hockey/015.webp",
+    "./gallery-rgb/hockey/016.webp",
+    "./gallery-rgb/hockey/017.webp",
+    "./gallery-rgb/hockey/018.webp",
+    "./gallery-rgb/hockey/019.webp",
+    "./gallery-rgb/hockey/020.webp",
+    "./gallery-rgb/hockey/021.webp",
+    "./gallery-rgb/hockey/022.webp",
+    "./gallery-rgb/hockey/023.webp",
+    "./gallery-rgb/hockey/024.webp",
+    "./gallery-rgb/hockey/025.webp",
+    "./gallery-rgb/hockey/026.webp",
+    "./gallery-rgb/hockey/027.webp",
+    "./gallery-rgb/hockey/028.webp",
+    "./gallery-rgb/hockey/029.webp",
+    "./gallery-rgb/hockey/030.webp",
+    "./gallery-rgb/hockey/031.webp",
+    "./gallery-rgb/hockey/032.webp",
+    "./gallery-rgb/hockey/033.webp",
+    "./gallery-rgb/hockey/034.webp",
+    "./gallery-rgb/hockey/035.webp",
+    "./gallery-rgb/hockey/036.webp",
+    "./gallery-rgb/hockey/037.webp",
+    "./gallery-rgb/hockey/038.webp",
+    "./gallery-rgb/hockey/039.webp",
+    "./gallery-rgb/hockey/040.webp",
+    "./gallery-rgb/hockey/041.webp",
+    "./gallery-rgb/hockey/042.webp",
+    "./gallery-rgb/hockey/043.webp",
+    "./gallery-rgb/hockey/044.webp",
+    "./gallery-rgb/hockey/045.webp",
+    "./gallery-rgb/hockey/046.webp",
+    "./gallery-rgb/hockey/047.webp",
+    "./gallery-rgb/hockey/048.webp",
+    "./gallery-rgb/hockey/049.webp"
+  ]
+}

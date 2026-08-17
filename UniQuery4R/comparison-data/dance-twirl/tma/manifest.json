@@ -1,0 +1,631 @@
+{
+  "version": 1,
+  "name": "dance-twirl/tma",
+  "frameCount": 50,
+  "fps": 10,
+  "targetFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "coordinateSystem": {
+    "source": "RDF",
+    "toThree": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  "bbox": {
+    "min": [
+      -3.1438207626342773,
+      -0.19247616827487946,
+      -2.068840265274048
+    ],
+    "max": [
+      0.7739056944847107,
+      0.9224058389663696,
+      -0.15128079056739807
+    ],
+    "scale": [
+      5.978067565592937e-05,
+      1.701200926618185e-05,
+      2.9260081646498293e-05
+    ]
+  },
+  "radii": {
+    "static": 0.002,
+    "dynamic": 0.0036,
+    "trajectory": 0.0005
+  },
+  "static": {
+    "dictionaryCount": 806096,
+    "bitmapSize": 100762,
+    "prefixEndFrame": 13,
+    "frames": [
+      {
+        "mode": "prefix",
+        "count": 17386
+      },
+      {
+        "mode": "prefix",
+        "count": 34720
+      },
+      {
+        "mode": "prefix",
+        "count": 52009
+      },
+      {
+        "mode": "prefix",
+        "count": 69301
+      },
+      {
+        "mode": "prefix",
+        "count": 86574
+      },
+      {
+        "mode": "prefix",
+        "count": 103704
+      },
+      {
+        "mode": "prefix",
+        "count": 120750
+      },
+      {
+        "mode": "prefix",
+        "count": 137742
+      },
+      {
+        "mode": "prefix",
+        "count": 154776
+      },
+      {
+        "mode": "prefix",
+        "count": 171930
+      },
+      {
+        "mode": "prefix",
+        "count": 189274
+      },
+      {
+        "mode": "prefix",
+        "count": 206696
+      },
+      {
+        "mode": "prefix",
+        "count": 224117
+      },
+      {
+        "mode": "prefix",
+        "count": 241597
+      },
+      {
+        "mode": "bitmap",
+        "offset": 0,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 100762,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 201524,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 302286,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 403048,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 503810,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 604572,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 705334,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 806096,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 906858,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1007620,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1108382,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1209144,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1309906,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1410668,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1511430,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1612192,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1712954,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1813716,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 1914478,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2015240,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2116002,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2216764,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2317526,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2418288,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2519050,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2619812,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2720574,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2821336,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 2922098,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3022860,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3123622,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3224384,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3325146,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3425908,
+        "byteLength": 100762,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3526670,
+        "byteLength": 100762,
+        "count": 250000
+      }
+    ]
+  },
+  "dynamic": {
+    "trackCount": 2048
+  },
+  "camera": {
+    "frustumSegmentCount": 400,
+    "centerCount": 50,
+    "frameSegmentCounts": [
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      56,
+      64,
+      72,
+      80,
+      88,
+      96,
+      104,
+      112,
+      120,
+      128,
+      136,
+      144,
+      152,
+      160,
+      168,
+      176,
+      184,
+      192,
+      200,
+      208,
+      216,
+      224,
+      232,
+      240,
+      248,
+      256,
+      264,
+      272,
+      280,
+      288,
+      296,
+      304,
+      312,
+      320,
+      328,
+      336,
+      344,
+      352,
+      360,
+      368,
+      376,
+      384,
+      392,
+      400
+    ],
+    "frameCenterCounts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "centerRadius": 0.004
+  },
+  "sections": {
+    "staticPositions": {
+      "offset": 0,
+      "byteLength": 4836576
+    },
+    "staticColors": {
+      "offset": 4836576,
+      "byteLength": 3224384
+    },
+    "dynamicPositions": {
+      "offset": 8060960,
+      "byteLength": 614400
+    },
+    "dynamicColors": {
+      "offset": 8675360,
+      "byteLength": 8192
+    },
+    "trajectoryColors": {
+      "offset": 8683552,
+      "byteLength": 8192
+    },
+    "cameraFrustumPositions": {
+      "offset": 8691744,
+      "byteLength": 9600
+    },
+    "cameraFrustumColors": {
+      "offset": 8701344,
+      "byteLength": 3200
+    },
+    "cameraCenterPositions": {
+      "offset": 8704544,
+      "byteLength": 600
+    },
+    "cameraCenterColors": {
+      "offset": 8705144,
+      "byteLength": 200
+    },
+    "staticBitmaps": {
+      "offset": 8705344,
+      "byteLength": 3627432
+    }
+  },
+  "binary": {
+    "url": "./scene.bin",
+    "byteLength": 12332776,
+    "sha256": "9e7ca7f8d7225dc7fc548a4e20f3f9c7fb9db4148ff7c05c9b927c168f952d12"
+  },
+  "validation": {
+    "quantizationMaxError": 3.0159950256347656e-05,
+    "sourceRrdBytes": 295111865
+  },
+  "viewBounds": {
+    "min": [
+      -1.4675108365663618,
+      -0.17522599087897106,
+      -1.8395875255737337
+    ],
+    "max": [
+      0.4767360777914291,
+      0.5792396080669278,
+      -0.274992439772177
+    ],
+    "percentiles": [
+      1,
+      99
+    ],
+    "coordinateFrame": "tma"
+  },
+  "alignment": {
+    "reference": "tma",
+    "scale": 1.0,
+    "rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "translation": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fit": {
+      "correspondence": "reference",
+      "keepFraction": 1.0,
+      "medianResidual": 0.0,
+      "rotationDegrees": 0.0
+    }
+  },
+  "rgbFrames": [
+    "./comparison-rgb/dance-twirl/tma/000.webp",
+    "./comparison-rgb/dance-twirl/tma/001.webp",
+    "./comparison-rgb/dance-twirl/tma/002.webp",
+    "./comparison-rgb/dance-twirl/tma/003.webp",
+    "./comparison-rgb/dance-twirl/tma/004.webp",
+    "./comparison-rgb/dance-twirl/tma/005.webp",
+    "./comparison-rgb/dance-twirl/tma/006.webp",
+    "./comparison-rgb/dance-twirl/tma/007.webp",
+    "./comparison-rgb/dance-twirl/tma/008.webp",
+    "./comparison-rgb/dance-twirl/tma/009.webp",
+    "./comparison-rgb/dance-twirl/tma/010.webp",
+    "./comparison-rgb/dance-twirl/tma/011.webp",
+    "./comparison-rgb/dance-twirl/tma/012.webp",
+    "./comparison-rgb/dance-twirl/tma/013.webp",
+    "./comparison-rgb/dance-twirl/tma/014.webp",
+    "./comparison-rgb/dance-twirl/tma/015.webp",
+    "./comparison-rgb/dance-twirl/tma/016.webp",
+    "./comparison-rgb/dance-twirl/tma/017.webp",
+    "./comparison-rgb/dance-twirl/tma/018.webp",
+    "./comparison-rgb/dance-twirl/tma/019.webp",
+    "./comparison-rgb/dance-twirl/tma/020.webp",
+    "./comparison-rgb/dance-twirl/tma/021.webp",
+    "./comparison-rgb/dance-twirl/tma/022.webp",
+    "./comparison-rgb/dance-twirl/tma/023.webp",
+    "./comparison-rgb/dance-twirl/tma/024.webp",
+    "./comparison-rgb/dance-twirl/tma/025.webp",
+    "./comparison-rgb/dance-twirl/tma/026.webp",
+    "./comparison-rgb/dance-twirl/tma/027.webp",
+    "./comparison-rgb/dance-twirl/tma/028.webp",
+    "./comparison-rgb/dance-twirl/tma/029.webp",
+    "./comparison-rgb/dance-twirl/tma/030.webp",
+    "./comparison-rgb/dance-twirl/tma/031.webp",
+    "./comparison-rgb/dance-twirl/tma/032.webp",
+    "./comparison-rgb/dance-twirl/tma/033.webp",
+    "./comparison-rgb/dance-twirl/tma/034.webp",
+    "./comparison-rgb/dance-twirl/tma/035.webp",
+    "./comparison-rgb/dance-twirl/tma/036.webp",
+    "./comparison-rgb/dance-twirl/tma/037.webp",
+    "./comparison-rgb/dance-twirl/tma/038.webp",
+    "./comparison-rgb/dance-twirl/tma/039.webp",
+    "./comparison-rgb/dance-twirl/tma/040.webp",
+    "./comparison-rgb/dance-twirl/tma/041.webp",
+    "./comparison-rgb/dance-twirl/tma/042.webp",
+    "./comparison-rgb/dance-twirl/tma/043.webp",
+    "./comparison-rgb/dance-twirl/tma/044.webp",
+    "./comparison-rgb/dance-twirl/tma/045.webp",
+    "./comparison-rgb/dance-twirl/tma/046.webp",
+    "./comparison-rgb/dance-twirl/tma/047.webp",
+    "./comparison-rgb/dance-twirl/tma/048.webp",
+    "./comparison-rgb/dance-twirl/tma/049.webp"
+  ]
+}
