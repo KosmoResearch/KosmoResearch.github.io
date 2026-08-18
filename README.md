@@ -1,44 +1,26 @@
-# Kosmo Research Project Pages
+# Kosmo Research
 
-Purely static project pages for:
+Official project pages and interactive research demonstrations from Kosmo
+Research.
 
-- `/GeoWeaver/`
-- `/UniQuery4R/`
+## Projects
 
-No build step or server runtime is required.
+### GeoWeaver
 
-## Local preview
+**Accurate Long-Sequence 3D Reconstruction via Hierarchical Geometric
+Assembly**
 
-Run this command from the repository root:
+GeoWeaver combines chunk-wise geometric priors with hierarchical test-time
+adaptation to recover accurate geometry and globally consistent camera
+trajectories from long image sequences.
 
-```bash
-python3 -m http.server 8000
-```
+[Explore GeoWeaver →](./GeoWeaver/)
 
-Then open `http://localhost:8000/`.
+### UniQuery4R
 
-## GitHub Pages
+**Unified 4D Scene Reconstruction from a Single Query**
 
-In **Settings → Pages**, choose **Deploy from a branch**, select the default
-branch, and use `/ (root)` as the publishing directory.
+UniQuery4R is a query-conditioned framework for unified correspondence,
+geometry, motion, depth, and camera estimation in dynamic scenes.
 
-## Cloudflare Pages
-
-Connect the repository and use:
-
-- Framework preset: `None`
-- Build command: leave empty
-- Build output directory: `/`
-
-The two project pages use relative asset URLs, so they work under both a custom
-domain and GitHub Pages subpaths.
-
-## Publication safety
-
-Manuscript formats and supplementary-only directories are excluded by
-`.gitignore`. Before every push, confirm that the staged file list contains no
-paper source or PDF:
-
-```bash
-git status --short
-```
+[Explore UniQuery4R →](./UniQuery4R/)
