@@ -14,7 +14,7 @@ GeoWeaver combines chunk-wise geometric priors with hierarchical test-time
 adaptation to recover accurate geometry and globally consistent camera
 trajectories from long image sequences.
 
-[Explore GeoWeaver →](./GeoWeaver/)
+[Explore GeoWeaver →](https://kosmoresearch.github.io/GeoWeaver/)
 
 ### UniQuery4R
 
@@ -23,4 +23,4 @@ trajectories from long image sequences.
 UniQuery4R is a query-conditioned framework for unified correspondence,
 geometry, motion, depth, and camera estimation in dynamic scenes.
 
-[Explore UniQuery4R →](./UniQuery4R/)
+[Explore UniQuery4R →](https://kosmoresearch.github.io/UniQuery4R/)
