@@ -17,14 +17,14 @@
     {
       "name": "rollerblade",
       "label": "Rollerblade",
-      "manifest": "./gallery-data/rollerblade/manifest.json",
+      "manifest": "./comparison-data/rollerblade/tma/manifest.json",
       "inputImages": [
-        "./gallery-inputs/rollerblade/00.webp",
-        "./gallery-inputs/rollerblade/01.webp",
-        "./gallery-inputs/rollerblade/02.webp",
-        "./gallery-inputs/rollerblade/03.webp",
-        "./gallery-inputs/rollerblade/04.webp",
-        "./gallery-inputs/rollerblade/05.webp"
+        "./comparison-inputs/rollerblade/tma/00.webp",
+        "./comparison-inputs/rollerblade/tma/01.webp",
+        "./comparison-inputs/rollerblade/tma/02.webp",
+        "./comparison-inputs/rollerblade/tma/03.webp",
+        "./comparison-inputs/rollerblade/tma/04.webp",
+        "./comparison-inputs/rollerblade/tma/05.webp"
       ]
     },
     {
