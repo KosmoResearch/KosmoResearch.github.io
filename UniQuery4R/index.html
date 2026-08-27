@@ -30,9 +30,9 @@
     "isAccessibleForFree": true
   }
   </script>
-  <script type="module" crossorigin src="./assets/index-zjfZ6VJV.js"></script>
+  <script type="module" crossorigin src="./assets/index-zjfZ6VJV.js?v=3"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-D0vAGhQZ.css?v=2">
-  <link rel="stylesheet" href="./assets/geoweaver-aligned-header.css">
+  <link rel="stylesheet" href="./assets/geoweaver-aligned-header.css?v=2">
   <link rel="stylesheet" href="./assets/results-table.css">
 </head>
 <body>
@@ -51,7 +51,6 @@
     <section class="hero publication-header" id="top">
       <div class="hero-body">
         <div class="container is-max-desktop has-text-centered">
-          <div class="publication-status">Project page · 2026</div>
           <h1 class="title publication-title">UniQuery4R: Unified 4D Scene Reconstruction from a Single Query</h1>
 
           <div class="publication-authors">
@@ -121,7 +120,7 @@
           <div class="gallery-toolbar">
             <div>
               <span class="viewer-status-dot" id="viewerStatusDot"></span>
-              <strong id="viewerTitle">Loading DAVIS sequences…</strong>
+              <strong id="viewerTitle">Select a DAVIS sequence</strong>
             </div>
             <button class="viewer-fullscreen" id="viewerFullscreen" type="button" disabled>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg>
@@ -150,8 +149,9 @@
               </div>
               <div class="viewer-empty" id="viewerEmpty">
                 <span class="viewer-loader"></span>
-                <strong>Preparing interactive viewer</strong>
-                <p>Loading compact 3D reconstruction data.</p>
+                <div class="load-ring" hidden><span>0%</span></div>
+                <strong>Select a sequence</strong>
+                <p>Choose a sequence above to load its 3D reconstruction.</p>
               </div>
             </div>
 

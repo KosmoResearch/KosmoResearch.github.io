@@ -364,6 +364,43 @@ section[id] {
   }
 }
 
+/* Circular download progress shown while scene binaries stream in. */
+.load-ring {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 0.9rem;
+  border-radius: 50%;
+  background: conic-gradient(#2563eb calc(var(--p, 0) * 1%), #e3e8f0 0);
+  display: grid;
+  place-content: center;
+}
+
+.load-ring[hidden] {
+  display: none;
+}
+
+.load-ring::before {
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: #fff;
+  content: "";
+}
+
+.load-ring span {
+  position: relative;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+
+.viewer-empty.error .load-ring,
+.comparison-loading.error .load-ring {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .publication-header .publication-links .button {
     transition-duration: 0.01ms;

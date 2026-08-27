@@ -1,7 +1,7 @@
 {
   "version": 1,
   "name": "parkour",
-  "frameCount": 50,
+  "frameCount": 100,
   "fps": 10,
   "targetFrames": [
     0,
@@ -53,7 +53,57 @@
     46,
     47,
     48,
-    49
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
   ],
   "coordinateSystem": {
     "source": "RDF",
@@ -65,31 +115,31 @@
   },
   "bbox": {
     "min": [
-      -3.9630608558654785,
-      -0.48436418175697327,
-      -2.992849588394165
+      -2.555196523666382,
+      -0.4173787236213684,
+      -2.4246416091918945
     ],
     "max": [
-      1.6060025691986084,
-      1.6568784713745117,
-      2.5525476932525635
+      1.2305904626846313,
+      1.1681859493255615,
+      2.141988515853882
     ],
     "scale": [
-      8.49784555612132e-05,
-      3.267326974309981e-05,
-      8.461733523290604e-05
+      5.7767407270148396e-05,
+      2.4194165234803222e-05,
+      6.968231173232198e-05
     ]
   },
   "viewBounds": {
     "min": [
-      -2.419071674346924,
-      -0.4102132022380829,
-      -2.162583589553833
+      -1.8973761796951294,
+      -0.352289080619812,
+      -1.6460790634155273
     ],
     "max": [
-      0.6293787956237793,
-      1.0516010522842407,
-      1.8852580785751343
+      0.3898963928222656,
+      0.7121714353561401,
+      1.1511867046356201
     ],
     "percentiles": [
       1,
@@ -102,282 +152,536 @@
     "trajectory": 0.0005
   },
   "static": {
-    "dictionaryCount": 839985,
-    "bitmapSize": 104999,
-    "prefixEndFrame": 12,
+    "dictionaryCount": 665724,
+    "bitmapSize": 83216,
+    "prefixEndFrame": 35,
     "frames": [
       {
         "mode": "prefix",
-        "count": 18079
+        "count": 6948
       },
       {
         "mode": "prefix",
-        "count": 36122
+        "count": 13879
       },
       {
         "mode": "prefix",
-        "count": 54120
+        "count": 20799
       },
       {
         "mode": "prefix",
-        "count": 72111
+        "count": 27715
       },
       {
         "mode": "prefix",
-        "count": 90107
+        "count": 34632
       },
       {
         "mode": "prefix",
-        "count": 108043
+        "count": 41540
       },
       {
         "mode": "prefix",
-        "count": 125964
+        "count": 48452
       },
       {
         "mode": "prefix",
-        "count": 143903
+        "count": 55359
       },
       {
         "mode": "prefix",
-        "count": 161875
+        "count": 62270
       },
       {
         "mode": "prefix",
-        "count": 179755
+        "count": 69164
       },
       {
         "mode": "prefix",
-        "count": 197540
+        "count": 76053
       },
       {
         "mode": "prefix",
-        "count": 215207
+        "count": 82937
       },
       {
         "mode": "prefix",
-        "count": 232899
+        "count": 89814
+      },
+      {
+        "mode": "prefix",
+        "count": 96695
+      },
+      {
+        "mode": "prefix",
+        "count": 103582
+      },
+      {
+        "mode": "prefix",
+        "count": 110478
+      },
+      {
+        "mode": "prefix",
+        "count": 117380
+      },
+      {
+        "mode": "prefix",
+        "count": 124260
+      },
+      {
+        "mode": "prefix",
+        "count": 131126
+      },
+      {
+        "mode": "prefix",
+        "count": 137970
+      },
+      {
+        "mode": "prefix",
+        "count": 144797
+      },
+      {
+        "mode": "prefix",
+        "count": 151605
+      },
+      {
+        "mode": "prefix",
+        "count": 158395
+      },
+      {
+        "mode": "prefix",
+        "count": 165175
+      },
+      {
+        "mode": "prefix",
+        "count": 171966
+      },
+      {
+        "mode": "prefix",
+        "count": 178769
+      },
+      {
+        "mode": "prefix",
+        "count": 185577
+      },
+      {
+        "mode": "prefix",
+        "count": 192377
+      },
+      {
+        "mode": "prefix",
+        "count": 199189
+      },
+      {
+        "mode": "prefix",
+        "count": 205997
+      },
+      {
+        "mode": "prefix",
+        "count": 212795
+      },
+      {
+        "mode": "prefix",
+        "count": 219583
+      },
+      {
+        "mode": "prefix",
+        "count": 226350
+      },
+      {
+        "mode": "prefix",
+        "count": 233110
+      },
+      {
+        "mode": "prefix",
+        "count": 239858
+      },
+      {
+        "mode": "prefix",
+        "count": 246587
       },
       {
         "mode": "bitmap",
         "offset": 0,
-        "byteLength": 104999,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 104999,
-        "byteLength": 104999,
+        "offset": 83216,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 209998,
-        "byteLength": 104999,
+        "offset": 166432,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 314997,
-        "byteLength": 104999,
+        "offset": 249648,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 419996,
-        "byteLength": 104999,
+        "offset": 332864,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 524995,
-        "byteLength": 104999,
+        "offset": 416080,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 629994,
-        "byteLength": 104999,
+        "offset": 499296,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 734993,
-        "byteLength": 104999,
+        "offset": 582512,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 839992,
-        "byteLength": 104999,
+        "offset": 665728,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 944991,
-        "byteLength": 104999,
+        "offset": 748944,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 1049990,
-        "byteLength": 104999,
+        "offset": 832160,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 1154989,
-        "byteLength": 104999,
+        "offset": 915376,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 1259988,
-        "byteLength": 104999,
+        "offset": 998592,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 1364987,
-        "byteLength": 104999,
+        "offset": 1081808,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 1469986,
-        "byteLength": 104999,
+        "offset": 1165024,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 1574985,
-        "byteLength": 104999,
+        "offset": 1248240,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 1679984,
-        "byteLength": 104999,
+        "offset": 1331456,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 1784983,
-        "byteLength": 104999,
+        "offset": 1414672,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 1889982,
-        "byteLength": 104999,
+        "offset": 1497888,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 1994981,
-        "byteLength": 104999,
+        "offset": 1581104,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 2099980,
-        "byteLength": 104999,
+        "offset": 1664320,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 2204979,
-        "byteLength": 104999,
+        "offset": 1747536,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 2309978,
-        "byteLength": 104999,
+        "offset": 1830752,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 2414977,
-        "byteLength": 104999,
+        "offset": 1913968,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 2519976,
-        "byteLength": 104999,
+        "offset": 1997184,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 2624975,
-        "byteLength": 104999,
+        "offset": 2080400,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 2729974,
-        "byteLength": 104999,
+        "offset": 2163616,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 2834973,
-        "byteLength": 104999,
+        "offset": 2246832,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 2939972,
-        "byteLength": 104999,
+        "offset": 2330048,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 3044971,
-        "byteLength": 104999,
+        "offset": 2413264,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 3149970,
-        "byteLength": 104999,
+        "offset": 2496480,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 3254969,
-        "byteLength": 104999,
+        "offset": 2579696,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 3359968,
-        "byteLength": 104999,
+        "offset": 2662912,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 3464967,
-        "byteLength": 104999,
+        "offset": 2746128,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 3569966,
-        "byteLength": 104999,
+        "offset": 2829344,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 3674965,
-        "byteLength": 104999,
+        "offset": 2912560,
+        "byteLength": 83216,
         "count": 250000
       },
       {
         "mode": "bitmap",
-        "offset": 3779964,
-        "byteLength": 104999,
+        "offset": 2995776,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3078992,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3162208,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3245424,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3328640,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3411856,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3495072,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3578288,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3661504,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3744720,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3827936,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3911152,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 3994368,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 4077584,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 4160800,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 4244016,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 4327232,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 4410448,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 4493664,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 4576880,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 4660096,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 4743312,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 4826528,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 4909744,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 4992960,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 5076176,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 5159392,
+        "byteLength": 83216,
+        "count": 250000
+      },
+      {
+        "mode": "bitmap",
+        "offset": 5242608,
+        "byteLength": 83216,
         "count": 250000
       }
     ]
@@ -386,165 +690,264 @@
     "trackCount": 2048
   },
   "camera": {
-    "frustumSegmentCount": 400,
-    "centerCount": 50,
+    "frustumSegmentCount": 0,
+    "centerCount": 0,
     "frameSegmentCounts": [
-      8,
-      16,
-      24,
-      32,
-      40,
-      48,
-      56,
-      64,
-      72,
-      80,
-      88,
-      96,
-      104,
-      112,
-      120,
-      128,
-      136,
-      144,
-      152,
-      160,
-      168,
-      176,
-      184,
-      192,
-      200,
-      208,
-      216,
-      224,
-      232,
-      240,
-      248,
-      256,
-      264,
-      272,
-      280,
-      288,
-      296,
-      304,
-      312,
-      320,
-      328,
-      336,
-      344,
-      352,
-      360,
-      368,
-      376,
-      384,
-      392,
-      400
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "frameCenterCounts": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24,
-      25,
-      26,
-      27,
-      28,
-      29,
-      30,
-      31,
-      32,
-      33,
-      34,
-      35,
-      36,
-      37,
-      38,
-      39,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46,
-      47,
-      48,
-      49,
-      50
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
-    "centerRadius": 0.004,
-    "frustumScale": 0.2
+    "centerRadius": 0.004
   },
   "sections": {
     "staticPositions": {
       "offset": 0,
-      "byteLength": 5039910
+      "byteLength": 3994344
     },
     "staticColors": {
-      "offset": 5039912,
-      "byteLength": 3359940
+      "offset": 3994344,
+      "byteLength": 2662896
     },
     "dynamicPositions": {
-      "offset": 8399852,
-      "byteLength": 614400
+      "offset": 6657240,
+      "byteLength": 1228800
     },
     "dynamicColors": {
-      "offset": 9014252,
+      "offset": 7886040,
       "byteLength": 8192
     },
     "trajectoryColors": {
-      "offset": 9022444,
+      "offset": 7894232,
       "byteLength": 8192
     },
     "cameraFrustumPositions": {
-      "offset": 9030636,
-      "byteLength": 9600
+      "offset": 7902424,
+      "byteLength": 0
     },
     "cameraFrustumColors": {
-      "offset": 9040236,
-      "byteLength": 3200
+      "offset": 7902424,
+      "byteLength": 0
     },
     "cameraCenterPositions": {
-      "offset": 9043436,
-      "byteLength": 600
+      "offset": 7902424,
+      "byteLength": 0
     },
     "cameraCenterColors": {
-      "offset": 9044036,
-      "byteLength": 200
+      "offset": 7902424,
+      "byteLength": 0
     },
     "staticBitmaps": {
-      "offset": 9044236,
-      "byteLength": 3884963
+      "offset": 7902424,
+      "byteLength": 5325824
     }
   },
   "binary": {
     "url": "./scene.bin",
-    "byteLength": 12929199,
-    "sha256": "98ce38a50420b76427f0d56f16a3d064aa3009e0ca1407a61cdd57fd22f92919"
+    "byteLength": 13228248,
+    "sha256": "51e66558edba90e593440d0972b6c31904a381e10fa69aa4326db8146100df27"
   },
   "validation": {
-    "quantizationMaxError": 4.279613494873047e-05,
-    "sourceRrdBytes": 299850614
+    "quantizationMaxError": 3.516674041748047e-05,
+    "sourceRrdBytes": 599061906
   },
   "rgbFrames": [
     "./gallery-rgb/parkour/000.webp",
@@ -596,6 +999,56 @@
     "./gallery-rgb/parkour/046.webp",
     "./gallery-rgb/parkour/047.webp",
     "./gallery-rgb/parkour/048.webp",
-    "./gallery-rgb/parkour/049.webp"
+    "./gallery-rgb/parkour/049.webp",
+    "./gallery-rgb/parkour/050.webp",
+    "./gallery-rgb/parkour/051.webp",
+    "./gallery-rgb/parkour/052.webp",
+    "./gallery-rgb/parkour/053.webp",
+    "./gallery-rgb/parkour/054.webp",
+    "./gallery-rgb/parkour/055.webp",
+    "./gallery-rgb/parkour/056.webp",
+    "./gallery-rgb/parkour/057.webp",
+    "./gallery-rgb/parkour/058.webp",
+    "./gallery-rgb/parkour/059.webp",
+    "./gallery-rgb/parkour/060.webp",
+    "./gallery-rgb/parkour/061.webp",
+    "./gallery-rgb/parkour/062.webp",
+    "./gallery-rgb/parkour/063.webp",
+    "./gallery-rgb/parkour/064.webp",
+    "./gallery-rgb/parkour/065.webp",
+    "./gallery-rgb/parkour/066.webp",
+    "./gallery-rgb/parkour/067.webp",
+    "./gallery-rgb/parkour/068.webp",
+    "./gallery-rgb/parkour/069.webp",
+    "./gallery-rgb/parkour/070.webp",
+    "./gallery-rgb/parkour/071.webp",
+    "./gallery-rgb/parkour/072.webp",
+    "./gallery-rgb/parkour/073.webp",
+    "./gallery-rgb/parkour/074.webp",
+    "./gallery-rgb/parkour/075.webp",
+    "./gallery-rgb/parkour/076.webp",
+    "./gallery-rgb/parkour/077.webp",
+    "./gallery-rgb/parkour/078.webp",
+    "./gallery-rgb/parkour/079.webp",
+    "./gallery-rgb/parkour/080.webp",
+    "./gallery-rgb/parkour/081.webp",
+    "./gallery-rgb/parkour/082.webp",
+    "./gallery-rgb/parkour/083.webp",
+    "./gallery-rgb/parkour/084.webp",
+    "./gallery-rgb/parkour/085.webp",
+    "./gallery-rgb/parkour/086.webp",
+    "./gallery-rgb/parkour/087.webp",
+    "./gallery-rgb/parkour/088.webp",
+    "./gallery-rgb/parkour/089.webp",
+    "./gallery-rgb/parkour/090.webp",
+    "./gallery-rgb/parkour/091.webp",
+    "./gallery-rgb/parkour/092.webp",
+    "./gallery-rgb/parkour/093.webp",
+    "./gallery-rgb/parkour/094.webp",
+    "./gallery-rgb/parkour/095.webp",
+    "./gallery-rgb/parkour/096.webp",
+    "./gallery-rgb/parkour/097.webp",
+    "./gallery-rgb/parkour/098.webp",
+    "./gallery-rgb/parkour/099.webp"
   ]
 }
