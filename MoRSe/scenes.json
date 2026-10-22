@@ -1,0 +1,231 @@
+{
+ "methods": [
+  {
+   "key": "morse",
+   "label": "MoRSe",
+   "cls": "ours"
+  },
+  {
+   "key": "gmos_s",
+   "label": "GMOS-S",
+   "cls": ""
+  },
+  {
+   "key": "gmos",
+   "label": "GMOS",
+   "cls": ""
+  },
+  {
+   "key": "geomotion",
+   "label": "GeoMotion",
+   "cls": ""
+  },
+  {
+   "key": "seganymo",
+   "label": "SegAnyMo",
+   "cls": ""
+  }
+ ],
+ "groups": {
+  "open": [
+   {
+    "name": "car-roundabout",
+    "label": "Car Roundabout",
+    "videos": {
+     "morse": "videos/morse_open_source/car-roundabout__morse.mp4",
+     "gmos_s": "videos/morse_open_source/car-roundabout__gmos_s.mp4",
+     "gmos": "videos/morse_open_source/car-roundabout__gmos.mp4",
+     "geomotion": "videos/morse_open_source/car-roundabout__geomotion.mp4",
+     "seganymo": "videos/morse_open_source/car-roundabout__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/car-roundabout.jpg"
+   },
+   {
+    "name": "dance-twirl",
+    "label": "Dance Twirl",
+    "videos": {
+     "morse": "videos/morse_open_source/dance-twirl__morse.mp4",
+     "gmos_s": "videos/morse_open_source/dance-twirl__gmos_s.mp4",
+     "gmos": "videos/morse_open_source/dance-twirl__gmos.mp4",
+     "geomotion": "videos/morse_open_source/dance-twirl__geomotion.mp4",
+     "seganymo": "videos/morse_open_source/dance-twirl__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/dance-twirl.jpg"
+   },
+   {
+    "name": "dog",
+    "label": "Dog",
+    "videos": {
+     "morse": "videos/morse_open_source/dog__morse.mp4",
+     "gmos_s": "videos/morse_open_source/dog__gmos_s.mp4",
+     "gmos": "videos/morse_open_source/dog__gmos.mp4",
+     "geomotion": "videos/morse_open_source/dog__geomotion.mp4",
+     "seganymo": "videos/morse_open_source/dog__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/dog.jpg"
+   },
+   {
+    "name": "drift-straight",
+    "label": "Drift Straight",
+    "videos": {
+     "morse": "videos/morse_open_source/drift-straight__morse.mp4",
+     "gmos_s": "videos/morse_open_source/drift-straight__gmos_s.mp4",
+     "gmos": "videos/morse_open_source/drift-straight__gmos.mp4",
+     "geomotion": "videos/morse_open_source/drift-straight__geomotion.mp4",
+     "seganymo": "videos/morse_open_source/drift-straight__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/drift-straight.jpg"
+   },
+   {
+    "name": "goat",
+    "label": "Goat",
+    "videos": {
+     "morse": "videos/morse_open_source/goat__morse.mp4",
+     "gmos_s": "videos/morse_open_source/goat__gmos_s.mp4",
+     "gmos": "videos/morse_open_source/goat__gmos.mp4",
+     "geomotion": "videos/morse_open_source/goat__geomotion.mp4",
+     "seganymo": "videos/morse_open_source/goat__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/goat.jpg"
+   },
+   {
+    "name": "hummingbird",
+    "label": "Hummingbird",
+    "videos": {
+     "morse": "videos/morse_open_source/hummingbird__morse.mp4",
+     "gmos_s": "videos/morse_open_source/hummingbird__gmos_s.mp4",
+     "gmos": "videos/morse_open_source/hummingbird__gmos.mp4",
+     "geomotion": "videos/morse_open_source/hummingbird__geomotion.mp4",
+     "seganymo": "videos/morse_open_source/hummingbird__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/hummingbird.jpg"
+   },
+   {
+    "name": "libby",
+    "label": "Libby",
+    "videos": {
+     "morse": "videos/morse_open_source/libby__morse.mp4",
+     "gmos_s": "videos/morse_open_source/libby__gmos_s.mp4",
+     "gmos": "videos/morse_open_source/libby__gmos.mp4",
+     "geomotion": "videos/morse_open_source/libby__geomotion.mp4",
+     "seganymo": "videos/morse_open_source/libby__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/libby.jpg"
+   },
+   {
+    "name": "motocross-jump",
+    "label": "Motocross Jump",
+    "videos": {
+     "morse": "videos/morse_open_source/motocross-jump__morse.mp4",
+     "gmos_s": "videos/morse_open_source/motocross-jump__gmos_s.mp4",
+     "gmos": "videos/morse_open_source/motocross-jump__gmos.mp4",
+     "geomotion": "videos/morse_open_source/motocross-jump__geomotion.mp4",
+     "seganymo": "videos/morse_open_source/motocross-jump__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/motocross-jump.jpg"
+   },
+   {
+    "name": "parkour",
+    "label": "Parkour",
+    "videos": {
+     "morse": "videos/morse_open_source/parkour__morse.mp4",
+     "gmos_s": "videos/morse_open_source/parkour__gmos_s.mp4",
+     "gmos": "videos/morse_open_source/parkour__gmos.mp4",
+     "geomotion": "videos/morse_open_source/parkour__geomotion.mp4",
+     "seganymo": "videos/morse_open_source/parkour__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/parkour.jpg"
+   }
+  ],
+  "dynamic": [
+   {
+    "name": "Tut_Hip_Hop_Dance_003ac11d-2abc-44f8-9836-4354e7dfa543",
+    "label": "Tut Hip Hop Dance",
+    "videos": {
+     "morse": "videos/morse_benchmark_dynamic/Tut_Hip_Hop_Dance_003ac11d-2abc-44f8-9836-4354e7dfa543__morse.mp4",
+     "gmos_s": "videos/morse_benchmark_dynamic/Tut_Hip_Hop_Dance_003ac11d-2abc-44f8-9836-4354e7dfa543__gmos_s.mp4",
+     "gmos": "videos/morse_benchmark_dynamic/Tut_Hip_Hop_Dance_003ac11d-2abc-44f8-9836-4354e7dfa543__gmos.mp4",
+     "geomotion": "videos/morse_benchmark_dynamic/Tut_Hip_Hop_Dance_003ac11d-2abc-44f8-9836-4354e7dfa543__geomotion.mp4",
+     "seganymo": "videos/morse_benchmark_dynamic/Tut_Hip_Hop_Dance_003ac11d-2abc-44f8-9836-4354e7dfa543__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/Tut_Hip_Hop_Dance_003ac11d-2abc-44f8-9836-4354e7dfa543.jpg"
+   }
+  ],
+  "static": [
+   {
+    "name": "080fd9111a491b37",
+    "label": "Mannequin Challenge",
+    "videos": {
+     "morse": "videos/morse_benchmark_static/080fd9111a491b37__morse.mp4",
+     "gmos_s": "videos/morse_benchmark_static/080fd9111a491b37__gmos_s.mp4",
+     "gmos": "videos/morse_benchmark_static/080fd9111a491b37__gmos.mp4",
+     "geomotion": "videos/morse_benchmark_static/080fd9111a491b37__geomotion.mp4",
+     "seganymo": "videos/morse_benchmark_static/080fd9111a491b37__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/080fd9111a491b37.jpg"
+   },
+   {
+    "name": "Bartending_bathroom_0451",
+    "label": "Bartending",
+    "videos": {
+     "morse": "videos/morse_benchmark_static/Bartending_bathroom_0451__morse.mp4",
+     "gmos_s": "videos/morse_benchmark_static/Bartending_bathroom_0451__gmos_s.mp4",
+     "gmos": "videos/morse_benchmark_static/Bartending_bathroom_0451__gmos.mp4",
+     "geomotion": "videos/morse_benchmark_static/Bartending_bathroom_0451__geomotion.mp4",
+     "seganymo": "videos/morse_benchmark_static/Bartending_bathroom_0451__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/Bartending_bathroom_0451.jpg"
+   },
+   {
+    "name": "Crouch_Cover_To_Cover_bathroom_0457",
+    "label": "Crouch Cover To Cover",
+    "videos": {
+     "morse": "videos/morse_benchmark_static/Crouch_Cover_To_Cover_bathroom_0457__morse.mp4",
+     "gmos_s": "videos/morse_benchmark_static/Crouch_Cover_To_Cover_bathroom_0457__gmos_s.mp4",
+     "gmos": "videos/morse_benchmark_static/Crouch_Cover_To_Cover_bathroom_0457__gmos.mp4",
+     "geomotion": "videos/morse_benchmark_static/Crouch_Cover_To_Cover_bathroom_0457__geomotion.mp4",
+     "seganymo": "videos/morse_benchmark_static/Crouch_Cover_To_Cover_bathroom_0457__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/Crouch_Cover_To_Cover_bathroom_0457.jpg"
+   }
+  ],
+  "dynamic-static": [
+   {
+    "name": "Hokey_Pokey_002c110c-9bbc-4ab4-affa-4225fb127bad",
+    "label": "Hokey Pokey",
+    "videos": {
+     "morse": "videos/morse_benchmark_dynamic-static/Hokey_Pokey_002c110c-9bbc-4ab4-affa-4225fb127bad__morse.mp4",
+     "gmos_s": "videos/morse_benchmark_dynamic-static/Hokey_Pokey_002c110c-9bbc-4ab4-affa-4225fb127bad__gmos_s.mp4",
+     "gmos": "videos/morse_benchmark_dynamic-static/Hokey_Pokey_002c110c-9bbc-4ab4-affa-4225fb127bad__gmos.mp4",
+     "geomotion": "videos/morse_benchmark_dynamic-static/Hokey_Pokey_002c110c-9bbc-4ab4-affa-4225fb127bad__geomotion.mp4",
+     "seganymo": "videos/morse_benchmark_dynamic-static/Hokey_Pokey_002c110c-9bbc-4ab4-affa-4225fb127bad__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/Hokey_Pokey_002c110c-9bbc-4ab4-affa-4225fb127bad.jpg"
+   },
+   {
+    "name": "I_CA_01",
+    "label": "I Ca 01",
+    "videos": {
+     "morse": "videos/morse_benchmark_dynamic-static/I_CA_01__morse.mp4",
+     "gmos_s": "videos/morse_benchmark_dynamic-static/I_CA_01__gmos_s.mp4",
+     "gmos": "videos/morse_benchmark_dynamic-static/I_CA_01__gmos.mp4",
+     "geomotion": "videos/morse_benchmark_dynamic-static/I_CA_01__geomotion.mp4",
+     "seganymo": "videos/morse_benchmark_dynamic-static/I_CA_01__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/I_CA_01.jpg"
+   },
+   {
+    "name": "I_MB_01",
+    "label": "I Mb 01",
+    "videos": {
+     "morse": "videos/morse_benchmark_dynamic-static/I_MB_01__morse.mp4",
+     "gmos_s": "videos/morse_benchmark_dynamic-static/I_MB_01__gmos_s.mp4",
+     "gmos": "videos/morse_benchmark_dynamic-static/I_MB_01__gmos.mp4",
+     "geomotion": "videos/morse_benchmark_dynamic-static/I_MB_01__geomotion.mp4",
+     "seganymo": "videos/morse_benchmark_dynamic-static/I_MB_01__seganymo.mp4"
+    },
+    "thumb": "./assets/thumbs/I_MB_01.jpg"
+   }
+  ]
+ }
+}

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="MoRSe: Moving Regions, Not Moving Objects — segmenting what actually moves under camera motion.">
+<meta name="keywords" content="moving object segmentation, moving region, motion segmentation, camera motion, MoRSe-5K">
+<meta name="author" content="Wenhua Jin, Tiancheng Chen, Sheng Tang, Jiahao Li, Yupeng Liu, Weiqi Zhang, Juntong Fang, Zesong Li">
+<meta property="og:title" content="MoRSe: Moving Regions, Not Moving Objects">
+<meta property="og:description" content="Pair-conditioned moving-region segmentation that separates real scene motion from camera-induced apparent motion.">
+<meta property="og:image" content="https://kosmoresearch.github.io/MoRSe/figures/teaser.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kosmoresearch.github.io/MoRSe/">
+<link rel="canonical" href="https://kosmoresearch.github.io/MoRSe/">
+<title>MoRSe | Academic Project Page</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="stylesheet" href="./assets/style.css?v=213331">
+</head>
+<body>
+<main>
+  <header class="site-header">
+    <a class="wordmark" href="#top">MoRSe</a>
+    <nav aria-label="Primary navigation">
+      <a href="#benchmark">Comparison</a>
+      <a href="#abstract">Abstract</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#bibtex">BibTeX</a>
+    </nav>
+    <span class="header-paper"></span>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero publication-header" id="top">
+    <div class="hero-body">
+      <div class="container is-max-desktop has-text-centered">
+        <p class="publication-brand"><img src="./assets/img/kosmo-logo.svg" alt="KOSMO" width="834" height="142"><span>Research Preprint</span></p>
+        <h1 class="title publication-title">Moving Regions, Not Moving Objects: Segmenting What Actually Moves under Camera Motion</h1>
+        <div class="publication-authors">
+          <span class="author-block">Wenhua Jin<sup>1,2</sup>,</span>
+          <span class="author-block">Tiancheng Chen<sup>1</sup>,</span>
+          <span class="author-block">Sheng Tang<sup>1</sup>,</span>
+          <span class="author-block">Jiahao Li<sup>1,3</sup>,</span>
+          <span class="author-block">Yupeng Liu<sup>1,2</sup>,</span>
+          <br>
+          <span class="author-block">Weiqi Zhang<sup>4</sup>,</span>
+          <span class="author-block">Juntong Fang<sup>4</sup>,</span>
+          <span class="author-block">Zesong Li<sup>1</sup></span>
+        </div>
+        <div class="publication-affiliations">
+          <span><sup>1</sup> Kosmo Research</span>
+          <span><sup>2</sup> Automotive Engineering Department, Jilin University</span>
+          <span><sup>3</sup> Xiamen University</span>
+          <span><sup>4</sup> School of Software, Tsinghua University</span>
+        </div>
+        <div class="publication-links">
+          <span class="button is-soon" aria-disabled="true" title="Paper link will be available upon publication"><svg viewBox="0 0 24 24"><path d="M6 2h8l4 4v16H6zM14 2v5h5M9 12h6M9 16h6"/></svg><span>Paper</span><small class="soon-tag">Soon</small></span>
+          <span class="button is-soon" aria-disabled="true" title="Coming soon"><svg viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg><span>Code</span><small class="soon-tag">Soon</small></span>
+          <span class="button is-soon" aria-disabled="true" title="Coming soon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12.5" r="8"/><path d="M9 11v.01M15 11v.01" stroke-linecap="round"/><path d="M9.2 14.6c1.7 1.3 3.9 1.3 5.6 0"/></svg><span>MoRSe-5K</span><small class="soon-tag">Soon</small></span>
+          <a class="button is-dark" href="#bibtex"><svg viewBox="0 0 24 24"><path d="M7 8h3v3H7v5h5V8H7ZM14 8h3v3h-3v5h5V8h-5Z"/></svg><span>BibTeX</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEASER VIDEO (open-source reel) ============ -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <figure class="publication-banner">
+        <video id="heroVideo" src="./assets/hero-reel.mp4?v=v11web" poster="./assets/hero-poster.jpg?v=v11web"
+               autoplay muted playsinline preload="metadata"></video>
+        <div class="banner-controls">
+          <button class="banner-btn" id="heroPlay" type="button" aria-label="Pause" title="Pause">&#10073;&#10073;</button>
+          <button class="banner-btn" id="heroZoom" type="button" aria-label="Enlarge video" title="Enlarge">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M11 8v6M8 11h6M16.5 16.5 21 21"/></svg>
+          </button>
+        </div>
+        <div class="banner-timeline">
+          <input type="range" id="heroSeek" min="0" max="1000" value="0" step="1" aria-label="Seek video">
+          <span class="banner-time" id="heroTime">0:00 / 0:00</span>
+        </div>
+      </figure>
+      <h2 class="subtitle has-text-centered">
+        Motion is judged between two adjacent frames: given an ordered source–target frame pair, MoRSe predicts a
+        <strong>moving-region</strong> mask directly from RGB — no optical flow, point tracks, or separate mask generator
+        at inference — isolating genuine scene motion from apparent motion induced by the camera.
+      </h2>
+    </div>
+  </section>
+
+  <!-- ============ BENCHMARK VIZ (MoRSe-5K) ============ -->
+  <section class="section" id="benchmark">
+    <div class="container is-wide">
+      <p class="section-kicker">Comparison</p>
+      <h2 class="title is-3 has-text-centered">MoRSe-5K</h2>
+      <p class="setting-legend">
+        <span class="sl"><i class="sw static"></i>Static</span>
+        <span class="sl"><i class="sw dynamic-static"></i>Dynamic-Static</span>
+        <span class="sl"><i class="sw dynamic"></i>Dynamic</span>
+      </p>
+      <div class="viz-shell" data-group="benchmark"></div>
+    </div>
+  </section>
+
+  <!-- ============ OPEN-SOURCE VIZ ============ -->
+  <section class="section comparison-section" id="opensource">
+    <div class="container is-wide">
+      <h2 class="title is-3 has-text-centered">Open-Source Dataset</h2>
+      <div class="viz-shell" data-group="open"></div>
+    </div>
+  </section>
+
+  <!-- ============ ABSTRACT ============ -->
+  <section class="section hero is-light" id="abstract">
+    <div class="container is-max-desktop">
+      <p class="section-kicker">Paper</p>
+      <h2 class="title is-3 has-text-centered">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>Moving object segmentation is conventionally formulated at the sequence and object level, marking an entire instance as moving once it moves anywhere in a video. Recent instantaneous formulations distinguish moving from stationary intervals, but still generate masks at the object level through frozen segmentation foundation models. Because the mask is derived from an instance-level proposal, motion is typically attributed to the entire instance rather than localized to the regions that actually move.</p>
+        <p>Moreover, such instance-level predictions can produce masks even when no part of the instance is actually moving, revealing a more fundamental issue: motion is not an intrinsic property of an instance; it can only be determined by comparing at least two frames. Building on this premise, we introduce <strong>MoRSe</strong>, which jointly interprets two frames to predict a <em>moving-region</em> mask, distinguishing actual scene motion from apparent motion induced by the camera. A single RGB encoder replaces multi-stage foundation stacks, so no optical flow, point tracks, or separate mask generator is needed at inference.</p>
+        <p>We release <strong>MoRSe-5K</strong>, a benchmark of 42 sequences with Static, Dynamic-Static, and Dynamic settings designed to evaluate the model's ability to distinguish and localize moving and stationary regions under different camera and scene motion conditions. MoRSe outperforms both specialized moving object segmentation methods and dense 4D reconstruction methods with motion-thresholded predictions, while producing the fewest false positives on sequences where nothing moves.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ METHOD ============ -->
+  <section class="section" id="method">
+    <div class="container is-max-desktop">
+      <p class="section-kicker">Approach</p>
+      <h2 class="title is-3 has-text-centered">Method Overview</h2>
+      <figure class="publication-figure">
+        <img src="./figures/architecture.jpg" alt="MoRSe architecture." loading="lazy" decoding="async">
+        <figcaption>
+          <strong>MoRSe architecture.</strong> Both frames pass jointly through a UniQuery4R-initialized ViT and a shallow
+          convolutional branch; the two are fused and split into source and target feature pyramids. A camera head reads the ViT
+          camera tokens and predicts per-view pose and field of view as auxiliary outputs that never enter the mask path.
+          Sampled source coordinates form the decoder queries; target features provide keys and values, and four cross-attention
+          blocks refine each query before a shared MLP predicts the motion logit.
+        </figcaption>
+      </figure>
+      <div class="columns feature-columns">
+        <article class="column feature-card">
+          <span class="feature-number">01</span>
+          <h3>Motion is a pair relation</h3>
+          <p>Motion is defined on an ordered source–target pair, not attached to an object for a whole clip. The same source stays silent when both frames lie in one stationary interval.</p>
+        </article>
+        <article class="column feature-card">
+          <span class="feature-number">02</span>
+          <h3>One RGB encoder</h3>
+          <p>No optical flow, point tracks, or frozen segmentation stack at inference. Target-conditioned cross-attention decodes each source coordinate into a motion logit.</p>
+        </article>
+        <article class="column feature-card">
+          <span class="feature-number">03</span>
+          <h3>Granularity without retraining</h3>
+          <p>A single target gives an instantaneous region; a target window gives a long-term region by a max over targets; a promptable segmenter recovers whole objects.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS ============ -->
+  <section class="section hero is-light" id="results">
+    <div class="container is-max-desktop">
+      <p class="section-kicker">Evaluation</p>
+      <h2 class="title is-3 has-text-centered">Results</h2>
+      <p class="section-intro has-text-centered">
+        MoRSe leads moving-region segmentation on MoRSe-5K and stays competitive on conventional sequence-level MOS benchmarks.
+      </p>
+
+      <!-- TABLE 1 -->
+      <div class="results-table-block">
+        <h3>Main Results on MoRSe-5K (%)</h3>
+        <p class="results-table-intro">
+          “Scene flow” rows are thresholded into masks by each model's own released or automatic criterion, frozen before
+          evaluation. <span class="legend"><i class="sw first"></i>best <i class="sw second"></i>second <i class="sw third"></i>third</span>
+        </p>
+        <div class="results-table-scroll" tabindex="0" role="region" aria-label="MoRSe-5K results">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th rowspan="3" scope="col" class="col-method">Method</th>
+                <th rowspan="3" scope="col" class="col-native">Native output</th>
+                <th colspan="2" scope="colgroup">Static</th>
+                <th colspan="6" scope="colgroup">Dynamic-Static + Dynamic</th>
+              </tr>
+              <tr>
+                <th colspan="2" class="sub-rule"></th>
+                <th colspan="3" scope="colgroup">Moving region</th>
+                <th colspan="3" scope="colgroup">Moving object</th>
+              </tr>
+              <tr class="metric-row">
+                <th>PER ↓</th><th>FER ↓</th>
+                <th>J ↑</th><th>F ↑</th><th>J&amp;F ↑</th>
+                <th>J ↑</th><th>F ↑</th><th>J&amp;F ↑</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="group-row"><td colspan="10"><em>Dense 4D reconstruction: predict scene flow, converted to a mask by thresholding</em></td></tr>
+              <tr><td>Trace Anything<sup>†</sup></td><td class="native">trajectory field</td><td>21.01</td><td>100.00</td><td>32.10</td><td>35.90</td><td>34.00</td><td>30.18<sup>∗</sup></td><td>38.23<sup>∗</sup></td><td>34.21<sup>∗</sup></td></tr>
+              <tr><td>Any4D<sup>†</sup></td><td class="native">scene flow</td><td class="third">0.46</td><td>18.70</td><td>27.30</td><td>29.80</td><td>28.60</td><td>33.80<sup>∗</sup></td><td>38.28<sup>∗</sup></td><td>36.04<sup>∗</sup></td></tr>
+              <tr><td>4RC<sup>†</sup></td><td class="native">scene flow</td><td>0.53</td><td class="third">18.20</td><td>40.50</td><td>41.50</td><td>41.00</td><td>39.56<sup>∗</sup></td><td>43.69<sup>∗</sup></td><td>41.62<sup>∗</sup></td></tr>
+              <tr><td>MoVieS<sup>†</sup></td><td class="native">scene flow</td><td>0.64</td><td>43.80</td><td>39.80</td><td>48.50</td><td>44.10</td><td>40.42<sup>∗</sup></td><td>49.38<sup>∗</sup></td><td>44.90<sup>∗</sup></td></tr>
+              <tr><td>UniQuery4R</td><td class="native">scene flow</td><td class="second">0.10</td><td>57.92</td><td>47.13</td><td>61.22</td><td>54.18</td><td>47.17<sup>∗</sup></td><td>58.28<sup>∗</sup></td><td>52.72<sup>∗</sup></td></tr>
+              <tr class="group-row"><td colspan="10"><em>Moving object segmentation: predict a mask directly</em></td></tr>
+              <tr><td>FlowSAM<sup>†</sup></td><td class="native">motion mask</td><td>32.26</td><td>100.00</td><td>13.24</td><td>18.84</td><td>16.04</td><td>16.35</td><td>22.03</td><td>19.19</td></tr>
+              <tr><td>SegAnyMo<sup>†</sup></td><td class="native">motion mask</td><td>10.25</td><td>93.28</td><td>38.50</td><td>47.76</td><td>43.13</td><td>42.77</td><td>53.29</td><td>48.03</td></tr>
+              <tr><td>RoMo<sup>†</sup></td><td class="native">motion mask</td><td>4.22</td><td>27.67</td><td>44.85</td><td>51.22</td><td>48.03</td><td>46.79</td><td>54.76</td><td>50.77</td></tr>
+              <tr><td>Easi3R<sup>†</sup></td><td class="native">motion mask</td><td>12.58</td><td>94.05</td><td>33.21</td><td>30.39</td><td>31.80</td><td>37.34</td><td>33.71</td><td>35.52</td></tr>
+              <tr><td>VGGT4D<sup>†</sup></td><td class="native">motion mask</td><td>4.91</td><td>99.94</td><td>35.14</td><td>40.61</td><td>37.88</td><td>43.84</td><td>46.72</td><td>45.28</td></tr>
+              <tr><td>MoRe<sup>†</sup></td><td class="native">motion mask</td><td>9.78</td><td>99.89</td><td>50.81</td><td>58.24</td><td>54.52</td><td>58.76</td><td>64.45</td><td>61.60</td></tr>
+              <tr><td>GeoMotion<sup>†</sup></td><td class="native">motion mask</td><td>9.29</td><td>99.87</td><td>55.52</td><td>61.98</td><td>58.75</td><td>64.33</td><td>68.67</td><td>66.50</td></tr>
+              <tr><td>GMOS<sup>†</sup></td><td class="native">motion mask</td><td>1.71</td><td>20.37</td><td class="third">57.56</td><td class="third">63.41</td><td class="third">60.49</td><td class="third">67.41</td><td class="third">70.64</td><td class="third">69.03</td></tr>
+              <tr><td>GMOS-S<sup>†</sup></td><td class="native">motion mask</td><td>0.60</td><td class="second">6.82</td><td class="second">66.65</td><td class="second">72.64</td><td class="second">69.64</td><td class="first"><strong>76.30</strong></td><td class="second">79.56</td><td class="second">77.93</td></tr>
+              <tr class="ours"><td><strong>MoRSe</strong></td><td class="native">motion mask</td><td class="first"><strong>0.0009</strong></td><td class="first"><strong>0.75</strong></td><td class="first"><strong>73.91</strong></td><td class="first"><strong>82.06</strong></td><td class="first"><strong>77.98</strong></td><td class="second">75.84<sup>∗</sup></td><td class="first"><strong>82.79</strong><sup>∗</sup></td><td class="first"><strong>79.32</strong><sup>∗</sup></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="results-table-note">
+          <sup>†</sup> matched-window rerun from released code. <sup>∗</sup> the moving-object score comes from the shared SAM 3 readout;
+          unmarked rows are scored on their own instance output. PER / FER are ego-motion false-positive rates on the Static split (lower is better).
+        </p>
+      </div>
+
+      <!-- TABLE 3 -->
+      <div class="results-table-block">
+        <h3>Conventional MOS Benchmarks (%)</h3>
+        <p class="results-table-intro">
+          Foreground–background MOS under one protocol, instance outputs unioned before evaluation. Every baseline is a
+          controlled rerun from released code. <span class="legend"><i class="sw first"></i>best <i class="sw second"></i>second <i class="sw third"></i>third</span>
+        </p>
+        <div class="results-table-scroll" tabindex="0" role="region" aria-label="MOS benchmark results">
+          <table class="results-table mos-table">
+            <thead>
+              <tr>
+                <th rowspan="2" scope="col" class="col-method">Method</th>
+                <th colspan="3" scope="colgroup">DAVIS16-M</th>
+                <th colspan="3" scope="colgroup">FBMS-59</th>
+                <th colspan="3" scope="colgroup">MoCA</th>
+              </tr>
+              <tr class="metric-row">
+                <th>J</th><th>F</th><th>J&amp;F</th>
+                <th>J</th><th>F</th><th>J&amp;F</th>
+                <th>J</th><th>F</th><th>J&amp;F</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>OCLR<sup>†</sup></td><td>70.25</td><td>69.60</td><td>69.92</td><td>61.71</td><td>62.87</td><td>62.29</td><td>12.08</td><td>17.86</td><td>14.97</td></tr>
+              <tr><td>ABR<sup>†</sup></td><td>74.02</td><td>71.81</td><td>72.91</td><td>73.48</td><td>75.32</td><td>74.40</td><td>8.80</td><td>14.71</td><td>11.75</td></tr>
+              <tr><td>FlowSAM<sup>†</sup></td><td>37.56</td><td>38.18</td><td>37.87</td><td>40.00</td><td>41.89</td><td>40.95</td><td>29.81</td><td>24.54</td><td>27.17</td></tr>
+              <tr><td>SegAnyMo<sup>†</sup></td><td>75.89</td><td>80.82</td><td>78.35</td><td>68.80</td><td>76.07</td><td>72.44</td><td class="second">58.81</td><td class="second">66.10</td><td class="second">62.46</td></tr>
+              <tr><td>RoMo<sup>†</sup></td><td>70.11</td><td>73.87</td><td>71.99</td><td>58.86</td><td>61.07</td><td>59.96</td><td>11.50</td><td>12.39</td><td>11.94</td></tr>
+              <tr><td>Easi3R<sup>†</sup></td><td>65.61</td><td>62.15</td><td>63.88</td><td>62.87</td><td>60.03</td><td>61.45</td><td>23.17</td><td>21.32</td><td>22.25</td></tr>
+              <tr><td>VGGT4D<sup>†</sup></td><td>56.47</td><td>52.01</td><td>54.24</td><td>44.31</td><td>44.23</td><td>44.27</td><td>33.52</td><td>35.57</td><td>34.54</td></tr>
+              <tr><td>MoRe<sup>†</sup></td><td>52.01</td><td>50.75</td><td>51.38</td><td>53.29</td><td>48.58</td><td>50.93</td><td>11.99</td><td>12.47</td><td>12.23</td></tr>
+              <tr><td>GeoMotion<sup>†</sup></td><td class="third">84.49</td><td class="third">83.77</td><td class="third">84.13</td><td class="second">74.78</td><td class="third">76.44</td><td class="second">75.61</td><td>23.69</td><td>27.02</td><td>25.36</td></tr>
+              <tr><td>GMOS<sup>†</sup></td><td class="first"><strong>87.33</strong></td><td class="first"><strong>88.29</strong></td><td class="first"><strong>87.81</strong></td><td class="first"><strong>88.10</strong></td><td class="first"><strong>91.25</strong></td><td class="first"><strong>89.68</strong></td><td class="first"><strong>61.49</strong></td><td class="first"><strong>66.40</strong></td><td class="first"><strong>63.95</strong></td></tr>
+              <tr class="unranked"><td><strong>MoRSe</strong><sup>‡</sup></td><td>80.25</td><td>81.88</td><td>81.07</td><td>78.34</td><td>81.79</td><td>80.06</td><td>22.96</td><td>25.15</td><td>24.06</td></tr>
+              <tr class="ours"><td><strong>MoRSe + SAM 3</strong></td><td class="second">84.78</td><td class="second">85.83</td><td class="second">85.31</td><td class="third">74.11</td><td class="second">77.08</td><td class="third">75.60</td><td class="third">45.24</td><td class="third">51.47</td><td class="third">48.35</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="results-table-note">
+          <sup>‡</sup> MoRSe emits a moving region rather than instances, so its row is shown in grey for reference only and is left
+          out of the ranking; the object-level entry is MoRSe + SAM 3. These benchmarks annotate whole instances, so parts of an
+          object that hold still count as misses against a region output. GMOS, which predicts instances natively, leads all three.
+        </p>
+      </div>
+
+      <h3 class="results-visualization-title">Moving Regions under a Moving Camera</h3>
+      <figure class="publication-figure">
+        <img src="./figures/comparison.jpg" alt="Qualitative comparison under camera motion." loading="lazy" decoding="async">
+        <figcaption>
+          <strong>Top (Static):</strong> the camera moves while the person stands still; every baseline paints the whole person,
+          while MoRSe leaves the frame empty. <strong>Bottom (Dynamic-Static):</strong> only the child's hand moves; MoRSe marks
+          that hand alone, whereas the baselines cover the whole child.
+        </figcaption>
+      </figure>
+
+      <figure class="publication-figure gallery-figure">
+        <img src="./figures/gallery.jpg" alt="Qualitative results on conventional MOS benchmarks." loading="lazy" decoding="async">
+        <figcaption><strong>Qualitative results on the conventional MOS benchmarks.</strong> Columns alternate input and prediction. <em>Top:</em> MoRSe. <em>Bottom (dashed):</em> the same sources under MoRSe (left) and MoRSe + SAM 3 (right).</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ BIBTEX ============ -->
+  <section class="section hero is-light" id="bibtex">
+    <div class="container is-max-desktop">
+      <div class="bibtex-header">
+        <p class="section-kicker">Reference</p>
+        <h2 class="title is-3">BibTeX</h2>
+        <p class="section-description">If you find MoRSe useful, please cite our work.</p>
+      </div>
+      <div class="bibtex-card">
+        <button class="copy-bibtex-btn" id="copyBibtex" type="button">
+          <svg viewBox="0 0 24 24"><path d="M8 8h11v11H8zM5 16H4V5h11v1"/></svg><span>Copy</span>
+        </button>
+<pre><code id="bibtexCode">@misc{jin2027morse,
+  title   = {Moving Regions, Not Moving Objects: Segmenting What Actually Moves under Camera Motion},
+  author  = {Jin, Wenhua and Chen, Tiancheng and Tang, Sheng and Li, Jiahao and
+             Liu, Yupeng and Zhang, Weiqi and Fang, Juntong and Li, Zesong},
+  note    = {Kosmo Research preprint},
+  year    = {2027}
+}</code></pre>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered">
+      <p>Page design adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a>, which was adopted from <a href="https://nerfies.github.io/" target="_blank" rel="noopener noreferrer">Nerfies</a>.</p>
+      <p>This website is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-to-top" id="toTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/></svg>
+</button>
+<script src="./assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+/* MVLoMa project page - interactive star-matching gallery and lightbox. */
+
+.gallery-shell {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: #10131a;
+  box-shadow: var(--shadow-xl);
+}
+.toolbar-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.tool-button {
+  padding: .5rem .72rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .42rem;
+  border: 1px solid #343b49;
+  border-radius: 8px;
+  background: #242a35;
+  color: #dce2ed;
+  font: inherit;
+  font-size: .75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.tool-button:hover { border-color: #6688f4; }
+.tool-button svg { width: 1rem; fill: none; stroke: currentColor; stroke-width: 1.8px; }
+
+.scene-browser {
+  padding: .85rem 1rem 1rem;
+  border-bottom: 1px solid #2b303b;
+  background: #171b24;
+  color: #e6eaf2;
+}
+.scene-browser-head {
+  margin-bottom: .75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .6rem 1rem;
+}
+.scene-browser-head strong { font-size: .8rem; }
+.scene-browser-head strong span { margin-left: .5rem; color: #778094; font-size: .7rem; font-weight: 600; }
+.scene-filters { display: flex; flex-wrap: wrap; gap: .35rem; }
+.scene-filters .chip {
+  padding: .3rem .65rem;
+  border-color: #343b49;
+  background: #0f1218;
+  color: #c3cad8;
+  font-size: .7rem;
+}
+.scene-filters .chip:hover { color: #fff; border-color: #6688f4; }
+.scene-filters .chip[aria-pressed="true"] { border-color: #2d5de5; background: #2d5de5; color: #fff; }
+.scene-strip {
+  display: flex;
+  gap: .65rem;
+  padding: .15rem .1rem .55rem;
+  overflow-x: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: #495266 transparent;
+}
+.scene-card {
+  position: relative;
+  flex: 0 0 172px;
+  min-height: 100px;
+  padding: .7rem .75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border: 1px solid #303746;
+  border-radius: 10px;
+  background: #141821;
+  color: #dfe5f0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.scene-card[hidden] { display: none; }
+.scene-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.scene-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(#070a1000 30%, #070a10e0 100%);
+}
+.scene-card:hover,
+.scene-card[aria-pressed="true"] { border-color: #6688f4; transform: translateY(-2px); }
+.scene-card[aria-pressed="true"] { box-shadow: inset 0 0 0 1px #6688f4, 0 0 0 3px #6688f455; }
+.scene-card strong,
+.scene-card small { position: relative; z-index: 2; display: block; text-shadow: 0 1px 4px #000; }
+.scene-card strong { font-size: .8rem; }
+.scene-card small { color: #b8c0cf; font-size: .66rem; }
+
+.gallery-player { background: #fff; }
+.gallery-viewer-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1000 / 332.8;
+  background: #fff;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+.gallery-viewer-wrap.is-zoomed { cursor: grab; touch-action: none; }
+.gallery-viewer-wrap.is-panning { cursor: grabbing; }
+.gallery-viewer-wrap.is-loading .mv-image { opacity: .55; }
+.mv-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: 0 0;
+  will-change: transform;
+  padding: 2% 5%;
+  box-sizing: border-box;
+  pointer-events: none;
+  transition: opacity .2s;
+  -webkit-user-drag: none;
+}
+.viewer-zoom {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #dfe3eb;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: var(--shadow-md);
+}
+/* Zoom + fullscreen float over the bottom-right corner of the image. */
+.viewer-controls {
+  position: absolute;
+  right: .75rem;
+  bottom: .75rem;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  opacity: .72;
+  transition: opacity .2s;
+}
+.gallery-viewer-wrap:hover .viewer-controls,
+.viewer-controls:focus-within { opacity: 1; }
+.viewer-fullscreen {
+  border-color: #ffffff1f;
+  background: rgba(23, 32, 51, .78);
+  box-shadow: 0 4px 14px #0000002e;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.viewer-fullscreen {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ffffff1f;
+  border-radius: 9px;
+  color: #fff;
+  cursor: pointer;
+}
+.viewer-fullscreen:hover { background: rgba(23, 32, 51, .92); }
+.viewer-fullscreen svg { width: 16px; fill: none; stroke: currentColor; stroke-width: 2px; }
+.viewer-zoom button {
+  width: 32px;
+  height: 30px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.viewer-zoom button:hover { background: #eef2ff; color: var(--primary); }
+.viewer-zoom output {
+  min-width: 46px;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+.viewer-hint {
+  position: absolute;
+  left: 50%;
+  bottom: .9rem;
+  z-index: 5;
+  padding: .4rem .8rem;
+  border-radius: 99px;
+  background: rgba(23, 32, 51, .86);
+  color: #fff;
+  font-size: .74rem;
+  font-weight: 600;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, 6px);
+  transition: opacity .2s, transform .2s;
+}
+.viewer-hint.visible { opacity: 1; transform: translate(-50%, 0); }
+.viewer-empty {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  padding: 2rem;
+  background: #fff;
+  color: #263044;
+  text-align: center;
+  transition: opacity .25s;
+}
+.viewer-empty.hidden { opacity: 0; pointer-events: none; }
+.viewer-empty p { max-width: 430px; margin: .5rem 0 0; color: #818a9b; font-size: .82rem; }
+.viewer-loader {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 1rem;
+  border: 3px solid #4f72e8;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin .9s linear infinite;
+}
+.viewer-empty.error .viewer-loader { border-color: #ef4444; border-top-color: transparent; animation: none; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.gallery-shell:fullscreen { display: flex; flex-direction: column; width: 100vw; height: 100vh; border-radius: 0; }
+.gallery-shell:fullscreen .gallery-player { display: flex; flex: 1 1 auto; min-height: 0; }
+.gallery-shell:fullscreen .gallery-viewer-wrap { flex: 1 1 auto; aspect-ratio: auto; }
+.viewer-note { margin: 1rem 0 0; color: var(--muted); font-size: .78rem; text-align: center; }
+.viewer-note kbd {
+  padding: .05rem .35rem;
+  border: 1px solid var(--border);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: #fff;
+  font-family: var(--mono);
+  font-size: .7rem;
+}
+
+/* -------------------------------------------------------------- lightbox */
+.lightbox {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #0a0d14;
+}
+.lightbox::backdrop { background: rgba(10, 13, 20, .6); }
+.lightbox-viewport {
+  position: absolute;
+  inset: 56px 0 0;
+  overflow: hidden;
+  background: #fff;
+  touch-action: none;
+  cursor: grab;
+}
+.lightbox-viewport.is-panning { cursor: grabbing; }
+.lightbox-viewport img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+.lightbox-bar {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 56px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #e6eaf2;
+  font-size: .85rem;
+}
+.lightbox-bar span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lightbox-bar .viewer-zoom { position: static; }
+
+@media (max-width: 768px) {
+  .viewer-controls { right: .4rem; bottom: .4rem; }
+  .viewer-fullscreen { width: 28px; height: 28px; }
+}
+@media (max-width: 480px) {
+  .tool-button span { display: none; }
+  .scene-card { flex-basis: 150px; }
+}

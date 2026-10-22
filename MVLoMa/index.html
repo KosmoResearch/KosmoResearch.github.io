@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Add public paper and code URLs once available. -->
+  <meta name="description" content="MVLoMa: Multi-View Local Feature Matching with Any Geometry Foundation Model. A sparse star-graph matcher that matches one centre image to all of its neighbours in a single forward pass.">
+  <meta name="keywords" content="local feature matching, multi-view geometry, star graph, geometry foundation models, relative pose estimation">
+  <meta name="author" content="Xinyang Lu, Shengzhe Wei, Sheng Tang, Weiqi Zhang, Juntong Fang, Zesong Li">
+  <meta property="og:title" content="MVLoMa: Multi-View Local Feature Matching with Any Geometry Foundation Model">
+  <meta property="og:description" content="A sparse star-graph matcher that reuses frozen multi-view geometry tokens and predicts every centre–neighbour edge in one forward pass.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kosmoresearch.github.io/MVLoMa/">
+  <link rel="canonical" href="https://kosmoresearch.github.io/MVLoMa/">
+  <meta property="og:image" content="https://kosmoresearch.github.io/MVLoMa/figures/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>MVLoMa | Academic Project Page</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "MVLoMa: Multi-View Local Feature Matching with Any Geometry Foundation Model",
+    "author": [
+      {"@type": "Person", "name": "Xinyang Lu"},
+      {"@type": "Person", "name": "Shengzhe Wei"},
+      {"@type": "Person", "name": "Sheng Tang"},
+      {"@type": "Person", "name": "Weiqi Zhang"},
+      {"@type": "Person", "name": "Juntong Fang"},
+      {"@type": "Person", "name": "Zesong Li"}
+    ],
+    "keywords": "local feature matching, multi-view geometry, star graph, geometry foundation models, relative pose estimation",
+    "datePublished": "2026",
+    "isAccessibleForFree": true
+  }
+  </script>
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/gallery.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="MVLoMa home">MVLoMa</a>
+    <nav aria-label="Primary navigation">
+      <a href="#gallery">Gallery</a>
+      <a href="#abstract">Abstract</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#efficiency">Efficiency</a>
+      <a href="#bibtex">BibTeX</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero publication-header" id="top">
+      <div class="container">
+        <p class="publication-brand"><img src="./assets/img/kosmo-logo.svg" alt="KOSMO" width="834" height="142"><span>Research Preprint</span></p>
+        <h1 class="publication-title"><span class="title-accent">MVLoMa</span>: Multi-View Local Feature Matching<br class="title-break"> with Any Geometry Foundation Model</h1>
+
+        <div class="publication-authors">
+          <span class="author-block">Xinyang Lu<sup>1,2</sup>,</span>
+          <span class="author-block">Shengzhe Wei<sup>1</sup>,</span>
+          <span class="author-block">Sheng Tang<sup>1</sup>,</span>
+          <span class="author-block">Weiqi Zhang<sup>3</sup>,</span>
+          <span class="author-block">Juntong Fang<sup>3</sup>,</span>
+          <span class="author-block">Zesong Li<sup>1</sup></span>
+        </div>
+        <div class="publication-affiliations">
+          <span><sup>1</sup> Kosmo Research</span>
+          <span><sup>2</sup> School of Astronautics, Harbin Institute of Technology</span>
+          <span><sup>3</sup> School of Software, Tsinghua University</span>
+        </div>
+
+        <div class="publication-links">
+          <!-- Replace with a public paper link once available; manuscripts are excluded from this repository. -->
+          <span class="button is-disabled" aria-disabled="true" title="Paper link will be available upon publication">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l4 4v16H6zM14 2v5h5M9 12h6M9 16h6"/></svg>
+            <span>Paper</span><span class="soon">Soon</span>
+          </span>
+          <!-- The paper states that code and evaluation configs are released upon publication. -->
+          <span class="button is-disabled" aria-disabled="true" title="Code will be released upon publication">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <span>Code</span><span class="soon">Soon</span>
+          </span>
+          <a class="button" href="#gallery">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17 8 7l4 7 3-5 6 8M5 19h14"/></svg>
+            <span>Gallery</span>
+          </a>
+          <a class="button" href="#bibtex">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h3v3H7v5h5V8H7ZM14 8h3v3h-3v5h5V8h-5Z"/></svg>
+            <span>BibTeX</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-wide">
+        <h2 class="subtitle has-text-centered">
+          Given one centre image and its neighbours, <strong>MVLoMa</strong> matches the centre to every neighbour in a
+          <strong>single forward pass</strong>, reusing frozen geometry-aware tokens from a multi-view foundation model
+          while keeping an explicit sparse match set for every edge.
+        </h2>
+        <figure class="publication-banner">
+          <img src="./figures/gallery/megadepth_01_match.jpg"
+               alt="A MegaDepth star graph: one centre image at the bottom connected to six neighbour images by coloured sparse correspondences."
+               width="3200" height="1041" decoding="async" fetchpriority="high">
+        </figure>
+        <div class="metrics">
+          <div class="metric">
+            <strong>58.65</strong>
+            <span>Macro AUC@1°</span>
+            <small>Best among compared methods on 25-view stars (85.41 @5°, 90.99 @10°)</small>
+          </div>
+          <div class="metric">
+            <strong>2.20×</strong>
+            <span>Faster matching</span>
+            <small>vs. sequential evaluation of the 24 centre–neighbour edges (one A800)</small>
+          </div>
+          <div class="metric">
+            <strong>1 pass</strong>
+            <span>For all 24 edges</span>
+            <small>Shared centre with bidirectional centre–neighbour cross-attention</small>
+          </div>
+          <div class="metric">
+            <strong>4</strong>
+            <span>Frozen geometry encoders</span>
+            <small>DA3, π³, VGGT and VGGT-Ω tested; DA3-Giant performs best</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container is-wide">
+        <p class="section-kicker">Visualization</p>
+        <h2 class="title is-3">Star-Matching Gallery</h2>
+        <p class="section-intro">
+          Each star links one centre image to six neighbours; MVLoMa predicts the sparse matches of all six edges in a
+          single forward pass.
+        </p>
+
+        <div class="gallery-shell" id="galleryShell">
+          <div class="scene-browser">
+            <div class="scene-browser-head">
+              <strong>Choose a star <span>11 examples · 5 datasets</span></strong>
+              <div class="scene-filters" role="group" aria-label="Filter stars by dataset">
+                <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+                <button class="chip" type="button" data-filter="HyperSim" aria-pressed="false">HyperSim</button>
+                <button class="chip" type="button" data-filter="MegaDepth" aria-pressed="false">MegaDepth</button>
+                <button class="chip" type="button" data-filter="MegaDepth-X" aria-pressed="false">MegaDepth-X</button>
+                <button class="chip" type="button" data-filter="TerraSky3D" aria-pressed="false">TerraSky3D</button>
+                <button class="chip" type="button" data-filter="BlendedMVS" aria-pressed="false">BlendedMVS</button>
+              </div>
+            </div>
+            <div class="scene-strip" id="sceneStrip">
+              <button class="scene-card" type="button" aria-pressed="true" data-scene="hypersim_01" data-dataset="HyperSim" data-domain="Indoor" data-title="Bedroom"><img src="./figures/gallery/thumbs/hypersim_01.jpg" alt="" loading="lazy"><strong>HyperSim</strong><small>Bedroom</small></button>
+              <button class="scene-card" type="button" aria-pressed="false" data-scene="hypersim_02" data-dataset="HyperSim" data-domain="Indoor" data-title="Kitchen"><img src="./figures/gallery/thumbs/hypersim_02.jpg" alt="" loading="lazy"><strong>HyperSim</strong><small>Kitchen</small></button>
+              <button class="scene-card" type="button" aria-pressed="false" data-scene="megadepth_01" data-dataset="MegaDepth" data-domain="Outdoor" data-title="Column monument"><img src="./figures/gallery/thumbs/megadepth_01.jpg" alt="" loading="lazy"><strong>MegaDepth</strong><small>Column monument</small></button>
+              <button class="scene-card" type="button" aria-pressed="false" data-scene="megadepth_02" data-dataset="MegaDepth" data-domain="Outdoor" data-title="Mountain peaks"><img src="./figures/gallery/thumbs/megadepth_02.jpg" alt="" loading="lazy"><strong>MegaDepth</strong><small>Mountain peaks</small></button>
+              <button class="scene-card" type="button" aria-pressed="false" data-scene="megadepthX_01" data-dataset="MegaDepth-X" data-domain="Outdoor" data-title="Waterfront skyline"><img src="./figures/gallery/thumbs/megadepthX_01.jpg" alt="" loading="lazy"><strong>MegaDepth-X</strong><small>Waterfront skyline</small></button>
+              <button class="scene-card" type="button" aria-pressed="false" data-scene="terrasky_01" data-dataset="TerraSky3D" data-domain="Aerial" data-title="Hillside church"><img src="./figures/gallery/thumbs/terrasky_01.jpg" alt="" loading="lazy"><strong>TerraSky3D</strong><small>Hillside church</small></button>
+              <button class="scene-card" type="button" aria-pressed="false" data-scene="terrasky_02" data-dataset="TerraSky3D" data-domain="Aerial" data-title="Modern façade"><img src="./figures/gallery/thumbs/terrasky_02.jpg" alt="" loading="lazy"><strong>TerraSky3D</strong><small>Modern façade</small></button>
+              <button class="scene-card" type="button" aria-pressed="false" data-scene="terrasky_03" data-dataset="TerraSky3D" data-domain="Aerial" data-title="Arcade courtyard"><img src="./figures/gallery/thumbs/terrasky_03.jpg" alt="" loading="lazy"><strong>TerraSky3D</strong><small>Arcade courtyard</small></button>
+              <button class="scene-card" type="button" aria-pressed="false" data-scene="terrasky_04" data-dataset="TerraSky3D" data-domain="Aerial" data-title="Bell-tower church"><img src="./figures/gallery/thumbs/terrasky_04.jpg" alt="" loading="lazy"><strong>TerraSky3D</strong><small>Bell-tower church</small></button>
+              <button class="scene-card" type="button" aria-pressed="false" data-scene="terrasky_05" data-dataset="TerraSky3D" data-domain="Aerial" data-title="Dome at dusk"><img src="./figures/gallery/thumbs/terrasky_05.jpg" alt="" loading="lazy"><strong>TerraSky3D</strong><small>Dome at dusk</small></button>
+              <button class="scene-card" type="button" aria-pressed="false" data-scene="blended_mvs_01" data-dataset="BlendedMVS" data-domain="Aerial" data-title="Twin-spire cathedral"><img src="./figures/gallery/thumbs/blended_mvs_01.jpg" alt="" loading="lazy"><strong>BlendedMVS</strong><small>Twin-spire cathedral</small></button>
+            </div>
+          </div>
+
+          <div class="gallery-player" id="galleryPlayer">
+            <div class="gallery-viewer-wrap" id="viewerWrap" tabindex="0"
+                 aria-label="Star-matching viewer. Ctrl plus scroll to zoom, drag to pan when zoomed, left and right arrow keys switch stars.">
+              <img id="matchImage" class="mv-image" src="./figures/gallery/hypersim_01_match.jpg" alt="Star-matching result for HyperSim · Bedroom." width="3200" height="1041" draggable="false">
+              <div class="viewer-empty hidden" id="viewerEmpty">
+                <span class="viewer-loader"></span>
+                <strong>Loading star…</strong>
+                <p>Fetching the matching visualization.</p>
+              </div>
+              <div class="viewer-controls">
+                <button class="viewer-fullscreen" id="viewerFullscreen" type="button" aria-label="Fullscreen">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="abstract">
+      <div class="container is-max-desktop">
+        <p class="section-kicker">Paper</p>
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Local feature matching is typically formulated for image pairs, although structure-from-motion and visual
+            localization commonly match one reference image against many retrieved or covisible neighbours. Applying a
+            pairwise matcher independently to these centre–neighbour edges duplicates reference-side computation and
+            prevents the matcher from exploiting complementary multi-view geometric evidence from the remaining observations.
+          </p>
+          <p>
+            To address these limitations, we introduce <strong>MVLoMa</strong>, a sparse star-graph matcher that extends
+            LoMa from image pairs to multiple views. MVLoMa first uses a frozen multi-view geometry model to jointly describe
+            all images in a star, then injects the resulting cross-view geometric context into local descriptors. It then
+            matches the centre image to all neighbours in a single forward pass through per-view self-attention and
+            bidirectional centre–neighbour cross-attention. For supervision, we derive positive correspondences only from
+            depth-valid, mutually visible dense warps and explicitly penalize high-confidence matches that violate epipolar
+            geometry.
+          </p>
+          <p>
+            On 25-view star graphs from HyperSim, ScanNet++, Mip-NeRF 360, and Tanks and Temples, MVLoMa obtains the best
+            macro-average relative-pose AUC among the compared methods at all three thresholds (58.65/85.41/90.99). Its
+            matcher is 2.20× faster than sequential evaluation of the 24 centre–neighbour edges. The same design supports
+            four tested frozen geometry encoders—DA3, π³, VGGT, and VGGT-Ω—with DA3-Giant performing best on all reported
+            encoder-ablation metrics. Controlled ablations further isolate the effects of geometry-aware descriptors,
+            visibility filtering, geometric negative supervision, and joint multi-view inference.
+          </p>
+        </div>
+        <div class="keywords" aria-label="Keywords">
+          <span>local feature matching</span>
+          <span>multi-view geometry</span>
+          <span>star graph</span>
+          <span>geometry foundation models</span>
+          <span>relative pose estimation</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="container is-wide">
+        <p class="section-kicker">Approach</p>
+        <h2 class="title is-3">Method Overview</h2>
+        <figure class="publication-figure">
+          <button class="zoomable" type="button" data-lightbox="./figures/mvloma_pipeline_hd.jpg"
+                  data-lightbox-title="Overview of MVLoMa" data-lightbox-alt="MVLoMa architecture, high resolution.">
+            <img src="./figures/mvloma_pipeline.jpg" alt="MVLoMa architecture: per-view VGG encoder and a frozen multi-view geometry foundation model feed a Conv Refiner; the multi-view star-graph matcher outputs sparse centre–neighbour matches."
+                 width="2800" height="519" loading="lazy" decoding="async">
+            <span class="zoom-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5M11 8v6M8 11h6"/></svg></span>
+          </button>
+          <figcaption>
+            <strong>Overview of MVLoMa.</strong> Local features and frozen multi-view geometry features are fused into
+            geometry-aware descriptors; a star-graph matcher then predicts sparse matches for every centre–neighbour edge
+            in one forward pass.
+          </figcaption>
+        </figure>
+
+        <div class="feature-columns">
+          <article class="feature-card">
+            <span class="feature-number">01</span>
+            <h3>Geometry-aware descriptors</h3>
+            <p>A frozen multi-view foundation model encodes the whole star once; its cross-view tokens enrich every local descriptor.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">02</span>
+            <h3>Star-graph attention</h3>
+            <p>The centre and all neighbours exchange information through bidirectional cross-attention, while each edge keeps its own sparse matches.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-number">03</span>
+            <h3>Geometric supervision</h3>
+            <p>Positives come only from mutually visible pixels, and confident matches that violate epipolar geometry are penalized.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="results">
+      <div class="container is-wide">
+        <p class="section-kicker">Evaluation</p>
+        <h2 class="title is-3">Results</h2>
+
+        <div class="results-block">
+          <h3 class="sub-title">Relative Pose on 25-View Star Graphs</h3>
+        <div class="chart-card results-explorer" id="comparison">
+          <div class="chart-controls">
+            <div class="control-group" id="benchmarkBench" role="group" aria-label="Benchmark">
+              <span class="control-label">Benchmark</span>
+              <button class="chip" type="button" data-bench="average" aria-pressed="true">Average</button>
+              <button class="chip" type="button" data-bench="hypersim" aria-pressed="false">HyperSim</button>
+              <button class="chip" type="button" data-bench="scannetpp" aria-pressed="false">ScanNet++</button>
+              <button class="chip" type="button" data-bench="mipnerf360" aria-pressed="false">Mip-NeRF 360</button>
+              <button class="chip" type="button" data-bench="tnt" aria-pressed="false">T&amp;T</button>
+            </div>
+            <div class="control-group" id="benchmarkThreshold" role="group" aria-label="AUC threshold">
+              <span class="control-label">AUC@</span>
+              <button class="chip" type="button" data-th="1" aria-pressed="true">1°</button>
+              <button class="chip" type="button" data-th="5" aria-pressed="false">5°</button>
+              <button class="chip" type="button" data-th="10" aria-pressed="false">10°</button>
+            </div>
+            <button class="chart-zoom" id="benchmarkZoom" type="button" hidden></button>
+          </div>
+          <div class="chart-legend">
+            <span><i class="dot" style="background: var(--series-ours)"></i>MVLoMa (ours)</span>
+            <span><i class="dot" style="background: var(--series-other)"></i>Baselines</span>
+          </div>
+          <div id="benchmarkChart"></div>
+        </div>
+          <div class="results-table-scroll" tabindex="0" role="region" aria-label="Scrollable main results table">
+            <table class="results-table is-wide" id="table-main">
+              <caption class="visually-hidden">Relative pose AUC on 25-view star graphs</caption>
+              <thead>
+                <tr>
+                  <th rowspan="2" scope="col">Method</th>
+                  <th colspan="3" scope="colgroup" class="group-start" data-bench="hypersim">HyperSim</th>
+                  <th colspan="3" scope="colgroup" class="group-start" data-bench="scannetpp">ScanNet++</th>
+                  <th colspan="3" scope="colgroup" class="group-start" data-bench="mipnerf360">Mip-NeRF 360</th>
+                  <th colspan="3" scope="colgroup" class="group-start" data-bench="tnt">T&amp;T</th>
+                  <th colspan="3" scope="colgroup" class="group-start" data-bench="average">Average</th>
+                </tr>
+                <tr>
+                  <th scope="col" class="group-start" data-key="hypersim-1">@1°</th><th scope="col" data-key="hypersim-5">@5°</th><th scope="col" data-key="hypersim-10">@10°</th>
+                  <th scope="col" class="group-start" data-key="scannetpp-1">@1°</th><th scope="col" data-key="scannetpp-5">@5°</th><th scope="col" data-key="scannetpp-10">@10°</th>
+                  <th scope="col" class="group-start" data-key="mipnerf360-1">@1°</th><th scope="col" data-key="mipnerf360-5">@5°</th><th scope="col" data-key="mipnerf360-10">@10°</th>
+                  <th scope="col" class="group-start" data-key="tnt-1">@1°</th><th scope="col" data-key="tnt-5">@5°</th><th scope="col" data-key="tnt-10">@10°</th>
+                  <th scope="col" class="group-start" data-key="average-1">@1°</th><th scope="col" data-key="average-5">@5°</th><th scope="col" data-key="average-10">@10°</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="group-row"><td colspan="16">Two-view</td></tr>
+                <tr data-method="LightGlue" data-group="two-view"><td>LightGlue</td>
+                  <td data-key="hypersim-1" class="group-start">20.20</td><td data-key="hypersim-5">47.34</td><td data-key="hypersim-10">55.72</td>
+                  <td data-key="scannetpp-1" class="group-start">22.84</td><td data-key="scannetpp-5">61.83</td><td data-key="scannetpp-10">74.49</td>
+                  <td data-key="mipnerf360-1" class="group-start">51.28</td><td data-key="mipnerf360-5">83.46</td><td data-key="mipnerf360-10">90.02</td>
+                  <td data-key="tnt-1" class="group-start">52.42</td><td data-key="tnt-5">84.69</td><td data-key="tnt-10">91.08</td>
+                  <td data-key="average-1" class="group-start">36.69</td><td data-key="average-5">69.33</td><td data-key="average-10">77.83</td></tr>
+                <tr data-method="LoMa-L" data-group="two-view"><td>LoMa-L</td>
+                  <td data-key="hypersim-1" class="group-start">51.99</td><td data-key="hypersim-5">77.00</td><td data-key="hypersim-10">82.86</td>
+                  <td data-key="scannetpp-1" class="group-start">37.68</td><td data-key="scannetpp-5" class="second-best">75.57</td><td data-key="scannetpp-10" class="second-best">85.14</td>
+                  <td data-key="mipnerf360-1" class="group-start">71.69</td><td data-key="mipnerf360-5">93.25</td><td data-key="mipnerf360-10">96.50</td>
+                  <td data-key="tnt-1" class="group-start"><strong>68.22</strong></td><td data-key="tnt-5"><strong>91.96</strong></td><td data-key="tnt-10"><strong>95.74</strong></td>
+                  <td data-key="average-1" class="group-start">57.40</td><td data-key="average-5">84.44</td><td data-key="average-10">90.06</td></tr>
+                <tr data-method="RoMa" data-group="two-view"><td>RoMa</td>
+                  <td data-key="hypersim-1" class="group-start">45.06</td><td data-key="hypersim-5">64.82</td><td data-key="hypersim-10">69.78</td>
+                  <td data-key="scannetpp-1" class="group-start">36.81</td><td data-key="scannetpp-5">73.88</td><td data-key="scannetpp-10">83.70</td>
+                  <td data-key="mipnerf360-1" class="group-start"><strong>75.42</strong></td><td data-key="mipnerf360-5">93.27</td><td data-key="mipnerf360-10">95.88</td>
+                  <td data-key="tnt-1" class="group-start">66.56</td><td data-key="tnt-5">90.99</td><td data-key="tnt-10">95.01</td>
+                  <td data-key="average-1" class="group-start">55.96</td><td data-key="average-5">80.74</td><td data-key="average-10">86.09</td></tr>
+                <tr data-method="RoMa v2" data-group="two-view"><td>RoMa v2</td>
+                  <td data-key="hypersim-1" class="group-start">52.93</td><td data-key="hypersim-5"><strong>80.65</strong></td><td data-key="hypersim-10"><strong>86.92</strong></td>
+                  <td data-key="scannetpp-1" class="group-start">33.02</td><td data-key="scannetpp-5">73.33</td><td data-key="scannetpp-10">84.58</td>
+                  <td data-key="mipnerf360-1" class="group-start second-best">74.81</td><td data-key="mipnerf360-5"><strong>94.16</strong></td><td data-key="mipnerf360-10"><strong>97.00</strong></td>
+                  <td data-key="tnt-1" class="group-start">67.06</td><td data-key="tnt-5">91.32</td><td data-key="tnt-10">95.37</td>
+                  <td data-key="average-1" class="group-start">56.95</td><td data-key="average-5">84.87</td><td data-key="average-10" class="second-best">90.97</td></tr>
+                <tr class="group-row"><td colspan="16">Multi-view</td></tr>
+                <tr data-method="MV-RoMa (13v)" data-group="multi-view"><td>MV-RoMa (13v)</td>
+                  <td data-key="hypersim-1" class="group-start">37.00</td><td data-key="hypersim-5">58.51</td><td data-key="hypersim-10">64.51</td>
+                  <td data-key="scannetpp-1" class="group-start">35.80</td><td data-key="scannetpp-5">71.57</td><td data-key="scannetpp-10">81.67</td>
+                  <td data-key="mipnerf360-1" class="group-start">74.45</td><td data-key="mipnerf360-5">92.93</td><td data-key="mipnerf360-10">95.61</td>
+                  <td data-key="tnt-1" class="group-start">66.04</td><td data-key="tnt-5">90.56</td><td data-key="tnt-10">94.75</td>
+                  <td data-key="average-1" class="group-start">53.32</td><td data-key="average-5">78.39</td><td data-key="average-10">84.14</td></tr>
+                <tr class="ours" data-method="MVLoMa (504)" data-group="multi-view"><td>MVLoMa (504)</td>
+                  <td data-key="hypersim-1" class="group-start second-best">53.35</td><td data-key="hypersim-5">78.99</td><td data-key="hypersim-10">84.76</td>
+                  <td data-key="scannetpp-1" class="group-start second-best">38.03</td><td data-key="scannetpp-5">74.72</td><td data-key="scannetpp-10">84.67</td>
+                  <td data-key="mipnerf360-1" class="group-start">73.90</td><td data-key="mipnerf360-5">94.04</td><td data-key="mipnerf360-10">96.97</td>
+                  <td data-key="tnt-1" class="group-start second-best">68.08</td><td data-key="tnt-5" class="second-best">91.91</td><td data-key="tnt-10" class="second-best">95.74</td>
+                  <td data-key="average-1" class="group-start second-best">58.34</td><td data-key="average-5" class="second-best">84.91</td><td data-key="average-10">90.53</td></tr>
+                <tr class="ours" data-method="MVLoMa (784)" data-group="multi-view"><td>MVLoMa (784)</td>
+                  <td data-key="hypersim-1" class="group-start"><strong>53.90</strong></td><td data-key="hypersim-5" class="second-best">80.02</td><td data-key="hypersim-10" class="second-best">85.99</td>
+                  <td data-key="scannetpp-1" class="group-start"><strong>38.44</strong></td><td data-key="scannetpp-5"><strong>75.68</strong></td><td data-key="scannetpp-10"><strong>85.33</strong></td>
+                  <td data-key="mipnerf360-1" class="group-start">74.29</td><td data-key="mipnerf360-5" class="second-best">94.08</td><td data-key="mipnerf360-10" class="second-best">96.97</td>
+                  <td data-key="tnt-1" class="group-start">67.96</td><td data-key="tnt-5">91.84</td><td data-key="tnt-10">95.68</td>
+                  <td data-key="average-1" class="group-start"><strong>58.65</strong></td><td data-key="average-5"><strong>85.41</strong></td><td data-key="average-10"><strong>90.99</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="results-block" id="ablations">
+          <h3 class="sub-title">Ablations</h3>
+          <p class="sub-intro">Controlled studies of supervision, frozen representation, encoder choice and star size.</p>
+          <div class="tabs" role="tablist" aria-label="Ablation studies">
+            <button class="tab-button" type="button" role="tab" id="tab-gt" aria-controls="ablation-gt" aria-selected="true">GT filtering &amp; negatives</button>
+            <button class="tab-button" type="button" role="tab" id="tab-backbone" aria-controls="ablation-backbone" aria-selected="false" tabindex="-1">Descriptor backbone</button>
+            <button class="tab-button" type="button" role="tab" id="tab-encoder" aria-controls="ablation-encoder" aria-selected="false" tabindex="-1">Foundation encoder</button>
+            <button class="tab-button" type="button" role="tab" id="tab-views" aria-controls="ablation-views" aria-selected="false" tabindex="-1">Inference views</button>
+          </div>
+
+          <div class="tab-panel" id="ablation-gt" role="tabpanel" aria-labelledby="tab-gt">
+            <div class="results-table-scroll is-narrow" tabindex="0" role="region" aria-label="GT filtering and negative loss ablation">
+              <table class="results-table is-medium">
+                <caption class="visually-hidden">GT filtering and geometric negative loss (DA3-G; four-view training; test at 784)</caption>
+                <thead>
+                  <tr><th rowspan="2" scope="col">Variant</th><th colspan="3" scope="colgroup" class="group-start">HyperSim</th><th colspan="3" scope="colgroup" class="group-start">Mip-NeRF 360</th></tr>
+                  <tr><th class="group-start">@1°</th><th>@5°</th><th>@10°</th><th class="group-start">@1°</th><th>@5°</th><th>@10°</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="ours"><td>Full</td><td class="group-start"><strong>52.84</strong></td><td><strong>78.42</strong></td><td><strong>84.34</strong></td><td class="group-start"><strong>73.85</strong></td><td><strong>93.96</strong></td><td><strong>96.92</strong></td></tr>
+                  <tr><td>w/o GT filtering</td><td class="group-start second-best">51.93</td><td class="second-best">77.75</td><td class="second-best">83.77</td><td class="group-start second-best">73.69</td><td class="second-best">93.85</td><td class="second-best">96.83</td></tr>
+                  <tr><td>w/o negative loss</td><td class="group-start">51.04</td><td>76.96</td><td>83.19</td><td class="group-start">72.72</td><td>93.42</td><td>96.55</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="takeaway"><strong>Both components help.</strong> Removing the geometric negative loss costs the most at the
+              strict threshold (HyperSim AUC@1° 52.84 → 51.04, vs. 52.84 → 51.93 without GT filtering). Filtering keeps invalid
+              dense warps out of the positives, while the negative term targets confident false matches that survive assignment.
+              DA3-G, four-view training, tested at 784.</p>
+          </div>
+
+          <div class="tab-panel" id="ablation-backbone" role="tabpanel" aria-labelledby="tab-backbone" hidden>
+            <div class="results-table-scroll is-narrow" tabindex="0" role="region" aria-label="Descriptor backbone ablation">
+              <table class="results-table is-medium">
+                <caption class="visually-hidden">Controlled frozen-backbone ablation at resolution 784, AUC@1°</caption>
+                <thead>
+                  <tr><th rowspan="2" scope="col">Backbone</th><th colspan="2" scope="colgroup" class="group-start">HyperSim</th><th colspan="2" scope="colgroup" class="group-start">AerialMD</th></tr>
+                  <tr><th class="group-start">o &gt; 0.35</th><th>o &gt; 0.05</th><th class="group-start">o &gt; 0.35</th><th>o &gt; 0.05</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="ours"><td>DA3-G</td><td class="group-start"><strong>69.27</strong></td><td><strong>61.14</strong></td><td class="group-start"><strong>77.97</strong></td><td><strong>48.16</strong></td></tr>
+                  <tr><td>DINOv2-G</td><td class="group-start second-best">68.11</td><td class="second-best">49.70</td><td class="group-start second-best">77.56</td><td class="second-best">47.51</td></tr>
+                  <tr><td>DINOv2-L</td><td class="group-start">67.72</td><td>48.29</td><td class="group-start">77.33</td><td>47.08</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="takeaway"><strong>Geometry-aware tokens beat a bigger 2D backbone.</strong> With data, resolution, matcher,
+              losses and optimization fixed, DA3-G improves AUC@1° over DINOv2-G by 1.16, 11.44, 0.41 and 0.65 points on the four
+              subsets. The small DINOv2-G vs. DINOv2-L gap shows that scaling the frozen 2D backbone alone does not explain the
+              gain. Overlap <em>o</em> follows the RoMa v2 definition.</p>
+          </div>
+
+          <div class="tab-panel" id="ablation-encoder" role="tabpanel" aria-labelledby="tab-encoder" hidden>
+            <div class="results-table-scroll is-narrow" tabindex="0" role="region" aria-label="Foundation encoder ablation">
+              <table class="results-table is-medium">
+                <caption class="visually-hidden">Frozen foundation encoder ablation (2–8 train views, 25 test views, resolution 784)</caption>
+                <thead>
+                  <tr><th rowspan="2" scope="col">Encoder</th><th colspan="3" scope="colgroup" class="group-start">HyperSim</th><th colspan="3" scope="colgroup" class="group-start">MegaDepth-X</th><th colspan="3" scope="colgroup" class="group-start">TerraSky3D</th></tr>
+                  <tr><th class="group-start">@1°</th><th>@5°</th><th>@10°</th><th class="group-start">@1°</th><th>@5°</th><th>@10°</th><th class="group-start">@1°</th><th>@5°</th><th>@10°</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="ours"><td>DA3-G</td><td class="group-start"><strong>53.90</strong></td><td><strong>80.02</strong></td><td><strong>85.99</strong></td><td class="group-start"><strong>18.88</strong></td><td><strong>52.97</strong></td><td><strong>65.77</strong></td><td class="group-start"><strong>55.53</strong></td><td><strong>83.88</strong></td><td><strong>90.04</strong></td></tr>
+                  <tr><td>π³</td><td class="group-start">51.50</td><td>76.56</td><td>82.57</td><td class="group-start">18.37</td><td>52.78</td><td>65.42</td><td class="group-start">53.77</td><td>82.81</td><td>89.45</td></tr>
+                  <tr><td>VGGT</td><td class="group-start second-best">52.28</td><td class="second-best">78.17</td><td class="second-best">84.26</td><td class="group-start">18.05</td><td>52.22</td><td>64.70</td><td class="group-start">53.21</td><td>81.92</td><td>88.56</td></tr>
+                  <tr><td>VGGT-Ω</td><td class="group-start">52.07</td><td>77.70</td><td>83.46</td><td class="group-start second-best">18.43</td><td class="second-best">52.91</td><td class="second-best">65.58</td><td class="group-start second-best">55.21</td><td class="second-best">83.38</td><td class="second-best">89.78</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="takeaway"><strong>Any geometry foundation model plugs in.</strong> The same descriptor head and star matcher
+              run on all four frozen encoders. DA3-G is best on every reported metric and leads HyperSim AUC@1° by 1.62–2.40
+              points, while VGGT-Ω is close on MegaDepth-X and TerraSky3D: the quality of the frozen tokens matters.</p>
+          </div>
+
+          <div class="tab-panel" id="ablation-views" role="tabpanel" aria-labelledby="tab-views" hidden>
+            <div class="results-table-scroll" tabindex="0" role="region" aria-label="Inference view count ablation">
+              <table class="results-table is-wide">
+                <caption class="visually-hidden">Inference view count for DA3-G MVLoMa trained with 2–8 views at resolution 784</caption>
+                <thead>
+                  <tr><th rowspan="2" scope="col"># views</th><th colspan="3" scope="colgroup" class="group-start">HyperSim</th><th colspan="3" scope="colgroup" class="group-start">Mip-NeRF 360</th><th colspan="3" scope="colgroup" class="group-start">T&amp;T</th><th colspan="3" scope="colgroup" class="group-start">TerraSky3D</th><th colspan="3" scope="colgroup" class="group-start">Average</th></tr>
+                  <tr><th class="group-start">@1°</th><th>@5°</th><th>@10°</th><th class="group-start">@1°</th><th>@5°</th><th>@10°</th><th class="group-start">@1°</th><th>@5°</th><th>@10°</th><th class="group-start">@1°</th><th>@5°</th><th>@10°</th><th class="group-start">@1°</th><th>@5°</th><th>@10°</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>2</td><td class="group-start">52.51</td><td>77.63</td><td>83.29</td><td class="group-start">73.96</td><td>94.02</td><td>96.95</td><td class="group-start">67.63</td><td class="second-best">91.86</td><td class="second-best">95.73</td><td class="group-start">54.76</td><td>83.01</td><td>89.37</td><td class="group-start">62.21</td><td>86.63</td><td>91.34</td></tr>
+                  <tr><td>4</td><td class="group-start">53.79</td><td>79.43</td><td>85.68</td><td class="group-start second-best">74.31</td><td>94.02</td><td>96.95</td><td class="group-start">67.85</td><td><strong>91.89</strong></td><td><strong>95.78</strong></td><td class="group-start">54.58</td><td>83.13</td><td>89.29</td><td class="group-start">62.63</td><td>87.12</td><td>91.92</td></tr>
+                  <tr><td>7</td><td class="group-start">53.90</td><td>79.13</td><td>85.14</td><td class="group-start"><strong>74.32</strong></td><td class="second-best">94.06</td><td class="second-best">96.97</td><td class="group-start">67.89</td><td>91.82</td><td>95.70</td><td class="group-start">54.97</td><td>83.42</td><td>89.75</td><td class="group-start">62.77</td><td>87.11</td><td>91.89</td></tr>
+                  <tr><td>13</td><td class="group-start"><strong>54.47</strong></td><td><strong>80.12</strong></td><td class="second-best">85.88</td><td class="group-start">74.20</td><td>94.04</td><td>96.96</td><td class="group-start second-best">67.92</td><td>91.82</td><td>95.66</td><td class="group-start second-best">55.39</td><td class="second-best">83.47</td><td class="second-best">89.85</td><td class="group-start"><strong>63.00</strong></td><td class="second-best">87.36</td><td class="second-best">92.09</td></tr>
+                  <tr><td>25</td><td class="group-start second-best">53.90</td><td class="second-best">80.02</td><td><strong>85.99</strong></td><td class="group-start">74.29</td><td><strong>94.08</strong></td><td><strong>96.97</strong></td><td class="group-start"><strong>67.96</strong></td><td>91.84</td><td>95.68</td><td class="group-start"><strong>55.53</strong></td><td><strong>83.88</strong></td><td><strong>90.04</strong></td><td class="group-start second-best">62.92</td><td><strong>87.45</strong></td><td><strong>92.17</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <figure class="figure-inline">
+              <img src="./figures/view_count_macro_auc.svg" alt="Macro-average AUC at 1, 5 and 10 degrees versus number of inference views (2, 4, 7, 13, 25)." loading="lazy" width="490" height="133">
+              <figcaption>Macro-average AUC over HyperSim, Mip-NeRF 360, Tanks and Temples and TerraSky3D versus the number of inference views.</figcaption>
+            </figure>
+            <p class="takeaway"><strong>Joint multi-view inference helps.</strong> The evaluated edges are fixed, so only the number
+              of jointly processed neighbours changes. At two views star matching degenerates to pair matching and the
+              macro-average drops to 62.21/86.63/91.34, about 0.8 points below the best multi-view result at every threshold.
+              Beyond two views the gains depend on dataset and threshold and are not monotonic (HyperSim AUC@1° peaks at 13
+              views), while the model, trained on 2–8 views, extrapolates to 25.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="efficiency">
+      <div class="container is-wide">
+        <p class="section-kicker">Complexity</p>
+        <h2 class="title is-3">Efficiency</h2>
+        <p class="section-intro">
+          A star shares the centre-side self-attention, projections and feed-forward networks across all of its edges. With
+          K = 2048 keypoints, d = 512 and L = 9 layers, the theoretical compute ratio is
+          C<sub>pair</sub> / C<sub>star</sub> = 70(V−1) / (43V−16) for a star with V views.
+        </p>
+        <div class="efficiency-grid">
+          <div class="chart-card">
+            <div class="chart-controls">
+              <div class="control-group" id="efficiencyMetric" role="group" aria-label="Metric">
+                <span class="control-label">Metric</span>
+                <button class="chip" type="button" data-metric="latency" aria-pressed="true">Measured latency</button>
+                <button class="chip" type="button" data-metric="compute" aria-pressed="false">Theoretical compute</button>
+              </div>
+            </div>
+            <div class="chart-legend">
+              <span><i style="background: var(--series-other)"></i>Sequential pairwise (one LoMa-L call per edge)</span>
+              <span><i style="background: var(--series-ours)"></i>Star (one MVLoMa call per star)</span>
+            </div>
+            <div id="efficiencyChart"></div>
+            <p class="chart-footnote">Matcher only: nine LoMa-L layers, 2048 keypoints, one NVIDIA A800, batch size 1; mean of 46
+              of 50 trials after dropping the two fastest and two slowest.</p>
+          </div>
+          <div class="stat-stack">
+            <div class="metric">
+              <strong>2.20×</strong>
+              <span>Measured speed-up at 25 views</span>
+              <small>446.96 → 203.09 ms (−54.6%). Larger than the 1.59× compute ratio because the 24 pairwise calls also pay
+                repeated Python/module and kernel-launch overhead.</small>
+            </div>
+            <div class="metric">
+              <strong>−37.0%</strong>
+              <span>Transformer FLOPs at 25 views</span>
+              <small>16.235 → 10.234 TFLOPs. Batching pairwise edges cannot remove this: it still repeats the centre-side work for
+                every edge.</small>
+            </div>
+            <div class="metric is-tradeoff">
+              <strong>979 MiB</strong>
+              <span>Peak matcher memory (trade-off)</span>
+              <small>vs. 176 MiB for sequential pairwise evaluation at 25 views.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-block is-narrow" style="margin-top: 2.2rem">
+          <h3 class="sub-title">Transformer Compute and Matcher Runtime</h3>
+          <p class="sub-intro">FLOPs count a multiply–add as two operations. Sp. is the pairwise / star ratio. Two-view outputs are
+            identical, an implementation sanity check.</p>
+          <div class="results-table-scroll" tabindex="0" role="region" aria-label="Runtime table">
+            <table class="results-table is-medium" id="table-runtime">
+              <caption class="visually-hidden">Transformer compute and matcher-only runtime for nine LoMa-L layers</caption>
+              <thead>
+                <tr>
+                  <th rowspan="2" scope="col">Views</th><th rowspan="2" scope="col">Edges</th>
+                  <th colspan="3" scope="colgroup" class="group-start">Theory (TFLOPs)</th>
+                  <th colspan="3" scope="colgroup" class="group-start">A800 (ms)</th>
+                </tr>
+                <tr>
+                  <th class="group-start">Pair</th><th>Star</th><th>Sp.</th>
+                  <th class="group-start">Pair</th><th>Star</th><th>Sp.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>2</td><td>1</td><td class="group-start">0.676</td><td>0.676</td><td>1.00×</td><td class="group-start">20.95</td><td>21.18</td><td>0.99×</td></tr>
+                <tr><td>4</td><td>3</td><td class="group-start">2.029</td><td>1.508</td><td>1.35×</td><td class="group-start">57.98</td><td>37.15</td><td>1.56×</td></tr>
+                <tr><td>7</td><td>6</td><td class="group-start">4.059</td><td>2.754</td><td>1.47×</td><td class="group-start">113.81</td><td>60.50</td><td>1.88×</td></tr>
+                <tr><td>13</td><td>12</td><td class="group-start">8.117</td><td>5.247</td><td>1.55×</td><td class="group-start">237.60</td><td>105.78</td><td>2.25×</td></tr>
+                <tr class="ours"><td>25</td><td>24</td><td class="group-start">16.235</td><td>10.234</td><td>1.59×</td><td class="group-start">446.96</td><td>203.09</td><td><strong>2.20×</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="bibtex">
+      <div class="container is-max-desktop">
+        <div class="bibtex-header">
+          <p class="section-kicker">Reference</p>
+          <h2 class="title is-3">BibTeX</h2>
+          <p class="section-description">If you find MVLoMa useful, please cite our work.</p>
+        </div>
+        <div class="bibtex-card">
+          <button class="copy-bibtex-btn" id="copyBibtex" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h11v11H8zM5 16H4V5h11v1"/></svg>
+            <span>Copy</span>
+          </button>
+          <!-- Add the arXiv identifier once available. -->
+          <pre><code id="bibtexCode">@misc{lu2026mvloma,
+  title  = {{MVLoMa}: Multi-View Local Feature Matching with Any Geometry Foundation Model},
+  author = {Lu, Xinyang and Wei, Shengzhe and Tang, Sheng and Zhang, Weiqi and Fang, Juntong and Li, Zesong},
+  note   = {Kosmo Research preprint},
+  year   = {2026}
+}</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container is-max-desktop">
+      <div class="content">
+        <p>
+          Page design adapted from the
+          <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a>,
+          which was adopted from <a href="https://nerfies.github.io/" target="_blank" rel="noopener noreferrer">Nerfies</a>.
+        </p>
+        <p>
+          This website is licensed under a
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Figure viewer">
+    <div class="lightbox-bar">
+      <span data-lightbox-caption></span>
+      <div class="toolbar-actions" style="width: auto">
+        <div class="viewer-zoom" role="group" aria-label="Zoom">
+          <button type="button" data-zoom="out" aria-label="Zoom out">−</button>
+          <output data-zoom-level aria-live="polite">100%</output>
+          <button type="button" data-zoom="in" aria-label="Zoom in">+</button>
+          <button type="button" data-zoom="reset" aria-label="Reset zoom">⟲</button>
+        </div>
+        <button class="tool-button" type="button" data-lightbox-close>Close ✕</button>
+      </div>
+    </div>
+    <div class="lightbox-viewport" tabindex="0" aria-label="Scroll to zoom, drag to pan"><img alt=""></div>
+  </dialog>
+
+  <button class="scroll-to-top" id="toTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6"/></svg>
+  </button>
+
+  <script src="./assets/js/zoom-pan.js" defer></script>
+  <script src="./assets/js/gallery.js" defer></script>
+  <script src="./assets/js/charts.js" defer></script>
+  <script src="./assets/js/site.js" defer></script>
+</body>
+</html>
