@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>4D Gaussian Splatting</title>
+  <link rel="stylesheet" href="./embed.css?v=20261028-carousel">
+</head>
+<body>
+  <canvas id="view" aria-label="Interactive 4D Gaussian scene" tabindex="0"></canvas>
+  <div class="scene-picker"><select id="models" aria-label="Scene" disabled><option>Loading scenes…</option></select></div>
+  <div id="loading" role="status"><span class="spinner"></span><strong>Loading dynamic scene</strong><span id="loading-detail">Initializing renderer…</span><button id="retry" type="button" hidden>Reload scene</button></div>
+  <pre id="status" hidden>Initializing renderer…</pre>
+  <footer>
+    <input id="time" type="range" min="0" max="5" step="0.001" value="0" aria-label="Playback time">
+    <div class="transport">
+      <div class="playback-transport"><button id="play" type="button" aria-label="Pause sequence">Pause</button></div>
+      <span class="clock"><span id="clock">0.00s</span><span class="muted"> / 5.00s</span></span>
+      <select id="speed" aria-label="Playback speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="0.75">0.75×</option><option value="1" selected>1×</option></select>
+      <span class="spacer"></span>
+      <button id="home" type="button">Reset view</button>
+      <button id="fullscreen" type="button">Fullscreen</button>
+    </div>
+  </footer>
+  <!-- Engine settings stay fixed at full quality; scene and playback controls are visible. -->
+  <div hidden>
+    <span id="scene-name"></span>
+    <select id="backend" aria-label="Renderer"><option value="webgpu">WebGPU</option><option value="webgl2">WebGL2</option></select>
+    <select id="quality" aria-label="Quality"><option value="full">Full detail</option></select>
+    <input id="clip-duration" value="5" aria-label="Duration"><input id="temporal" type="checkbox" aria-label="Temporal filtering"><input id="correct" type="checkbox" aria-label="Motion correction"><input id="orbit" type="checkbox" aria-label="Automatic orbit">
+    <button id="load" type="button">Apply</button><button id="open-file" type="button">Open</button>
+  </div>
+  <script type="module" src="./embed.mjs?v=20261102-vvc-restored"></script>
+</body>
+</html>

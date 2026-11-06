@@ -5,6 +5,15 @@ Research.
 
 ## Projects
 
+### Kosmo-GFM
+
+**A Production-Ready Geometry Foundation Model**
+
+Kosmo-GFM unifies camera estimation, static and dynamic point-cloud reconstruction,
+and Gaussian scene representations, with interactive 3D and 4D demonstrations.
+
+[Explore Kosmo-GFM →](https://kosmoresearch.github.io/Kosmo-GFM/)
+
 ### GeoWeaver
 
 **Accurate Long-Sequence 3D Reconstruction via Hierarchical Geometric
