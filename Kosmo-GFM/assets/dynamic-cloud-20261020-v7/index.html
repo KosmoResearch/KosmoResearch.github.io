@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>GFM · 3D Point Tracking</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="embed.css?v=20261029-scene-border">
+  <script type="importmap">{"imports":{"three":"./lib/three.module.js","three/addons/":"./lib/addons/"}}</script>
+</head>
+<body>
+<main id="app">
+  <header class="intro"><div><p class="eyebrow">GFM / INTERACTIVE RESULTS</p><h1>Follow motion in three dimensions.</h1><p class="sub">Explore how points move through a video and the reconstructed 3D world.</p></div><span class="pill">3D Point Tracking</span></header>
+  <section class="demo" aria-label="Interactive 3D point tracking">
+    <div class="demo-top"><div class="scene-info"><span class="status-dot"></span><strong id="scene-name">Loading scenes</strong><span id="scene-tag" class="tag"></span></div><div class="top-actions"><select id="scene-picker" aria-label="Select scene"></select><button id="btn-fullscreen" class="icon-btn" title="Fullscreen">⛶ <span>Fullscreen</span></button></div></div>
+    <nav id="seq-nav" aria-label="Choose a scene"></nav>
+    <div id="stage" data-mode="reference">
+      <section id="rgb-panel" class="rgb-panel"><div class="pane-title"><span>INPUT VIDEO</span></div><div id="rgb-wrap" class="rgb-wrap"><canvas id="canvas-2d" aria-label="Input video"></canvas></div></section>
+      <section class="world-panel"><div class="world-viewport"><canvas id="canvas-3d" aria-label="Interactive dense 3D reconstruction and trajectories"></canvas><div class="world-label"><span class="live-dot"></span> WORLD SPACE <span class="muted">· frame-0 reference</span></div><div class="view-tools"><button id="btn-focus" title="Focus trajectory region">Focus tracks</button><button id="btn-reset" title="Reset 3D viewpoint">Reset view</button><button id="btn-settings" aria-expanded="true" aria-label="Collapse side panel" title="Toggle viewer settings">◧</button></div><div id="cloud-summary" class="cloud-summary" aria-live="off"></div><div class="orbit-hint">Drag to orbit <span>·</span> scroll to zoom</div></div><aside id="settings" aria-label="Viewer settings"><h2>VIEWER SETTINGS</h2><label><input id="show-cloud" type="checkbox" checked> Voxel-fused background</label><label><input id="show-sky" type="checkbox" checked> Far sky backdrop</label><label><input id="show-objects" type="checkbox" checked> Current-frame objects</label><label><input id="show-trails" type="checkbox" checked> Motion trails</label><label><input id="show-cameras" type="checkbox"> Camera path</label><label>Trail history <span id="tail-policy" title="Latest 10 frames at full opacity; older trails fade out over 10 more frames">10 frames + fade</span></label><label>Point size <input id="point-size" type="range" min=".5" max="3" value="1" step=".25"></label><p>Drag to orbit. Scroll to zoom. Video and 3D motion stay synchronized.</p></aside></section>
+      <div id="loading" class="loading"><img id="loading-poster" alt="Scene preview"><div class="loading-card"><span class="spinner"></span><strong id="loading-text">Preparing the scene</strong><p id="loading-detail">Precomputed results · no GPU needed to explore</p><progress id="load-progress" max="100" value="0"></progress><button id="btn-retry" hidden>Retry</button></div></div>
+      <div id="toast" role="status" aria-live="polite"></div>
+    </div>
+    <footer class="controls"><button id="btn-play" class="play" aria-label="Play sequence">▶</button><button id="btn-prev" class="step" title="Previous frame">‹</button><button id="btn-next" class="step" title="Next frame">›</button><span id="frame-label" class="frame-label">Frame — / —</span><input id="timeline" type="range" min="0" max="1" value="0" aria-label="Sequence frame"><select id="speed" aria-label="Playback speed"><option value=".5" selected>0.5×</option><option value="1">1×</option><option value="2">2×</option></select><span id="point-count">0 tracks</span></footer>
+  </section>
+  <div class="caption"><p><strong>A persistent scene, moving objects.</strong> Static background is fused across frames. Objects inside each frame’s mask are reconstructed for that frame only. Rainbow trails show the latest 10 frames; older trails fade out over the next 10 frames. The input video is shown without overlays.</p></div>
+</main>
+<script type="module" src="app.js?v=20261104-balanced-zoom-5"></script>
+<script type="module" src="embed.js?v=20261028-gentle-wheel"></script>
+</body></html>

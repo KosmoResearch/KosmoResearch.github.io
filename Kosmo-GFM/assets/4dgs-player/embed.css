@@ -1,0 +1,32 @@
+:root{font-family:Inter,system-ui,sans-serif;color-scheme:dark;color:#edf3f5;background:#172127;font-size:12px}*{box-sizing:border-box}body{margin:0;overflow:hidden}canvas{display:block;width:100vw;height:100dvh;touch-action:none}button,select{font:500 11px/1.4 Inter,system-ui,sans-serif;color:inherit;background:#172127df;border:1px solid #ffffff3d;border-radius:6px;padding:9px 12px}button{cursor:pointer}button:hover{background:#34474a}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #b0c9ba;outline-offset:3px}.primary{background:#9ab6a7;color:#14231b;border-color:#9ab6a7}.primary:hover{background:#b0c9ba}footer{position:fixed;left:16px;right:16px;bottom:16px;padding:12px 14px 8px;background:#172127e8;border:1px solid #ffffff29;border-radius:10px;backdrop-filter:blur(12px)}.transport{display:flex;align-items:center;gap:12px}.clock{font-variant-numeric:tabular-nums;white-space:nowrap}.muted{color:#99aab4}.spacer{flex:1}#time{display:block;width:100%;margin:12px 0 3px;accent-color:#9ab6a7;cursor:pointer}#loading{position:fixed;left:50%;top:45%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:14px;max-width:90vw;width:350px;padding:24px;border:1px solid #ffffff24;border-radius:12px;background:#172127f2;text-align:center}#loading-detail{color:#b9c8d0;line-height:1.7}.spinner{width:26px;height:26px;border:2px solid #ffffff20;border-top-color:#9ab6a7;border-radius:50%;animation:spin 1s linear infinite}[hidden]{display:none!important}@keyframes spin{to{transform:rotate(360deg)}}@media(max-width:600px){footer{left:10px;right:10px;bottom:10px;padding:10px}.transport{gap:8px;flex-wrap:wrap}button,select{padding:8px;font-size:11px}.spacer{display:none}#home{margin-left:auto}.clock{font-size:10px}#time{margin-top:10px}}@media(max-width:360px){#home{margin-left:0}.transport{justify-content:space-between}#fullscreen{margin-left:auto}}
+/* Shared playback appearance with Dynamic Point Cloud. */
+.scene-picker { position:fixed; top:16px; left:16px; max-width:calc(100% - 32px); }
+.embedded .scene-picker { display:none; }
+#models { max-width:100%; min-width:170px; height:34px; padding:0 30px 0 10px; background:#00000080; border:1px solid #ffffff29; color:#e0dcdd; }
+#models optgroup,#models option { background:#172127; }
+footer { left:16px; right:16px; bottom:16px; padding:0; border:0; border-radius:0; background:transparent; backdrop-filter:none; }
+.transport { gap:8px; flex-wrap:nowrap; }
+.playback-transport { display:flex; flex:0 0 auto; border-radius:6px; background:#0000004d; }
+#play { display:block; flex:0 0 auto; width:34px; height:34px; padding:0; margin:0; border:0; border-radius:6px; background:transparent; color:#e0dcdd; font-size:0; }
+#play:hover { color:#fff; background:#ffffff0d; }
+#play::before { content:""; display:block; width:0; height:0; margin:auto; border-top:7px solid transparent; border-bottom:7px solid transparent; border-left:11px solid currentColor; transform:translateX(1px); }
+#play[aria-label="Pause sequence"]::before { box-sizing:content-box; width:4px; height:14px; border:0; border-left:4px solid currentColor; border-right:4px solid currentColor; transform:none; }
+.clock { color:#e0dcdd; font:11px Arial,sans-serif; font-variant-numeric:tabular-nums; }
+.muted { color:#aaa; }
+#speed { margin-left:auto; height:34px; padding:5px; border:0; background:#0000004d; color:#e0dcdd; }
+.spacer { display:none; }
+#home,#fullscreen { height:34px; padding:0 9px; background:#0000004d; border:0; color:#e0dcdd; font-size:10px; }
+#time { appearance:none; display:block; width:100%; height:30px; min-width:0; margin:0; border:0; background:transparent; cursor:pointer; }
+#time::-webkit-slider-runnable-track { height:4px; background:#d9d9d9; }
+#time::-moz-range-track { height:4px; background:#d9d9d9; }
+#time::-webkit-slider-thumb { appearance:none; width:12px; height:12px; margin-top:-4px; border:2px solid #d9d9d9; border-radius:50%; background:#ffaf50; }
+#time::-moz-range-thumb { box-sizing:border-box; width:12px; height:12px; border:2px solid #d9d9d9; border-radius:50%; background:#ffaf50; }
+button:focus-visible,select:focus-visible,input:focus-visible { outline-color:#d0ad60; }
+@media(max-width:600px) {
+  .scene-picker { top:12px; left:12px; max-width:calc(100% - 24px); }
+  footer { left:12px; right:12px; bottom:12px; padding:0; }
+  .transport { gap:6px; flex-wrap:wrap; }
+  #home { margin-left:0; }
+  #time { margin:0; }
+  .clock { font-size:10px; }
+}

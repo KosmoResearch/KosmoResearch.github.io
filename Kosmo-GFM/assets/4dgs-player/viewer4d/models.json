@@ -1,0 +1,93 @@
+[
+  {
+    "id": "vvc_001_1_seq0",
+    "name": "VVC 001 · seq0",
+    "roll": -90,
+    "size": 57571537,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_001_1_seq0.l4d",
+      "bytes": 57571537,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_001_1_seq0.l4d.gz",
+      "gzipBytes": 47756681
+    }
+  },
+  {
+    "id": "vvc_004_1_seq1",
+    "name": "VVC 004 · seq1",
+    "roll": -90,
+    "size": 66771649,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_004_1_seq1.l4d",
+      "bytes": 66771649,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_004_1_seq1.l4d.gz",
+      "gzipBytes": 55488067
+    }
+  },
+  {
+    "id": "vvc_006_1_seq1",
+    "name": "VVC 006 · seq1",
+    "roll": -90,
+    "size": 83964770,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_006_1_seq1.l4d",
+      "bytes": 83964770,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_006_1_seq1.l4d.gz",
+      "gzipBytes": 70050542
+    }
+  },
+  {
+    "id": "vvc_007_C_wall_surface",
+    "name": "VVC 007 · wall surface",
+    "roll": -90,
+    "size": 89557498,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_007_C_wall_surface.l4d",
+      "bytes": 89557498,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_007_C_wall_surface.l4d.gz",
+      "gzipBytes": 74620552
+    }
+  },
+  {
+    "id": "vvc_008_2_seq1",
+    "name": "VVC 008 · seq1",
+    "roll": -90,
+    "size": 86872562,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_008_2_seq1.l4d",
+      "bytes": 86872562,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_008_2_seq1.l4d.gz",
+      "gzipBytes": 72938748
+    }
+  },
+  {
+    "id": "vvc_011_0_seq1",
+    "name": "VVC 011 · seq1",
+    "roll": -90,
+    "size": 87199538,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_011_0_seq1.l4d",
+      "bytes": 87199538,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_011_0_seq1.l4d.gz",
+      "gzipBytes": 72572535
+    }
+  },
+  {
+    "id": "vvc_012_0_seq0",
+    "name": "VVC 012 · seq0",
+    "roll": -90,
+    "size": 67773649,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_012_0_seq0.l4d",
+      "bytes": 67773649,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_012_0_seq0.l4d.gz",
+      "gzipBytes": 56507361
+    }
+  }
+]
