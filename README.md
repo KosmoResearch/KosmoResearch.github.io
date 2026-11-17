@@ -5,6 +5,15 @@ Research.
 
 ## Projects
 
+### 4DGS
+
+**Interactive 4D Gaussian Splatting Web Player**
+
+Explore dynamic scenes with free-viewpoint playback. Model assets load from
+Hugging Face, while the static player is served from the `4dgs/` directory.
+
+[Open 4DGS demo →](https://kosmoresearch.github.io/4dgs/)
+
 ### Kosmo-GFM
 
 **A Production-Ready Geometry Foundation Model**

@@ -1,0 +1,15 @@
+{
+  "name": "4dgs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 18117 --bind 127.0.0.1",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tools/check-browser.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.64.0",
+    "pngjs": "7.0.0"
+  }
+}
