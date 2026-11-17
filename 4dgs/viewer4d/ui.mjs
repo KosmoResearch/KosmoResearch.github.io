@@ -95,6 +95,7 @@ const updatePlaybackUI=()=>{
  if(videoActive||fatalError)return;
  const p=window.probe;
  if(p?.errors.length){error(p.errors.at(-1));return;}
+ const hasPreviews=!!window.sceneCatalog?.find(model=>model.id===(p?.model||activeScene))?.cache?.previews?.length;
  const hasFrame=!!(p?.ready||p?.renderedFrames);
  if(p?.fullReady&&!completedAt)completedAt=performance.now();
  $('#loading').hidden=!!(p?.loadError||(completedAt&&performance.now()-completedAt>450));
@@ -103,10 +104,11 @@ const updatePlaybackUI=()=>{
  $('#load-percent').textContent=percent+'%';
  $('#load-progress-arc').style.strokeDashoffset=String(100-percent);
  $('#load-progress').setAttribute('aria-valuenow',String(percent));
- const label=p?.fullReady?'Ready':p?.loadStage==='full'?(p?.downloadProgress?.ratio>=1?'Preparing scene':'Loading full detail'):'Loading preview';
+ const label=p?.fullReady?'Ready':p?.loadStage==='full'?(p?.downloadProgress?.ratio>=1?'Preparing scene':'Loading full detail'):hasPreviews?'Loading preview':'Loading scene';
  $('#loading strong').textContent=label;
  $('#load-progress').setAttribute('aria-valuetext',label+' · '+percent+'%');
  $('#loading-detail').textContent=p?.fullReady?'Full detail ready':hasFrame?'You can explore while loading':p?.downloadProgress?.total?'Opening dynamic scene':$('#status').textContent||'Initializing GPU…';
+ $('#loading-hint').textContent=hasPreviews?'Preview first, then full detail':'Loading full detail from Hugging Face';
  $('#loading-hint').hidden=hasFrame;
  if(p?.ready||p?.renderedFrames){
   $('#stage').setAttribute('aria-busy','false');$('#render-state').textContent=p.preview?'Preview · Free view':p.playing===false?'Paused · Free view':'Live rendering · Free view';

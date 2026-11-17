@@ -6,17 +6,20 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 
-test('the five published ACS scenes have complete public HF stages and no local model paths',()=>{
+test('five ACS and seven VVC scenes use their verified public HF asset directories',()=>{
  const catalog=JSON.parse(read('catalog/models.json'));
- assert.deepEqual(catalog.map(model=>model.id),['acs_zhao_solo','acs_qiqi','acs_xixi','acs_two_people','acs_3girl']);
+ assert.deepEqual(catalog.map(model=>model.id),['acs_zhao_solo','acs_qiqi','acs_xixi','acs_two_people','acs_3girl',
+  'vvc_001_1_seq0','vvc_004_1_seq1','vvc_006_1_seq1','vvc_007_C_wall_surface','vvc_008_2_seq1','vvc_011_0_seq1','vvc_012_0_seq0']);
  for(const model of catalog){
-  assert(model.id.startsWith('acs_'));assert.equal(model.originalAvailable,false);
-  assert.equal(model.cache.previews.length,2);
-  assert.equal(model.cache.url,undefined,'uncompressed full models stay local');
-  for(const stage of [model.cache,...model.cache.previews])for(const [key,length] of [['url','bytes'],['gzipUrl','gzipBytes']]){
-   if(key==='url'&&stage===model.cache)continue;
+  const acs=model.id.startsWith('acs_'),previews=model.cache.previews||[];
+  const date=acs?'20261117':'20261106';
+  assert.equal(model.originalAvailable,false);assert.equal(previews.length,acs?2:0);
+  if(acs)assert.equal(model.cache.url,undefined,'uncompressed ACS full models stay local');
+  else{assert.equal(model.roll,-90);assert(model.cache.url,'VVC raw fallback is available');}
+  for(const stage of [model.cache,...previews])for(const [key,length] of [['url','bytes'],['gzipUrl','gzipBytes']]){
+   if(key==='url'&&stage===model.cache&&acs)continue;
    const url=new URL(stage[key]);assert.equal(url.origin,'https://huggingface.co');
-   assert(url.pathname.startsWith('/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261117/4dgs-player/'));
+   assert(url.pathname.startsWith('/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/'+date+'/4dgs-player/'));
    assert(url.pathname.split('/').at(-1).startsWith(model.id+'.'));assert(stage[length]>0);
   }
  }

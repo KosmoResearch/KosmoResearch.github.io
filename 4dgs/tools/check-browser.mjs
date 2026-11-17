@@ -49,7 +49,7 @@ async function setup(coarseOnly=false){
  return {context,page,errors};
 }
 try{
- for(const model of process.env.CHECK_MODE==='full'?[]:catalog){
+ for(const model of ['full','vvc'].includes(process.env.CHECK_MODE)?[]:catalog.filter(model=>model.cache.previews?.length)){
   console.log('Preview',model.id);
   const {context,page,errors}=await setup(true);
   await page.goto(base+'?model='+model.id+'&paused=1&time=2.5');
@@ -58,12 +58,14 @@ try{
   assert.equal(state.model,model.id);assert.equal(state.quality,'full');assert.equal(state.rate,1);assert.deepEqual(state.errors,[]);assert.deepEqual(errors,[]);
   report.coarse.push(state);await context.close();
  }
- for(const id of ['acs_zhao_solo','acs_two_people']){
+ const fullModels=catalog.filter(model=>['acs_zhao_solo','acs_two_people','vvc_001_1_seq0'].includes(model.id));
+ for(const model of fullModels.filter(model=>process.env.CHECK_MODE!=='vvc'||model.id.startsWith('vvc_'))){
+  const id=model.id;
   console.log('Full model',id);
   const {context,page,errors}=await setup();
   await page.goto(base+'?model='+id+'&paused=1&time=2.5');
   if(process.env.THROTTLE_ASSETS){
-   await wait(page,()=>window.probe?.renderedFrames>0&&!probe.fullReady&&probe.downloadProgress?.ratio>.35&&probe.downloadProgress?.ratio<.9);
+   await wait(page,()=>window.probe&&!probe.fullReady&&probe.downloadProgress?.ratio>.35&&probe.downloadProgress?.ratio<.9);
    assert.equal(await page.locator('#loading').isVisible(),true);
    const percent=Number(await page.locator('#load-progress').getAttribute('aria-valuenow'));
    assert(percent>0&&percent<100);

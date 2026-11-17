@@ -133,5 +133,103 @@
         }
       ]
     }
+  },
+  {
+    "id": "vvc_001_1_seq0",
+    "name": "VVC 001 \u00b7 seq0",
+    "roll": -90,
+    "size": 47756681,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_001_1_seq0.l4d",
+      "bytes": 57571537,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_001_1_seq0.l4d.gz",
+      "gzipBytes": 47756681
+    },
+    "file": "vvc_001_1_seq0.l4d"
+  },
+  {
+    "id": "vvc_004_1_seq1",
+    "name": "VVC 004 \u00b7 seq1",
+    "roll": -90,
+    "size": 55488067,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_004_1_seq1.l4d",
+      "bytes": 66771649,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_004_1_seq1.l4d.gz",
+      "gzipBytes": 55488067
+    },
+    "file": "vvc_004_1_seq1.l4d"
+  },
+  {
+    "id": "vvc_006_1_seq1",
+    "name": "VVC 006 \u00b7 seq1",
+    "roll": -90,
+    "size": 70050542,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_006_1_seq1.l4d",
+      "bytes": 83964770,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_006_1_seq1.l4d.gz",
+      "gzipBytes": 70050542
+    },
+    "file": "vvc_006_1_seq1.l4d"
+  },
+  {
+    "id": "vvc_007_C_wall_surface",
+    "name": "VVC 007 \u00b7 wall surface",
+    "roll": -90,
+    "size": 74620552,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_007_C_wall_surface.l4d",
+      "bytes": 89557498,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_007_C_wall_surface.l4d.gz",
+      "gzipBytes": 74620552
+    },
+    "file": "vvc_007_C_wall_surface.l4d"
+  },
+  {
+    "id": "vvc_008_2_seq1",
+    "name": "VVC 008 \u00b7 seq1",
+    "roll": -90,
+    "size": 72938748,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_008_2_seq1.l4d",
+      "bytes": 86872562,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_008_2_seq1.l4d.gz",
+      "gzipBytes": 72938748
+    },
+    "file": "vvc_008_2_seq1.l4d"
+  },
+  {
+    "id": "vvc_011_0_seq1",
+    "name": "VVC 011 \u00b7 seq1",
+    "roll": -90,
+    "size": 72572535,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_011_0_seq1.l4d",
+      "bytes": 87199538,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_011_0_seq1.l4d.gz",
+      "gzipBytes": 72572535
+    },
+    "file": "vvc_011_0_seq1.l4d"
+  },
+  {
+    "id": "vvc_012_0_seq0",
+    "name": "VVC 012 \u00b7 seq0",
+    "roll": -90,
+    "size": 56507361,
+    "originalAvailable": false,
+    "cache": {
+      "url": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_012_0_seq0.l4d",
+      "bytes": 67773649,
+      "gzipUrl": "https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/main/website-assets/20261106/4dgs-player/viewer4d/cache/vvc_012_0_seq0.l4d.gz",
+      "gzipBytes": 56507361
+    },
+    "file": "vvc_012_0_seq0.l4d"
   }
 ]
