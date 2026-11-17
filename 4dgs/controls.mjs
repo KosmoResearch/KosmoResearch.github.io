@@ -1,4 +1,4 @@
-import {initialSceneState} from './viewer4d/camera-presets.mjs?v=20261028-camera2';
+import {initialSceneState} from './viewer4d/camera-presets.mjs?v=20261118-long1';
 import {getViewMatrix,invert4,translate4,rotate4} from './camera-math.mjs';
 // Keep the original viewer's COLMAP camera convention; convert only at the
 // PlayCanvas boundary. This preserves pointer directions and key semantics.

@@ -1,6 +1,6 @@
 // Two-pass projection strategy inspired by HS_SplatTV/hybrid.js.
 // Evaluation and blending use this viewer's unchanged full-detail kernels.
-import {projectionVertex,projectedVertex,fragment} from './fast-shader.mjs?v=4';
+import {projectionVertex,projectedVertex,fragment} from './fast-shader.mjs?v=20261118-long1';
 const STRIDE=44,CHUNK=1<<20;
 export function createProjectedRenderer(gl,indices,quad){
  const resources=[];
@@ -16,7 +16,7 @@ export function createProjectedRenderer(gl,indices,quad){
  }
  const project=program(projectionVertex,['projectedCenterMajor','projectedMinorExtentR','projectedColorGBA']);
  const render=program(projectedVertex);
- const uniforms=p=>Object.fromEntries(['view','viewport','focal','clockTime','classic','splats'].map(k=>[k,gl.getUniformLocation(p,k)]));
+ const uniforms=p=>Object.fromEntries(['view','viewport','focal','clockTime','classic','splats0','splats1','splats2','splats3','recordsPerRow','recordsPerTexture'].map(k=>[k,gl.getUniformLocation(p,k)]));
  const pu=uniforms(project),ru=uniforms(render);
  const buffer=gl.createBuffer(),feedback=gl.createTransformFeedback(),projectVao=gl.createVertexArray(),renderVao=gl.createVertexArray();
  resources.push(['Buffer',buffer],['TransformFeedback',feedback],['VertexArray',projectVao],['VertexArray',renderVao]);
@@ -31,10 +31,10 @@ export function createProjectedRenderer(gl,indices,quad){
  let capacity=0,validated=false;
  return {
   get bytes(){return capacity*STRIDE;},
-  draw({view,viewport,focal,time,classic,count}){
+  draw({view,viewport,focal,time,classic,count,recordsPerRow=1024,recordsPerTexture=1024}){
    if(!count)return;
    if(Math.min(count,CHUNK)>capacity){capacity=Math.min(count,CHUNK);gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,capacity*STRIDE,gl.DYNAMIC_COPY);}
-   gl.useProgram(project);gl.uniformMatrix4fv(pu.view,false,view);gl.uniform2fv(pu.viewport,viewport);gl.uniform2fv(pu.focal,focal);gl.uniform1f(pu.clockTime,time);gl.uniform1f(pu.classic,classic);gl.uniform1i(pu.splats,0);
+   gl.useProgram(project);for(let s=0;s<4;s++)gl.uniform1i(pu['splats'+s],s);gl.uniform1ui(pu.recordsPerRow,recordsPerRow);gl.uniform1ui(pu.recordsPerTexture,recordsPerTexture);gl.uniformMatrix4fv(pu.view,false,view);gl.uniform2fv(pu.viewport,viewport);gl.uniform2fv(pu.focal,focal);gl.uniform1f(pu.clockTime,time);gl.uniform1f(pu.classic,classic);
    gl.useProgram(render);gl.uniform2fv(ru.viewport,viewport);gl.uniform1f(ru.classic,classic);
    for(let start=0;start<count;start+=capacity){
     const n=Math.min(capacity,count-start);

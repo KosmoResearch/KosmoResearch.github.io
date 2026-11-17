@@ -2,9 +2,9 @@ import {half} from '../splatv.mjs';
 let positions,velocities,times,factors,radii,alpha,moving,persistent,meta,ids,depths,depthBits,tempOrder,scores,persistentStatic,persistentMoving,staticOrder,staticDepths,dynamicOrder,dynamicDepths,cachedView,cachedProjection;
 let modelRevision=0;
 let orderPool=[],staticVisibleCount=0;
-const TEMPORAL_LEAVES=256;
+let TEMPORAL_LEAVES=256,t0=0,t1=5;
 let temporalNodes,temporalMask,temporalIds,temporalIndexBytes,cachedTemporalLeaf=-1,cachedTemporalCount=0;
-const temporalLeaf=time=>Math.max(0,Math.min(TEMPORAL_LEAVES-1,Math.floor(time*TEMPORAL_LEAVES/5)));
+const temporalLeaf=time=>Math.max(0,Math.min(TEMPORAL_LEAVES-1,Math.floor((time-t0)*TEMPORAL_LEAVES/(t1-t0))));
 function visitTemporalRange(lo,hi,emit){
  // Inclusive endpoints cover every cell touched by the already outward-rounded
  // lifetime. The original per-record time check still decides final visibility.
@@ -37,9 +37,12 @@ function initialize(buffer){
  const parsed=JSON.parse(new TextDecoder().decode(new Uint8Array(buffer,8,length)));
  if(!Number.isSafeInteger(parsed.count)||parsed.count<1||8+length+parsed.count*48!==buffer.byteLength)throw Error('Invalid optimized model length');
  meta=parsed;modelRevision++;
+ [t0,t1]=meta.timeRange||[0,5];
+ if(!Number.isFinite(t0)||!Number.isFinite(t1)||t1<=t0)throw Error('Invalid model time range');
+ TEMPORAL_LEAVES=t1-t0>6?64:256;
  const n=meta.count,src=new DataView(buffer,8+length);
  positions=new Float32Array(n*3);velocities=new Float32Array(n*3);times=new Float32Array(n*4);factors=new Float32Array(n);radii=new Float32Array(n);alpha=new Float32Array(n);moving=new Uint8Array(n);
- const width=3072,height=Math.ceil(n/1024),packed=new Uint32Array(width*height*4),staticIds=[];
+ const perRow=n>16000000?4096:1024,width=perRow*3,height=Math.ceil(n/perRow),packed=new Uint32Array(width*height*4),staticIds=[];
  // Explicit uint32 reads work with the variable-length (unaligned) JSON header.
  for(let i=0;i<n;i++){
   const b=i*48,j=i*3,k=i*4;
@@ -52,11 +55,11 @@ function initialize(buffer){
   // rounded outwards, so a Float32 store cannot remove a boundary splat.
   const cutoff=Math.max(.02,1/(255*alpha[i]));
   const reach=times[k+1]*Math.sqrt(Math.max(0,-2*Math.log(cutoff)));
-  times[k+2]=outward(Math.max(0,times[k+2],times[k]-reach),false);
-  times[k+3]=outward(Math.min(5,times[k+3],times[k]+reach),true);
+  times[k+2]=outward(Math.max(t0,times[k+2],times[k]-reach),false);
+  times[k+3]=outward(Math.min(t1,times[k+3],times[k]+reach),true);
   radii[i]=3.33*Math.sqrt(3*factors[i])*(1+1e-6);
   const lo=times[k+2],hi=times[k+3];
-  if(lo<=0&&hi>=5)staticIds.push(i);
+  if(lo<=t0&&hi>=t1)staticIds.push(i);
  }
  persistent=Uint32Array.from(staticIds);
  // Only exactly stationary, whole-clip records are reusable across time. Moving
@@ -68,17 +71,18 @@ function initialize(buffer){
  for(const i of persistent){const j=i*3;if(velocities[j]===0&&velocities[j+1]===0&&velocities[j+2]===0)persistentStatic[stationaryAt++]=i;else persistentMoving[movingAt++]=i;}
  staticOrder=null;staticDepths=null;staticVisibleCount=0;cachedView=null;cachedProjection=null;orderPool=[];
  // Store each interval in a disjoint set of tree nodes. This avoids copying
- // long-lived records into every fine bucket while providing ~19.5 ms cells.
+ // long-lived records into every fine bucket. Long clips use fewer leaves
+ // to bound index memory; every record still gets an exact lifetime check.
  const counts=new Uint32Array(TEMPORAL_LEAVES*2);
  for(let i=0;i<n;i++){
   const k=i*4,lo=times[k+2],hi=times[k+3];
-  if(lo<=0&&hi>=5||hi<lo)continue;
+  if(lo<=t0&&hi>=t1||hi<lo)continue;
   visitTemporalRange(lo,hi,node=>counts[node]++);
  }
  temporalNodes=Array.from(counts,c=>new Uint32Array(c));counts.fill(0);
  for(let i=0;i<n;i++){
   const k=i*4,lo=times[k+2],hi=times[k+3];
-  if(lo<=0&&hi>=5||hi<lo)continue;
+  if(lo<=t0&&hi>=t1||hi<lo)continue;
   visitTemporalRange(lo,hi,node=>temporalNodes[node][counts[node]++]=i);
  }
  let maxCandidates=0;
@@ -106,7 +110,7 @@ function radixSort(kept,out,orderedDepths){
 }
 function sortFrame({view,time,fx,fy,width,height,budget=Infinity,generation=0}){
  const start=performance.now(),bucket=temporalCandidates(time);
- const limited=Number.isFinite(budget),cacheStatic=!limited&&time>=0&&time<=5;
+ const limited=Number.isFinite(budget),cacheStatic=!limited&&time>=t0&&time<=t1;
  let staticRebuilt=false;
  let count=0;if(limited)scoreBins.fill(0);
  const scan=list=>{for(let a=0;a<list.length;a++){

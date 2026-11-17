@@ -62,7 +62,7 @@ fetch(new URL('../catalog/models.json',import.meta.url)).then(response=>response
   const label=document.createElement('span');label.className='scene-group-label';label.textContent=title;group.append(label);
   for(const model of members){
    const chip=document.createElement('button');chip.type='button';chip.className='scene-chip';chip.dataset.model=model.id;
-   const number=document.createElement('span');number.className='scene-number';number.textContent=String(models.indexOf(model)+1).padStart(2,'0');const copy=document.createElement('span');copy.className='scene-copy';const name=document.createElement('strong');name.textContent=sceneTitle(model);const info=document.createElement('small');info.textContent=(model.cache?'4DGS · 5 s':'Original model')+' · '+(model.size/1e6).toFixed(0)+' MB';copy.append(name,info);const arrow=document.createElement('span');arrow.className='scene-arrow';arrow.textContent='↗';chip.append(number,copy,arrow);chip.title=model.name||model.id;
+   const number=document.createElement('span');number.className='scene-number';number.textContent=String(models.indexOf(model)+1).padStart(2,'0');const copy=document.createElement('span');copy.className='scene-copy';const name=document.createElement('strong');name.textContent=sceneTitle(model);const info=document.createElement('small');info.textContent=(model.cache?`4DGS · ${Number((model.cache.duration||model.duration||5).toFixed(2))} s`:'Original model')+' · '+(model.size/1e6).toFixed(0)+' MB';copy.append(name,info);const arrow=document.createElement('span');arrow.className='scene-arrow';arrow.textContent='↗';chip.append(number,copy,arrow);chip.title=model.name||model.id;
    chip.addEventListener('click',()=>chooseScene(model.id));group.append(chip);sceneChips.push(chip);
   }
   list.append(group);
@@ -87,7 +87,7 @@ const error=message=>{fatalError=true;$('#loading').hidden=false;$('#loading-det
 window.addEventListener('error',e=>{if(e.message)error(e.message);});
 window.addEventListener('unhandledrejection',e=>error(e.reason?.message||String(e.reason)));
 if(videoById.has(activeScene)){showVideo(activeScene);}else try{
- const {startFast}=await import('./fast.mjs?v=20261117-progress1');await startFast(q);
+ const {startFast}=await import('./fast.mjs?v=20261118-long1');await startFast(q);
 }catch(e){error(e.message);}
 let shown=false,completedAt=0;
 $('#refinement-retry').onclick=()=>window.retryFullModel?.();

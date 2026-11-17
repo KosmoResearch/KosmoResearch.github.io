@@ -1,10 +1,11 @@
 export const vertex=`#version 300 es
 precision highp float;
 precision highp int;
-uniform highp usampler2D splats;
+uniform highp usampler2D splats0,splats1,splats2,splats3;
 uniform mat4 view;
 uniform vec2 viewport,focal;
 uniform float clockTime,classic;
+uniform uint recordsPerRow,recordsPerTexture;
 in vec2 corner;
 in uint index;
 out vec2 gaussian;
@@ -14,17 +15,27 @@ out vec4 projectedCenterMajor;
 out vec4 projectedMinorExtentR;
 out vec3 projectedColorGBA;
 #endif
+// Whole-clip datasets exceed single-allocation texture limits on some ANGLE
+// drivers; records are split across up to four equal-row slots. Constant
+// branches keep sampler selection legal in GLSL ES 3.0.
+uvec4 fetchSplats(uint slot,ivec2 uv){
+ if(slot==0u)return texelFetch(splats0,uv,0);
+ if(slot==1u)return texelFetch(splats1,uv,0);
+ if(slot==2u)return texelFetch(splats2,uv,0);
+ return texelFetch(splats3,uv,0);
+}
 void main(){
 #ifdef PROJECT_ONLY
  projectedCenterMajor=vec4(0.);projectedMinorExtentR=vec4(0.);projectedColorGBA=vec3(0.,0.,-1.);
 #endif
  gl_Position=vec4(0.,0.,2.,1.);color=vec4(0.);
- ivec2 uv=ivec2(int(index%1024u)*3,int(index/1024u));
- uvec4 d=texelFetch(splats,uv+ivec2(2,0),0);
+ uint slot=index/recordsPerTexture,local=index-slot*recordsPerTexture;
+ ivec2 uv=ivec2(int(local%recordsPerRow)*3,int(local/recordsPerRow));
+ uvec4 d=fetchSplats(slot,uv+ivec2(2,0));
  vec2 vt=unpackHalf2x16(d.x),tl=unpackHalf2x16(d.y),end=unpackHalf2x16(d.z);
  if(clockTime<tl.y||clockTime>end.x)return;
  float dt=clockTime-vt.y;float temporal=exp(-.5*pow(dt/tl.x,2.));if(temporal<.02)return;
- uvec4 a=texelFetch(splats,uv,0),b=texelFetch(splats,uv+ivec2(1,0),0);
+ uvec4 a=fetchSplats(slot,uv),b=fetchSplats(slot,uv+ivec2(1,0));
  vec3 velocity=vec3(unpackHalf2x16(b.w),vt.x),center=uintBitsToFloat(a.xyz)+velocity*dt;
  vec3 cam=(view*vec4(center,1.)).xyz;if(cam.z<=.05||cam.z>500.)return;
  vec2 c0=unpackHalf2x16(b.x),c1=unpackHalf2x16(b.y),c2=unpackHalf2x16(b.z);

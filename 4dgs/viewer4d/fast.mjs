@@ -1,8 +1,9 @@
-import {vertex,fragment} from './fast-shader.mjs?v=4';
-import {installControls} from '../controls.mjs?v=20261107-progressive1';
-import {playbackTime} from './playback-clock.mjs';
+import {vertex,fragment} from './fast-shader.mjs?v=20261118-long1';
+import {installControls} from '../controls.mjs?v=20261118-long1';
+import {playbackTime} from './playback-clock.mjs?v=20261118-long1';
 import {createLoadingProgress} from './loading-progress.mjs';
-import {createProjectedRenderer} from './fast-projection.mjs?v=1';
+import {createProjectedRenderer} from './fast-projection.mjs?v=20261118-long1';
+import {textureLayout} from './texture-layout.mjs';
 const $=s=>document.querySelector(s);
 export async function startFast(q){
  const canvas=$('canvas'),status=$('#status');
@@ -19,9 +20,26 @@ export async function startFast(q){
  const a=gl.getAttribLocation(program,'corner');gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);
  const indices=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,indices);gl.bufferData(gl.ARRAY_BUFFER,4,gl.DYNAMIC_DRAW);
  const ai=gl.getAttribLocation(program,'index');gl.enableVertexAttribArray(ai);gl.vertexAttribIPointer(ai,1,gl.UNSIGNED_INT,0,0);gl.vertexAttribDivisor(ai,1);
- const u=Object.fromEntries(['view','viewport','focal','clockTime','splats'].map(k=>[k,gl.getUniformLocation(program,k)]));
- gl.uniform1i(u.splats,0);gl.uniform1f(gl.getUniformLocation(program,'classic'),q.get('quality')==='full'?1:0);
- const texture=gl.createTexture();gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,texture);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.NEAREST);
+ const u=Object.fromEntries(['view','viewport','focal','clockTime','splats0','splats1','splats2','splats3','recordsPerRow','recordsPerTexture'].map(k=>[k,gl.getUniformLocation(program,k)]));
+ for(let slot=0;slot<4;slot++)gl.uniform1i(u['splats'+slot],slot);
+ gl.uniform1f(gl.getUniformLocation(program,'classic'),q.get('quality')==='full'?1:0);
+ const textures=Array.from({length:4},()=>{const texture=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,texture);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.NEAREST);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.NEAREST);return texture;});
+ let recordsPerRow=1024,recordsPerTexture=1024;
+ const uploadTextures=m=>{
+  const layout=textureLayout(m.width,m.height,gl.getParameter(gl.MAX_TEXTURE_SIZE));
+  gl.getError();
+  for(let slot=0;slot<4;slot++){
+   gl.activeTexture(gl.TEXTURE0+slot);gl.bindTexture(gl.TEXTURE_2D,textures[slot]);
+   const rows=Math.max(0,Math.min(layout.rowsPerSlot,m.height-slot*layout.rowsPerSlot));
+   if(rows){
+    const at=slot*layout.rowsPerSlot*m.width*4;
+    gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA32UI,m.width,rows,0,gl.RGBA_INTEGER,gl.UNSIGNED_INT,m.texture.subarray(at,at+rows*m.width*4));
+   }else gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA32UI,1,1,0,gl.RGBA_INTEGER,gl.UNSIGNED_INT,null);
+   const error=gl.getError();if(error!==gl.NO_ERROR)throw Error('Model texture upload failed (WebGL error '+error+'). Try a device with more GPU memory.');
+  }
+  recordsPerRow=layout.perRow;recordsPerTexture=layout.perTexture;
+  probe.textureSlots=layout.slots;probe.recordsPerTexture=recordsPerTexture;
+ };
  let projected=null;probe.pipeline='direct';
  if(q.get('pipeline')==='projected'){
   try{projected=createProjectedRenderer(gl,indices,quad);probe.pipeline='projected';}
@@ -32,6 +50,9 @@ export async function startFast(q){
  const model=models.find(m=>m.id===(q.get('model')||'acs_zhao_solo'))||models.find(m=>m.id==='acs_zhao_solo')||models[0];
  if(!model)throw Error('No models available');
  if(!model.cache)throw Error('No optimized cache is available for '+(model.name||model.id));
+ const duration=model.cache.duration||model.duration||5;
+ probe.duration=duration;
+ q.set('duration',String(duration));history.replaceState(null,'','?'+q+location.hash);
  const download=createLoadingProgress(model.cache,{progressive:q.get('progressive')!=='0'});
  probe.downloadProgress=download.snapshot();
  $('#models').value=model.id;
@@ -40,12 +61,13 @@ window.setActiveScene?.(model.id);
  probe.model=model.id;probe.localFile=model.file||model.id;
  $('#scene-name').textContent=model.name?.split('·')[0].trim()||model.file||model.id;
  document.title=$('#scene-name').textContent+' · 4DGS';
- $('#clip-duration').disabled=true;$('#clip-duration').title='This clip is 5 seconds long';
+ $('#clip-duration').disabled=true;$('#clip-duration').value=duration;$('#clip-duration').title=`This clip is ${duration.toFixed(2)} seconds long`;
+ $('#total').textContent=duration.toFixed(2)+'s';
  if(model.originalAvailable===false){$('#backend option[value=webgpu]').disabled=true;$('#open-file').hidden=true;}
  $('#backend').value='webgl2';$('#quality').value=q.get('quality')||'auto';$('#temporal').checked=true;$('#temporal').disabled=true;$('#correct').checked=true;$('#correct').disabled=true;
  $('#load').onclick=()=>{const params=new URLSearchParams(location.search);params.set('model',$('#models').value);params.set('quality',$('#quality').value);params.set('backend',$('#backend').value);params.set('engine',$('#backend').value==='webgpu'?'legacy':'fast');if(params.get('model')!==model.id){params.set('rate','1');params.delete('roll');params.set('camera','0');params.set('time','0');location.href='?'+params;}else location.search=params;};
  $('#open-file').onclick=()=>{const params=new URLSearchParams(location.search);params.set('engine','legacy');params.set('quality','full');location.search=params;};
- const worker=new Worker(new URL('./fast-worker.mjs?v=20261117-progress1',import.meta.url),{type:'module'});
+ const worker=new Worker(new URL('./fast-worker.mjs?v=20261118-long1',import.meta.url),{type:'module'});
  // Controls only need the scene node and two math classes. Loading the complete
  // engine index adds hundreds of unrelated module requests before any preview.
  const [{Entity},{Mat4},{Quat}]=await Promise.all([
@@ -63,17 +85,19 @@ window.setActiveScene?.(model.id);
  let pixelBudget=fullDetail?Infinity:q.get('quality')==='low'?350000:700000,lodBudget=q.get('quality')==='full'?Infinity:q.get('quality')==='low'?220000:q.get('quality')==='balanced'?650000:450000;
  const auto=q.get('quality')==='auto';let qualityLast=0,drawMs=[],lastUI=0,firstDraw=false;
  const resize=()=>{drawInvalidated=true;const scale=fullDetail?1:Math.min(1,Math.sqrt(pixelBudget/(canvas.clientWidth*canvas.clientHeight)),1280/Math.max(canvas.clientWidth,canvas.clientHeight));canvas.width=Math.max(1,Math.round(canvas.clientWidth*scale));canvas.height=Math.max(1,Math.round(canvas.clientHeight*scale));gl.viewport(0,0,canvas.width,canvas.height);probe.renderScale=scale;probe.resolution=[canvas.width,canvas.height];};resize();window.addEventListener('resize',resize);new ResizeObserver(resize).observe(canvas);
- const seek=value=>{t=Math.max(0,Math.min(5,value));playing=false;probe.playing=false;drawInvalidated=true;generation++;$('#play').textContent='Play';$('#clock').textContent=t.toFixed(2)+'s';lastSort=-Infinity;};
- $('#time').oninput=()=>seek(Number($('#time').value));$('#time').min=0;$('#time').max=5;
+ t=Math.max(0,Math.min(duration,t));timeAtPlay=t;
+ const seek=value=>{t=Math.max(0,Math.min(duration,value));playing=false;probe.playing=false;drawInvalidated=true;generation++;$('#play').textContent='Play';$('#clock').textContent=t.toFixed(2)+'s';lastSort=-Infinity;};
+ $('#time').oninput=()=>seek(Number($('#time').value));$('#time').min=0;$('#time').max=duration;
  $('#play').onclick=()=>{playing=!playing;probe.playing=playing;drawInvalidated=true;last=0;epoch=performance.now();timeAtPlay=t;$('#play').textContent=playing?'Pause':'Play';};$('#play').textContent=playing?'Pause':'Play';
  window.setTime=seek;window.setPlaying=value=>{playing=value;probe.playing=playing;drawInvalidated=true;last=0;epoch=performance.now();timeAtPlay=t;$('#play').textContent=playing?'Pause':'Play';};
  let rate=Number(q.get('rate')||1);if(![.25,.5,.75,1].includes(rate))rate=1;
  $('#speed').value=String(rate);probe.playbackRate=rate;
- const setRate=value=>{const now=performance.now();if(playing)t=playbackTime(timeAtPlay,epoch,now,rate);rate=Number(value);if(![.25,.5,.75,1].includes(rate))rate=1;epoch=now;timeAtPlay=t;probe.playbackRate=rate;$('#speed').value=String(rate);q.set('rate',String(rate));history.replaceState(null,'','?'+q+location.hash);};
+ const setRate=value=>{const now=performance.now();if(playing)t=playbackTime(timeAtPlay,epoch,now,rate,duration);rate=Number(value);if(![.25,.5,.75,1].includes(rate))rate=1;epoch=now;timeAtPlay=t;probe.playbackRate=rate;$('#speed').value=String(rate);q.set('rate',String(rate));history.replaceState(null,'','?'+q+location.hash);};
  $('#speed').onchange=e=>setRate(e.target.value);window.setPlaybackRate=setRate;
  const start=performance.now();
- const sort=now=>{if(busy||!controls)return;
- if(playing)t=playbackTime(timeAtPlay,epoch,now,rate);
+ let sortPending=false;
+ const sort=now=>{if(!controls)return;if(busy){sortPending=true;return;}
+ if(playing)t=playbackTime(timeAtPlay,epoch,now,rate,duration);
  const state=controls.getState();
  if(requestedView&&Math.abs(t-requestedTime)<1e-6&&requestedBudget===lodBudget&&requestedWidth===canvas.width&&requestedHeight===canvas.height&&requestedGeneration===generation&&state.view.every((v,i)=>Math.abs(v-requestedView[i])<1e-5)){return;}
  busy=true;lastSort=now;
@@ -84,7 +108,7 @@ window.setActiveScene?.(model.id);
  worker.onmessage=({data:m})=>{
   if(m.type==='error'){if(m.recoverable){probe.loadError=m.message;probe.loading=false;}else probe.errors.push(m.message);status.textContent=m.message;return;}
   if(m.type==='warning'){probe.loadWarnings.push(m.message);return;}
-  if(m.type==='stale'){busy=false;sort(performance.now());return;}
+  if(m.type==='stale'){busy=false;sortPending=false;sort(performance.now());return;}
   if(m.type==='progress'){
    probe.loadStage=m.stage;probe.downloadProgress=download.update(m);
    if(m.stage==='full'){probe.loadReceived=m.received??probe.loadReceived;probe.loadSize=m.size??probe.loadSize;}
@@ -97,9 +121,7 @@ window.setActiveScene?.(model.id);
    revision=m.revision;generation++;probe.ready=false;requestedGeneration=-1;
    meta=m.meta;probe.modelRevision=revision;probe.preview=!!meta.preview;probe.originalCount=meta.originalCount;probe.count=meta.count;probe.capacity=meta.count;probe.fullCount=meta.fullCount||meta.count;probe.bytes=meta.count*48;
    probe.loadedStages=(probe.loadedStages||0)+1;if(!meta.preview)probe.loadMs=performance.now()-start;
-   if(m.width>gl.getParameter(gl.MAX_TEXTURE_SIZE)||m.height>gl.getParameter(gl.MAX_TEXTURE_SIZE))throw Error('This device does not support the required texture size');
-   gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,texture);
-   gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA32UI,m.width,m.height,0,gl.RGBA_INTEGER,gl.UNSIGNED_INT,m.texture);
+   try{uploadTextures(m);}catch(error){probe.errors.push(error.message);status.textContent=error.message;return;}
    if(!controls){
    const modelRoll=Number.isFinite(model.roll)?model.roll:-90,angle=Number(q.has('roll')?q.get('roll'):modelRoll)*Math.PI/180,c=Math.cos(angle),s=Math.sin(angle);
    const cameras=meta.cameras.map(cam=>({...cam,...(Math.abs(c)<1e-6?{width:cam.height,height:cam.width,fx:cam.fy,fy:cam.fx}:{}),rotation:cam.rotation.map(([x,y,z])=>[x*c+y*s,-x*s+y*c,z])}));
@@ -120,7 +142,7 @@ window.setActiveScene?.(model.id);
    }else{probe.discardedOrders++;recycle(m);}
    // Keep a slow Worker busy while the GPU draws its completed frame. Fast
    // Workers are driven by RAF, avoiding a spin loop or excess uploads.
-   const now=performance.now();if(playing&&now-lastSort>=16)sort(now);
+   const now=performance.now();if(sortPending||playing&&now-lastSort>=16){sortPending=false;sort(now);}
   }
  };
  canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();probe.errors.push('WebGL context lost. Please reload the page.');});
@@ -129,7 +151,7 @@ window.setActiveScene?.(model.id);
   requestAnimationFrame(frame);
   if(gpuTimer){while(pendingGpu.length&&gl.getQueryParameter(pendingGpu[0],gl.QUERY_RESULT_AVAILABLE)){const query=pendingGpu.shift();if(!gl.getParameter(gpuTimer.GPU_DISJOINT_EXT)){probe.gpuMs.push(gl.getQueryParameter(query,gl.QUERY_RESULT)/1e6);if(probe.gpuMs.length>600)probe.gpuMs.shift();}gl.deleteQuery(query);}}
   if(!controls)return;
-  if(playing)t=playbackTime(timeAtPlay,epoch,now,rate);
+  if(playing)t=playbackTime(timeAtPlay,epoch,now,rate,duration);
   const delta=last?Math.min(.1,(now-last)/1000):.016;controls.update(delta);
   probe.time=t;probe.playbackWallTime=now;probe.playing=playing;probe.lodBudget=lodBudget;probe.pixelBudget=pixelBudget;probe.playbackRate=rate;
   if(pendingOrder){
@@ -157,10 +179,10 @@ window.setActiveScene?.(model.id);
     if(gpuQuery)gl.beginQuery(gpuTimer.TIME_ELAPSED_EXT,gpuQuery);
     gl.clear(gl.COLOR_BUFFER_BIT);
     if(projected){
-     try{projected.draw({view:stateView,viewport,focal,time:renderTime,classic:fullDetail?1:0,count});probe.projectionBytes=projected.bytes;}
+     try{projected.draw({view:stateView,viewport,focal,time:renderTime,classic:fullDetail?1:0,count,recordsPerRow,recordsPerTexture});probe.projectionBytes=projected.bytes;}
      catch(e){probe.projectionFallback=e.message;console.warn('Projection cache failed; using direct rendering',e);projected.dispose();projected=null;probe.pipeline='direct';gl.disable(gl.RASTERIZER_DISCARD);gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK,null);gl.bindBufferBase(gl.TRANSFORM_FEEDBACK_BUFFER,0,null);gl.clear(gl.COLOR_BUFFER_BIT);}
     }
-    if(!projected){gl.useProgram(program);gl.bindVertexArray(vao);gl.uniformMatrix4fv(u.view,false,stateView);gl.uniform2fv(u.viewport,viewport);gl.uniform2fv(u.focal,focal);gl.uniform1f(u.clockTime,renderTime);gl.drawArraysInstanced(gl.TRIANGLE_STRIP,0,4,count);}
+    if(!projected){gl.useProgram(program);gl.bindVertexArray(vao);gl.uniform1ui(u.recordsPerRow,recordsPerRow);gl.uniform1ui(u.recordsPerTexture,recordsPerTexture);gl.uniformMatrix4fv(u.view,false,stateView);gl.uniform2fv(u.viewport,viewport);gl.uniform2fv(u.focal,focal);gl.uniform1f(u.clockTime,renderTime);gl.drawArraysInstanced(gl.TRIANGLE_STRIP,0,4,count);}
     if(gpuQuery){gl.endQuery(gpuTimer.TIME_ELAPSED_EXT);pendingGpu.push(gpuQuery);}
 
     probe.renderTime=renderTime;probe.renderedFrames=(probe.renderedFrames||0)+1;
@@ -174,7 +196,7 @@ window.setActiveScene?.(model.id);
     else if(auto&&playing&&avg<22&&lodBudget<650000){lodBudget=Math.min(650000,Math.round(lodBudget*1.1));pixelBudget=Math.min(900000,pixelBudget*1.05);resize();}
    }
    if(now-lastUI>250){lastUI=now;$('#time').value=t;$('#clock').textContent=t.toFixed(2)+'s';const f=probe.frames.slice(-120),sorted=[...f].sort((a,b)=>a-b),mean=f.reduce((a,b)=>a+b,0)/f.length;
-    probe.frameAge=Math.abs(t-probe.renderTime)>2.5?Math.abs(t-probe.renderTime)-5:t-probe.renderTime;
+    probe.frameAge=Math.abs(t-probe.renderTime)>duration/2?Math.abs(t-probe.renderTime)-duration:t-probe.renderTime;
     status.textContent=`WebGL2 · Worker temporal filtering and sorting · Linear motion\n${(1000/mean).toFixed(1)} render FPS · P95 ${(sorted[Math.floor(sorted.length*.95)]||0).toFixed(1)} ms · ${canvas.width}×${canvas.height}\nDrawn ${count.toLocaleString()} / Active visible ${(probe.visibleCount||0).toLocaleString()} / Original ${meta.originalCount.toLocaleString()}\nWorker ${(probe.sortMs.at(-1)||0).toFixed(1)} ms · ${auto?'Adaptive detail':meta.preview?'Loading preview':fullDetail?'Full detail · Native resolution':'Preview detail'} · ${rate}× · Loaded ${((probe.loadMs||0)/1000).toFixed(2)}s\n${projected?'Two-stage projection · One projection per Gaussian':'Direct projection'} · Synchronized scene time\nGPU: ${probe.renderer}`;
    }
   }

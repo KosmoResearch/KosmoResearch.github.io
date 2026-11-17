@@ -6,9 +6,9 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 
-test('five ACS and seven VVC scenes use their verified public HF asset directories',()=>{
+test('six ACS and seven VVC scenes use their verified public HF asset directories',()=>{
  const catalog=JSON.parse(read('catalog/models.json'));
- assert.deepEqual(catalog.map(model=>model.id),['acs_zhao_solo','acs_qiqi','acs_xixi','acs_two_people','acs_3girl',
+ assert.deepEqual(catalog.map(model=>model.id),['acs_zhao_solo','acs_qiqi','acs_xixi','acs_two_people','acs_two_people_47s_clean','acs_3girl',
   'vvc_001_1_seq0','vvc_004_1_seq1','vvc_006_1_seq1','vvc_007_C_wall_surface','vvc_008_2_seq1','vvc_011_0_seq1','vvc_012_0_seq0']);
  for(const model of catalog){
   const acs=model.id.startsWith('acs_'),previews=model.cache.previews||[];

@@ -5,6 +5,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import http from 'node:http';
 import {createReadStream} from 'node:fs';
+import {pipeline} from 'node:stream/promises';
 import {setTimeout as delay} from 'node:timers/promises';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -23,19 +24,19 @@ const server=http.createServer(async(req,res)=>{
    res.writeHead(200,{'Content-Type':'application/octet-stream','Content-Length':size,'Access-Control-Allow-Origin':'*'});
    const input=createReadStream(asset,{highWaterMark:256*1024});
    res.on('close',()=>input.destroy());
-   for await(const chunk of input){if(res.destroyed)break;res.write(chunk);if(process.env.THROTTLE_ASSETS)await delay(18);}
-   res.end();return;
+   await pipeline(input,async function*(source){for await(const chunk of source){if(process.env.THROTTLE_ASSETS)await delay(18);yield chunk;}},res);
+   return;
   }
   const file=path.resolve(root,relative);if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return;}
   const content=await fs.readFile(file);res.writeHead(200,{'Content-Type':types[path.extname(file)]||'application/octet-stream'}).end(content);
- }catch{res.writeHead(404).end();}
+ }catch{if(!res.destroyed){if(!res.headersSent)res.writeHead(404);res.end();}}
 });
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const base=`http://127.0.0.1:${server.address().port}${prefix}`;
 const browser=await chromium.launch({executablePath:process.env.CHROME_EXECUTABLE||'/usr/bin/google-chrome',headless:true,dumpio:!!process.env.DEBUG_BROWSER,
- args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+ args:['--no-sandbox',...(process.env.HARDWARE_GL?['--enable-gpu','--use-angle=gl']:['--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader'])]});
 const report={base,mode:process.env.ASSET_ROOT?'local immutable HF asset mirror':'real HF',coarse:[],full:[]};
-const wait=(page,fn,arg)=>page.waitForFunction(fn,arg,{timeout:180000});
+const wait=(page,fn,arg)=>page.waitForFunction(fn,arg,{timeout:300000});
 async function setup(coarseOnly=false){
  const context=await browser.newContext({viewport:{width:1100,height:760}}),page=await context.newPage(),errors=[];
  page.on('pageerror',e=>errors.push(e.message));
@@ -49,7 +50,7 @@ async function setup(coarseOnly=false){
  return {context,page,errors};
 }
 try{
- for(const model of ['full','vvc'].includes(process.env.CHECK_MODE)?[]:catalog.filter(model=>model.cache.previews?.length)){
+ for(const model of ['full','vvc','long'].includes(process.env.CHECK_MODE)?[]:catalog.filter(model=>model.cache.previews?.length)){
   console.log('Preview',model.id);
   const {context,page,errors}=await setup(true);
   await page.goto(base+'?model='+model.id+'&paused=1&time=2.5');
@@ -58,12 +59,13 @@ try{
   assert.equal(state.model,model.id);assert.equal(state.quality,'full');assert.equal(state.rate,1);assert.deepEqual(state.errors,[]);assert.deepEqual(errors,[]);
   report.coarse.push(state);await context.close();
  }
- const fullModels=catalog.filter(model=>['acs_zhao_solo','acs_two_people','vvc_001_1_seq0'].includes(model.id));
+ const fullModels=catalog.filter(model=>(process.env.CHECK_MODE==='long'?['acs_two_people_47s_clean']:['acs_zhao_solo','acs_two_people','vvc_001_1_seq0']).includes(model.id));
  for(const model of fullModels.filter(model=>process.env.CHECK_MODE!=='vvc'||model.id.startsWith('vvc_'))){
   const id=model.id;
+  const duration=model.cache.duration||5,long=duration>6,query=process.env.PIPELINE?'&pipeline='+process.env.PIPELINE:'';
   console.log('Full model',id);
   const {context,page,errors}=await setup();
-  await page.goto(base+'?model='+id+'&paused=1&time=2.5');
+  await page.goto(base+'?model='+id+'&paused=1&time=2.5'+query);
   if(process.env.THROTTLE_ASSETS){
    await wait(page,()=>window.probe&&!probe.fullReady&&probe.downloadProgress?.ratio>.35&&probe.downloadProgress?.ratio<.9);
    assert.equal(await page.locator('#loading').isVisible(),true);
@@ -76,9 +78,25 @@ try{
   assert.equal(await page.locator('html').getAttribute('lang'),'en');
   assert(!/\p{Script=Han}/u.test(await page.locator('body').textContent()),'all UI text must be English');
   assert.equal(await page.evaluate(()=>probe.sampled),false);
+  assert.equal(await page.evaluate(()=>probe.duration),duration);
+  assert.equal(Number(await page.locator('#time').getAttribute('max')),duration);
+  assert.equal(await page.locator('#total').textContent(),duration.toFixed(2)+'s');
+  if(process.env.PIPELINE)assert.equal(await page.evaluate(()=>probe.pipeline),process.env.PIPELINE);
+  if(long){
+   assert.equal(await page.evaluate(()=>probe.count),40070282);
+   assert.equal(await page.evaluate(()=>probe.textureSlots),4);
+   assert(await page.evaluate(()=>probe.recordsPerTexture*probe.textureSlots>=probe.count));
+  }
   assert.equal(await page.evaluate(()=>probe.lodBudget===Infinity),true);
   assert.deepEqual(await page.evaluate(()=>probe.resolution),await page.evaluate(()=>[view.clientWidth,view.clientHeight]));
-  for(const time of [.1,4.9,2.5]){await page.evaluate(t=>setTime(t),time);await wait(page,t=>probe.renderTime===t,time);}
+  for(const time of long?[.1,12,22,27.3,46.2,2.5]:[.1,4.9,2.5]){await page.evaluate(t=>setTime(t),time);await wait(page,t=>probe.renderTime===t,time);assert(await page.evaluate(()=>probe.activeCount)>0);}
+  if(long){
+   await page.evaluate(()=>{setTime(11.7);setPlaying(true);});
+   await wait(page,()=>probe.time>12.5&&probe.renderTime>12);
+   await page.evaluate(()=>{setTime(46.8);setPlaying(true);});
+   await wait(page,()=>probe.time<2&&probe.renderTime<2);
+   assert(await page.evaluate(()=>probe.activeCount)>0);
+  }
   const camera=await page.evaluate(()=>controls.getState());const box=await page.locator('canvas').boundingBox();
   await page.mouse.move(box.x+box.width/2,box.y+box.height/2);await page.mouse.down();await page.mouse.move(box.x+box.width/2+40,box.y+box.height/2+15,{steps:4});await page.mouse.up();
   assert.notDeepEqual(await page.evaluate(()=>controls.getState()),camera);
@@ -87,14 +105,16 @@ try{
   await wait(page,now=>probe.playbackWallTime>=now+1500,start.now);
   const end=await page.evaluate(()=>({time:probe.time,now:probe.playbackWallTime}));
   const elapsed=(end.now-start.now)/1000;
-  const delta=end.time+5*Math.round((elapsed*.5-end.time)/5);const clockRate=delta/elapsed;
+  const delta=end.time+duration*Math.round((elapsed*.5-end.time)/duration);const clockRate=delta/elapsed;
   assert(Math.abs(clockRate-.5)<.08,'half-speed clock '+JSON.stringify({clockRate,start,end,elapsed}));
   await page.evaluate(()=>{setTime(2.5);controls.home();});await wait(page,()=>probe.renderTime===2.5);
   await page.waitForTimeout(500);const frames=await page.evaluate(()=>probe.renderedFrames);await page.waitForTimeout(500);
   assert.equal(await page.evaluate(()=>probe.renderedFrames),frames);
   const pixels=PNG.sync.read(await page.locator('canvas').screenshot({path:path.join(output,id+'-canvas.png')})).data;
   await page.screenshot({path:path.join(output,id+'-page.png')});
-  const state=await page.evaluate(()=>({model:probe.model,renderer:probe.renderer,resolution:probe.resolution,quality:probe.quality,sampled:probe.sampled,stages:probe.loadedStages,workerMs:probe.sortMs.at(-1),errors:probe.errors}));
+  let visiblePixels=0;for(let i=3;i<pixels.length;i+=4)if(pixels[i]>0)visiblePixels++;
+  assert(visiblePixels>1000,'rendered canvas must contain substantial visible content');
+  const state=await page.evaluate(()=>({model:probe.model,renderer:probe.renderer,resolution:probe.resolution,quality:probe.quality,sampled:probe.sampled,stages:probe.loadedStages,duration:probe.duration,total:probe.count,textureSlots:probe.textureSlots,workerMs:probe.sortMs.at(-1),errors:probe.errors}));
   assert.deepEqual(state.errors,[]);assert.deepEqual(errors,[]);await context.close();
   let pixelEquality;
   if(process.env.REFERENCE_URL){
@@ -104,10 +124,10 @@ try{
    const expected=PNG.sync.read(await baseline.locator('canvas').screenshot()).data;
    assert.deepEqual(pixels,expected,'full canvas must match the existing LAN renderer');pixelEquality=true;await reference.close();
   }
-  report.full.push({...state,clockRate,pausePassed:true,cameraPassed:true,seekPassed:true,pixelEquality});
-  await fs.writeFile(path.join(output,'browser.json'),JSON.stringify(report,null,2));
+  report.full.push({...state,clockRate,visiblePixels,pausePassed:true,cameraPassed:true,seekPassed:true,wrapPassed:long||undefined,pixelEquality});
+  await fs.writeFile(path.join(output,process.env.CHECK_MODE==='long'?'long-browser'+(process.env.PIPELINE?'-'+process.env.PIPELINE:'')+'.json':'browser.json'),JSON.stringify(report,null,2));
   console.log('Passed',id);
  }
- report.passed=true;await fs.writeFile(path.join(output,'browser.json'),JSON.stringify(report,null,2));
+ report.passed=true;await fs.writeFile(path.join(output,process.env.CHECK_MODE==='long'?'long-browser'+(process.env.PIPELINE?'-'+process.env.PIPELINE:'')+'.json':'browser.json'),JSON.stringify(report,null,2));
  console.log('Browser checks passed');
 }finally{await browser.close();server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
