@@ -6,9 +6,9 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 
-test('all eight ACS scenes have complete public HF stages and no local model paths',()=>{
+test('the five published ACS scenes have complete public HF stages and no local model paths',()=>{
  const catalog=JSON.parse(read('catalog/models.json'));
- assert.equal(catalog.length,8);assert.equal(catalog[0].id,'acs_zhao_solo');
+ assert.deepEqual(catalog.map(model=>model.id),['acs_zhao_solo','acs_qiqi','acs_xixi','acs_two_people','acs_3girl']);
  for(const model of catalog){
   assert(model.id.startsWith('acs_'));assert.equal(model.originalAvailable,false);
   assert.equal(model.cache.previews.length,2);

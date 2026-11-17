@@ -38,8 +38,8 @@ export async function startFast(q){
 window.setActiveScene?.(model.id);
  if(q.get('model')!==model.id){q.set('model',model.id);history.replaceState(null,'','?'+q+location.hash);}
  probe.model=model.id;probe.localFile=model.file||model.id;
- $('#scene-name').textContent=model.file||model.name||model.id;
- document.title=(model.file||model.id)+' · 4DGS';
+ $('#scene-name').textContent=model.name?.split('·')[0].trim()||model.file||model.id;
+ document.title=$('#scene-name').textContent+' · 4DGS';
  $('#clip-duration').disabled=true;$('#clip-duration').title='This clip is 5 seconds long';
  if(model.originalAvailable===false){$('#backend option[value=webgpu]').disabled=true;$('#open-file').hidden=true;}
  $('#backend').value='webgl2';$('#quality').value=q.get('quality')||'auto';$('#temporal').checked=true;$('#temporal').disabled=true;$('#correct').checked=true;$('#correct').disabled=true;

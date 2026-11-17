@@ -58,7 +58,7 @@ try{
   assert.equal(state.model,model.id);assert.equal(state.quality,'full');assert.equal(state.rate,1);assert.deepEqual(state.errors,[]);assert.deepEqual(errors,[]);
   report.coarse.push(state);await context.close();
  }
- for(const id of ['acs_zhao_solo','acs_four_people']){
+ for(const id of ['acs_zhao_solo','acs_two_people']){
   console.log('Full model',id);
   const {context,page,errors}=await setup();
   await page.goto(base+'?model='+id+'&paused=1&time=2.5');
