@@ -3,7 +3,7 @@ import {HISTORY_FRAMES,FADE_FRAMES,trailFragmentShader,trailDrawRange} from './t
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js?v=20261104-fine-zoom';
 
 const $ = id => document.getElementById(id);
-const DATA_ROOT = new URL("https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/a985fdda9d0dcab8ddc90f413fe8f41c94630cc7/website-assets/20261106/dynamic-cloud-20261020-v7/data/", location.href);
+const DATA_ROOT = new URL("https://huggingface.co/datasets/KosmoResearch/Kosmo-GFM/resolve/ea4f4b0bcbb505c3fe94231c0efaa942c93a673f/website-assets/20261106/dynamic-cloud-20261020-v7/data/", location.href);
 const LABELS = {
   'ssdb_handgame':['Studio · Hand game','Captured · hand interaction'],
   'ssdb_crossing':['Studio · Crossing','Captured · crossing and turning'],
